@@ -174,10 +174,10 @@
 
                                    <div class="team-info">
                                         <h3>Julian Ipia</h3>
-                                        <p>Profesional Oftanmologico</p>
+                                        <p>Profesional Oftalmologico</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(57) 300 324 5431</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">docoftanmo@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">docoftalmo@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-linkedin-square"></a></li>
@@ -353,7 +353,7 @@
                                         <select class="form-control">
                                              <option>Medicina General</option>
                                              <option>Traumatologia</option>
-                                             <option>Oftanmologia</option>
+                                             <option>Oftalmologia</option>
                                              <option>Ginecologia</option>
                                         </select>
                                    </div>
