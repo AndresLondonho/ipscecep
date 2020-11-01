@@ -3,13 +3,7 @@
 <head>
 
      <title>IPS CECEP</title>
-<!--
 
-Template 2098 Health
-
-http://www.tooplate.com/view/2098-health
-
--->
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -45,7 +39,7 @@ http://www.tooplate.com/view/2098-health
                <div class="row">
 
                     <div class="col-md-4 col-sm-5">
-                         <p>Bienvenido a un cuidado profesional</p>
+                         <p>¡Bienvenido, gente cuidando gente!</p>
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
@@ -99,9 +93,9 @@ http://www.tooplate.com/view/2098-health
                               <div class="item item-first">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Let's make your life happier</h3>
+                                             <h3>Hagamos tu vida más feliz</h3>
                                              <h1>Healthy Living</h1>
-                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Meet Our Doctors</a>
+                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Conoce nuestros doctores</a>
                                         </div>
                                    </div>
                               </div>
@@ -110,8 +104,8 @@ http://www.tooplate.com/view/2098-health
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3>Aenean luctus lobortis tellus</h3>
-                                             <h1>New Lifestyle</h1>
-                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+                                             <h1>Nuevo estilo de vida</h1>
+                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">Más de nosotros</a>
                                         </div>
                                    </div>
                               </div>
@@ -120,8 +114,8 @@ http://www.tooplate.com/view/2098-health
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3>Pellentesque nec libero nisi</h3>
-                                             <h1>Your Health Benefits</h1>
-                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Read Stories</a>
+                                             <h1>Beneficios para tu salud</h1>
+                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Leer historias</a>
                                         </div>
                                    </div>
                               </div>
@@ -139,7 +133,7 @@ http://www.tooplate.com/view/2098-health
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ealth Center</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a <i class="fa fa-h-square"></i>centro de salud</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
                                    <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
@@ -147,8 +141,8 @@ http://www.tooplate.com/view/2098-health
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
                                    <img src="images/author-image.jpg" class="img-responsive" alt="">
                                    <figcaption>
-                                        <h3>Dr. Neil Jackson</h3>
-                                        <p>General Principal</p>
+                                        <h3>Esteban Peñaranda</h3>
+                                        <p>Ginecoloco profesional</p>
                                    </figcaption>
                               </figure>
                          </div>
@@ -166,7 +160,7 @@ http://www.tooplate.com/view/2098-health
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Our Doctors</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Nuestros doctores</h2>
                          </div>
                     </div>
 
@@ -177,11 +171,11 @@ http://www.tooplate.com/view/2098-health
                               <img src="images/team-image1.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Nate Baston</h3>
-                                        <p>General Principal</p>
+                                        <h3>Julian Ipia</h3>
+                                        <p>Profesional Oftanmologico</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
+                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5431</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">docoftanmo@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-linkedin-square"></a></li>
@@ -197,11 +191,11 @@ http://www.tooplate.com/view/2098-health
                               <img src="images/team-image2.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Jason Stewart</h3>
-                                        <p>Pregnancy</p>
+                                        <h3>Sebastian Idrobo</h3>
+                                        <p>Traumatologo profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
+                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-facebook-square"></a></li>
@@ -218,11 +212,11 @@ http://www.tooplate.com/view/2098-health
                               <img src="images/team-image3.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Miasha Nakahara</h3>
-                                        <p>Cardiology</p>
+                                        <h3>Cristian Loaiza</h3>
+                                        <p>Odontologo profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
+                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5433</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">docodonto@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-twitter"></a></li>
@@ -246,7 +240,7 @@ http://www.tooplate.com/view/2098-health
                     <div class="col-md-12 col-sm-12">
                          <!-- SECTION TITLE -->
                          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                              <h2>Latest News</h2>
+                              <h2>Ultimas noticias</h2>
                          </div>
                     </div>
 
@@ -257,13 +251,13 @@ http://www.tooplate.com/view/2098-health
                                    <img src="images/news-image1.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
-                                   <span>March 08, 2018</span>
-                                   <h3><a href="news-detail.html">About Amazing Technology</a></h3>
+                                   <span>Febrero 5, 2019</span>
+                                   <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
                                    <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
                                    <div class="author">
                                         <img src="images/author-image.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
-                                             <h5>Jeremie Carlson</h5>
+                                             <h5>Rafael Londoño</h5>
                                              <p>CEO / Founder</p>
                                         </div>
                                    </div>
@@ -353,21 +347,21 @@ http://www.tooplate.com/view/2098-health
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="select">Select Department</label>
+                                        <label for="select">Selecione departamento:</label>
                                         <select class="form-control">
-                                             <option>General Health</option>
-                                             <option>Cardiology</option>
-                                             <option>Dental</option>
-                                             <option>Medical Research</option>
+                                             <option>Medicina Generañ</option>
+                                             <option>Traumatologia</option>
+                                             <option>Oftanmologia</option>
+                                             <option>Ginecologia</option>
                                         </select>
                                    </div>
 
                                    <div class="col-md-12 col-sm-12">
-                                        <label for="telephone">Phone Number</label>
+                                        <label for="telephone">Numero de telefono</label>
                                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
-                                        <label for="Message">Additional Message</label>
+                                        <label for="Message">Mensajes adicionales</label>
                                         <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Aceptar</button>
                                    </div>
                               </div>
                         </form>
