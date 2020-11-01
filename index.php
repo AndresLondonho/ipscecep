@@ -135,14 +135,14 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a <i class="fa fa-h-square"></i>centro de salud</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
-                                   <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+                                   <p>En nuestro centro de salud contamos con profesionales de alta calidad para prestar un servivio de primera calidad.</p>
+                                   <p>Para nuestro orgullo, acabamos de realizar el ingreso del Dr Esteban, el cual es profesional en no tocar a Kelly</p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
                                    <img src="images/author-image.jpg" class="img-responsive" alt="">
                                    <figcaption>
                                         <h3>Esteban Peñaranda</h3>
-                                        <p>Ginecoloco profesional</p>
+                                        <p>Ginecologo profesional</p>
                                    </figcaption>
                               </figure>
                          </div>
@@ -380,7 +380,7 @@
             3. Click "Share" and choose "Embed map" tab
             4. Copy only URL and paste it within the src="" field below
 	-->
-          <iframe src="https://www.google.com/maps/place/fcecep/@3.429653,-76.5374846,17z/data=!3m1!4b1!4m5!3m4!1s0x8e30a690d035b647:0xe28267e34f932e45!8m2!3d3.4296476!4d-76.5352959?hl=es" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/place/fcecep/@3.4296476,-76.5374846,17z/data=!3m1!4b1!4m5!3m4!1s0x8e30a690d035b647:0xe28267e34f932e45!8m2!3d3.4296476!4d-76.5352959?hl=es" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
      </section>           
 
 
