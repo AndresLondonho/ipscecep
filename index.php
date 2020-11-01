@@ -141,7 +141,7 @@
                                    <p>Para nuestro orgullo, acabamos de realizar el ingreso del Dr Esteban, el cual es profesional en no tocar a Kelly</p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                                   <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                   <img src="imgs/esteban.jpg" class="img-responsive" alt="">
                                    <figcaption>
                                         <h3>Esteban Peñaranda</h3>
                                         <p>Ginecologo profesional</p>
@@ -170,7 +170,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <img src="images/team-image1.jpg" class="img-responsive" alt="">
+                              <img src="imgs/julian.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Julian Ipia</h3>
@@ -190,7 +190,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="images/team-image2.jpg" class="img-responsive" alt="">
+                              <img src="imgs/sebastian.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Sebastian Idrobo</h3>
@@ -211,7 +211,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="images/team-image3.jpg" class="img-responsive" alt="">
+                              <img src="imgs/cristian.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Cristian Loaiza</h3>
@@ -257,7 +257,7 @@
                                    <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
                                    <p>No corremos riesgo, corremos con tecnologia la cual es potente para todos nosotros.</p>
                                    <div class="author">
-                                        <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/andres.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Rafael Londoño</h5>
                                              <p>CEO / Founder</p>
@@ -278,7 +278,7 @@
                                    <h3><a href="news-detail.html">Introduciendo un nuevo proceso de salud</a></h3>
                                    <p>Para nosotros, siempre la innovación irá de la mano, siempre buscamos cosas nuevas.</p>
                                    <div class="author">
-                                        <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/diego.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Diego David</h5>
                                              <p>Medico General</p>
