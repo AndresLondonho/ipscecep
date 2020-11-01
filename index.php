@@ -45,7 +45,7 @@
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
-                         <span class="phone-icon"><i class="fa fa-phone"></i> (032) 323 4532</span>
+                         <span class="phone-icon"><i class="fa fa-phone"></i> +(572) 890 0520</span>
                          <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 6:00 PM (Lun a Vie)</span>
                          <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">info@ipscecep.com</a></span>
                     </div>
@@ -176,7 +176,7 @@
                                         <h3>Julian Ipia</h3>
                                         <p>Oftalmologico profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5431</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 2881</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">docoftalmo@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -196,7 +196,7 @@
                                         <h3>Sebastian Idrobo</h3>
                                         <p>Traumatologo profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 2669</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -217,7 +217,7 @@
                                         <h3>Cristian Loaiza</h3>
                                         <p>Odontologo profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5433</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 3021</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">docodonto@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -237,7 +237,7 @@
                                         <h3>Andres Londoño</h3>
                                         <p>Nutricionista profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 4554</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -252,13 +252,13 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="imgs/esteban.jpg" class="img-responsive" alt="">
+                              <img src="imgs/esteban2.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Esteban Peñaranda</h3>
                                         <p>Ginecologo profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 6969</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -279,7 +279,7 @@
                                         <h3>Diego David</h3>
                                         <p>Medico profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 1391</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -300,7 +300,7 @@
                                         <h3>Alberto Londoño</h3>
                                         <p>Pediatra profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 0623</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -341,7 +341,7 @@
                                    <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
                                    <p>No corremos riesgo, corremos con tecnologia la cual es potente para todos nosotros.</p>
                                    <div class="author">
-                                        <img src="imgs/andres.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/rafa.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Rafael Londoño</h5>
                                              <p>CEO / Founder</p>
@@ -362,7 +362,7 @@
                                    <h3><a href="news-detail.html">Introduciendo un nuevo proceso de salud</a></h3>
                                    <p>Para nosotros, siempre la innovación irá de la mano, siempre buscamos cosas nuevas.</p>
                                    <div class="author">
-                                        <img src="imgs/diego.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/diego2.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Diego David</h5>
                                              <p>Medico General</p>
@@ -383,7 +383,7 @@
                                    <h3><a href="news-detail.html">Ver nuestras investigaciones anuales</a></h3>
                                    <p>Vivamos todos las investigaciones realizadas por parte de nuestro equipo.</p>
                                    <div class="author">
-                                        <img src="imgs/vinasco.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/beto.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Carlos Vinasco</h5>
                                              <p>Agente publicitario</p>
@@ -404,7 +404,7 @@
                <div class="row">
 
                     <div class="col-md-6 col-sm-6">
-                         <img src="images/appointment-image.jpg" class="img-responsive" alt="">
+                         <img src="imgs/logo_mo.png" class="img-responsive" alt="">
                     </div>
 
                     <div class="col-md-6 col-sm-6">
@@ -466,7 +466,7 @@
             3. Click "Share" and choose "Embed map" tab
             4. Copy only URL and paste it within the src="" field below
 	-->
-          <iframe src="https://www.google.com/maps/place/fcecep/@3.4296476,-76.5374846,17z/data=!3m1!4b1!4m5!3m4!1s0x8e30a690d035b647:0xe28267e34f932e45!8m2!3d3.4296476!4d-76.5352959?hl=es" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.672580901988!2d-76.53748458524188!3d3.4296475975036818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a690d035b647%3A0xe28267e34f932e45!2sfcecep!5e0!3m2!1ses!2sco!4v1604267677673!5m2!1ses!2sco" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
      </section>           
 
 
@@ -481,7 +481,7 @@
                               <p>Para nosotros es importante que el paciente se esté en su mejor sentido, para nosotros siempre será la primer opción.</p>
 
                               <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i>+(57) 300 324 5436</p>
+                                   <p><i class="fa fa-phone"></i>+(572) 890 0520 ext. 1201</p>
                                    <p><i class="fa fa-envelope-o"></i> <a href="#">info@ipscecep.com</a></p>
                               </div>
                          </div>
@@ -492,7 +492,7 @@
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas nocticias</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="imgs/andres.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>Acerca de nuestra tecnologia</h5></a>
@@ -502,7 +502,7 @@
 
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="imgs/diego.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>Introduciendo el proceso de salud</h5></a>
@@ -534,7 +534,7 @@
                               <div class="copyright-text"> 
                                    <p>Copyright &copy; 2012 IPS CECEP 
                                    
-                                   | Design: Rafael Londoño</p>
+                                   | Design: TEAM PROGRAMACIÓN / S6AN</p>
                               </div>
                          </div>
                          <div class="col-md-6 col-sm-6">
