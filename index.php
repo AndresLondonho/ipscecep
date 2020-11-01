@@ -45,7 +45,7 @@
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
-                         <span class="phone-icon"><i class="fa fa-phone"></i> (032) 323 4532</span>
+                         <span class="phone-icon"><i class="fa fa-phone"></i> +(572) 890 0520</span>
                          <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 6:00 PM (Lun a Vie)</span>
                          <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">info@ipscecep.com</a></span>
                     </div>
@@ -67,7 +67,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>IPS Centro Cecep</a>
+                    <a href="index.html" class="navbar-brand"> </i>IPS CENTRO CECEP</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -78,7 +78,7 @@
                          <li><a href="#team" class="smoothScroll">Doctores</a></li>
                          <li><a href="#news" class="smoothScroll">Noticias</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contactenos</a></li>
-                         <li class="appointment-btn"><a href="#appointment">Reserva tu cita</a></li>
+                         <li class="appointment-btn"><a href="../ipscecep/login.html">Iniciar sesion</a></li>
                     </ul>
                </div>
 
@@ -105,7 +105,7 @@
                               <div class="item item-second">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Acerca de nuestros laboratorios</h3>
+                                             <h3>Acerca de nosotros</h3>
                                              <h1>Nuevo estilo de vida</h1>
                                              <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">Más de nosotros</a>
                                         </div>
@@ -135,7 +135,7 @@
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a <i class="fa fa-h-square"></i>centro de salud</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a ips cecep centro de salud</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p>En nuestro centro de salud contamos con profesionales de alta calidad para prestar un servivio de primera calidad.</p>
                                    <p>Para nuestro orgullo, acabamos de realizar el ingreso del Dr Esteban, el cual es profesional en no tocar a Kelly</p>
@@ -176,7 +176,7 @@
                                         <h3>Julian Ipia</h3>
                                         <p>Oftalmologico profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5431</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 2881</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">docoftalmo@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -196,7 +196,7 @@
                                         <h3>Sebastian Idrobo</h3>
                                         <p>Traumatologo profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 2669</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
@@ -217,12 +217,96 @@
                                         <h3>Cristian Loaiza</h3>
                                         <p>Odontologo profesional</p>
                                         <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5433</p>
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 3021</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">docodonto@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-twitter"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/andres.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Andres Londoño</h3>
+                                        <p>Nutricionista profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 4554</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/esteban2.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Esteban Peñaranda</h3>
+                                        <p>Ginecologo profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 6969</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/diego.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Diego David</h3>
+                                        <p>Medico profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 1391</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/vinasco.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Alberto Londoño</h3>
+                                        <p>Pediatra profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 0623</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
                                         </ul>
                                    </div>
 
@@ -250,14 +334,14 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
                               <a href="news-detail.html">
-                                   <img src="images/news-image1.jpg" class="img-responsive" alt="">
+                                   <img src="imgs/investigacion.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>Febrero 5, 2019</span>
                                    <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
-                                   <p>No corremos riesgo, corremos con tecnologia la cual es potente para todos nosotros.</p>
+                                   <p>Mantenemos innovando acerca de los recursos que poseemos, haciendo que nuestros usuarios tengan la mejor atención y se sientan como en casa</p>
                                    <div class="author">
-                                        <img src="imgs/andres.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/rafa.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Rafael Londoño</h5>
                                              <p>CEO / Founder</p>
@@ -271,14 +355,14 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
                               <a href="news-detail.html">
-                                   <img src="images/news-image2.jpg" class="img-responsive" alt="">
+                                   <img src="imgs/avance.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>February 20, 2018</span>
-                                   <h3><a href="news-detail.html">Introduciendo un nuevo proceso de salud</a></h3>
-                                   <p>Para nosotros, siempre la innovación irá de la mano, siempre buscamos cosas nuevas.</p>
+                                   <h3><a href="news-detail.html">Buscando opciones avanzar</a></h3>
+                                   <p>Siempre buscamos en como mejorar, para ello mantenemos en investigaciones frecuentes en tanto a las nuevas maneras de ayudar a las personas y el bien común</p>
                                    <div class="author">
-                                        <img src="imgs/diego.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/diego2.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Diego David</h5>
                                              <p>Medico General</p>
@@ -292,14 +376,14 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
                               <a href="news-detail.html">
-                                   <img src="images/news-image3.jpg" class="img-responsive" alt="">
+                                   <img src="imgs/indicadores.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>January 27, 2018</span>
-                                   <h3><a href="news-detail.html">Ver nuestras investigaciones anuales</a></h3>
-                                   <p>Vivamos todos las investigaciones realizadas por parte de nuestro equipo.</p>
+                                   <h3><a href="news-detail.html">¿Cómo nos fue en todo el año?</a></h3>
+                                   <p>Revive todo el proceso del pasado año con nosotros, para ello te mostramos todo lo que realizamos y a las personas que ayudamos en todo el año anterior gracias a nuestros pacientes.</p>
                                    <div class="author">
-                                        <img src="imgs/vinasco.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/beto.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Carlos Vinasco</h5>
                                              <p>Agente publicitario</p>
@@ -314,64 +398,7 @@
      </section>
 
 
-     <!-- MAKE AN APPOINTMENT -->
-     <section id="appointment" data-stellar-background-ratio="3">
-          <div class="container">
-               <div class="row">
 
-                    <div class="col-md-6 col-sm-6">
-                         <img src="images/appointment-image.jpg" class="img-responsive" alt="">
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- CONTACT FORM HERE -->
-                         <form id="appointment-form" role="form" method="post" action="#">
-
-                              <!-- SECTION TITLE -->
-                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                                   <h2>Separa tu cita</h2>
-                              </div>
-
-                              <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="name">Nombre</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="email">Correo</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electronico">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="date">Fecha de la cita</label>
-                                        <input type="date" name="date" value="" class="form-control">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="select">Selecione departamento:</label>
-                                        <select class="form-control">
-                                             <option>Medicina General</option>
-                                             <option>Traumatologia</option>
-                                             <option>Oftalmologia</option>
-                                             <option>Ginecologia</option>
-                                        </select>
-                                   </div>
-
-                                   <div class="col-md-12 col-sm-12">
-                                        <label for="telephone">Numero de telefono</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Numero de telefono">
-                                        <label for="Message">Mensajes adicionales</label>
-                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Mensaje adicional"></textarea>
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Aceptar</button>
-                                   </div>
-                              </div>
-                        </form>
-                    </div>
-
-               </div>
-          </div>
-     </section>
 
 
      <!-- GOOGLE MAP -->
@@ -382,7 +409,7 @@
             3. Click "Share" and choose "Embed map" tab
             4. Copy only URL and paste it within the src="" field below
 	-->
-          <iframe src="https://www.google.com/maps/place/fcecep/@3.4296476,-76.5374846,17z/data=!3m1!4b1!4m5!3m4!1s0x8e30a690d035b647:0xe28267e34f932e45!8m2!3d3.4296476!4d-76.5352959?hl=es" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.672580901988!2d-76.53748458524188!3d3.4296475975036818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a690d035b647%3A0xe28267e34f932e45!2sfcecep!5e0!3m2!1ses!2sco!4v1604267677673!5m2!1ses!2sco" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
      </section>           
 
 
@@ -397,7 +424,7 @@
                               <p>Para nosotros es importante que el paciente se esté en su mejor sentido, para nosotros siempre será la primer opción.</p>
 
                               <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i>+(57) 300 324 5436</p>
+                                   <p><i class="fa fa-phone"></i>+(572) 890 0520 ext. 1201</p>
                                    <p><i class="fa fa-envelope-o"></i> <a href="#">info@ipscecep.com</a></p>
                               </div>
                          </div>
@@ -408,7 +435,7 @@
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas nocticias</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="imgs/andres.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>Acerca de nuestra tecnologia</h5></a>
@@ -418,7 +445,7 @@
 
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="imgs/diego.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>Introduciendo el proceso de salud</h5></a>
@@ -450,7 +477,7 @@
                               <div class="copyright-text"> 
                                    <p>Copyright &copy; 2012 IPS CECEP 
                                    
-                                   | Design: Rafael Londoño</p>
+                                   | Design: TEAM PROGRAMACIÓN / S6AN</p>
                               </div>
                          </div>
                          <div class="col-md-6 col-sm-6">
