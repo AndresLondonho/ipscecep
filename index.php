@@ -211,7 +211,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="imgs/cristian.jpg" class="img-responsive" alt="">
+                              <img src="imgs/cristian2.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Cristian Loaiza</h3>
