@@ -65,7 +65,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
+                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>IPS Centro Cecep</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -103,7 +103,7 @@
                               <div class="item item-second">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Aenean luctus lobortis tellus</h3>
+                                             <h3>Acerca de nuestros laboratorios</h3>
                                              <h1>Nuevo estilo de vida</h1>
                                              <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">Más de nosotros</a>
                                         </div>
@@ -113,7 +113,7 @@
                               <div class="item item-third">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Pellentesque nec libero nisi</h3>
+                                             <h3>Consejos para tu salud</h3>
                                              <h1>Beneficios para tu salud</h1>
                                              <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Leer historias</a>
                                         </div>
@@ -253,7 +253,7 @@
                               <div class="news-info">
                                    <span>Febrero 5, 2019</span>
                                    <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
-                                   <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
+                                   <p>No corremos riesgo, corremos con tecnologia la cual es potente para todos nosotros.</p>
                                    <div class="author">
                                         <img src="images/author-image.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
@@ -273,13 +273,13 @@
                               </a>
                               <div class="news-info">
                                    <span>February 20, 2018</span>
-                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
-                                   <p>Fusce vel sem finibus, rhoncus massa non, aliquam velit. Nam et est ligula.</p>
+                                   <h3><a href="news-detail.html">Introduciendo un nuevo proceso de salud</a></h3>
+                                   <p>Para nosotros, siempre la innovación irá de la mano, siempre buscamos cosas nuevas.</p>
                                    <div class="author">
                                         <img src="images/author-image.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
-                                             <h5>Jason Stewart</h5>
-                                             <p>General Director</p>
+                                             <h5>Diego David</h5>
+                                             <p>Medico General</p>
                                         </div>
                                    </div>
                               </div>
@@ -294,13 +294,13 @@
                               </a>
                               <div class="news-info">
                                    <span>January 27, 2018</span>
-                                   <h3><a href="news-detail.html">Review Annual Medical Research</a></h3>
-                                   <p>Vivamus non nulla semper diam cursus maximus. Pellentesque dignissim.</p>
+                                   <h3><a href="news-detail.html">Ver nuestras investigaciones anuales</a></h3>
+                                   <p>Vivamos todos las investigaciones realizadas por parte de nuestro equipo.</p>
                                    <div class="author">
                                         <img src="images/author-image.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
-                                             <h5>Andrio Abero</h5>
-                                             <p>Online Advertising</p>
+                                             <h5>Carlos Vinasco</h5>
+                                             <p>Agente publicitario</p>
                                         </div>
                                    </div>
                               </div>
@@ -327,29 +327,29 @@
 
                               <!-- SECTION TITLE -->
                               <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                                   <h2>Make an appointment</h2>
+                                   <h2>Separa tu cita</h2>
                               </div>
 
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="name">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                                        <label for="name">Nombre</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                        <label for="email">Correo</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electronico">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="date">Select Date</label>
+                                        <label for="date">Fecha de la cita</label>
                                         <input type="date" name="date" value="" class="form-control">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Selecione departamento:</label>
                                         <select class="form-control">
-                                             <option>Medicina Generañ</option>
+                                             <option>Medicina General</option>
                                              <option>Traumatologia</option>
                                              <option>Oftanmologia</option>
                                              <option>Ginecologia</option>
@@ -358,9 +358,9 @@
 
                                    <div class="col-md-12 col-sm-12">
                                         <label for="telephone">Numero de telefono</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Numero de telefono">
                                         <label for="Message">Mensajes adicionales</label>
-                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Mensaje adicional"></textarea>
                                         <button type="submit" class="form-control" id="cf-submit" name="submit">Aceptar</button>
                                    </div>
                               </div>
@@ -391,26 +391,26 @@
 
                     <div class="col-md-4 col-sm-4">
                          <div class="footer-thumb"> 
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                              <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Información de contacto</h4>
+                              <p>Para nosotros es importante que el paciente se esté en su mejor sentido, para nosotros siempre será la primer opción.</p>
 
                               <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
+                                   <p><i class="fa fa-phone"></i>+(57) 300 324 5436</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@ipscecep.com</a></p>
                               </div>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas nocticias</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
                                         <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>Amazing Technology</h5></a>
-                                        <span>March 08, 2018</span>
+                                        <a href="#"><h5>Tecnologia fascinante</h5></a>
+                                        <span>Junio 28, 2019</span>
                                    </div>
                               </div>
 
@@ -419,8 +419,8 @@
                                         <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>New Healing Process</h5></a>
-                                        <span>February 20, 2018</span>
+                                        <a href="#"><h5>Nuevo proceso de curación</h5></a>
+                                        <span>Enero 23, 2017</span>
                                    </div>
                               </div>
                          </div>
@@ -429,10 +429,10 @@
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb">
                               <div class="opening-hours">
-                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
-                                   <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
-                                   <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
-                                   <p>Sunday <span>Closed</span></p>
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horarios de atención</h4>
+                                   <p>Lunes a Vierners <span>06:00 AM - 6:00 PM</span></p>
+                                   <p>Sabados <span>08:00 AM - 01:00 PM</span></p>
+                                   <p>Domingos <span>No atendemos / CERRADO</span></p>
                               </div> 
 
                               <ul class="social-icon">
@@ -446,17 +446,17 @@
                     <div class="col-md-12 col-sm-12 border-top">
                          <div class="col-md-4 col-sm-6">
                               <div class="copyright-text"> 
-                                   <p>Copyright &copy; 2018 Your Company 
+                                   <p>Copyright &copy; 2012 IPS CECEP 
                                    
-                                   | Design: Tooplate</p>
+                                   | Design: Rafael Londoño</p>
                               </div>
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <div class="footer-link"> 
-                                   <a href="#">Laboratory Tests</a>
-                                   <a href="#">Departments</a>
-                                   <a href="#">Insurance Policy</a>
-                                   <a href="#">Careers</a>
+                                   <a href="#">Pruebas de laboratorio</a>
+                                   <a href="#">Departamentos</a>
+                                   <a href="#">Politicas de privacidad</a>
+                                   <a href="#">Carreras</a>
                               </div>
                          </div>
                          <div class="col-md-2 col-sm-2 text-align-center">
