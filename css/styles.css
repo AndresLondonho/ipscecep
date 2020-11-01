@@ -44,10 +44,9 @@ body {
     
 }
 
-.form-box input[type="text"]:focus, .form-box input[type="password"]:focus {
-    width: 280px;
-    border-color: #30b834;
-}
+
+    
+
 
 .form-box button[type="submit"] {
     border: 0;
