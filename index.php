@@ -3,6 +3,8 @@
 <head>
 
      <title>IPS CECEP</title>
+     <link rel="shortcut icon" href="imgs/icono.ico">
+
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">

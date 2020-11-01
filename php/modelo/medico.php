@@ -2,52 +2,61 @@
     require_once("conexionBD.php");
 
     class Medico extends ConexionDB{
-        private $id_med;
-        private $cc_med;
-        private $nom_med;
-        private $ape_med;
-        private $tel_med;
-        private $sede;
-        private $espec;
-        private $img_med;
+        private $id_func;
+        private $id_priv;
+        private $username;
+        private $password;
+        private $nom_user;
+        private $ape_user;
+        private $tel_user;
+        private $cc_user;
+        private $email_user;
+        private $id_cargo;
+        private $id_espec;
+        
 
         function __construct(){
 
         }
 
-        public function getID_med(){
-            return $this->id_med;
+        public function getID_func(){
+            return $this->id_func;
         }
-        public function getCC_med(){
-            return $this->cc_med;
+        public function getID_priv(){
+            return $this->id_priv;
         }
-        public function getNom_med(){
-            return $this->nom_med;
+        public function getUsername(){
+            return $this->username;
         }
-        public function getApe_med(){
-            return $this->ape_med;
+        public function getPassword(){
+            return $this->password;
         }
-        public function getTel_med(){
-            return $this->tel_med;
+        public function getNom_user(){
+            return $this->nom_user;
         }
-        public function getSede(){
-            return $this->sede;
+        public function getApe_user(){
+            return $this->ape_user;
         }
-        public function getEspec(){
-            return $this->espec;
+        public function getTel_user(){
+            return $this->tel_user;
         }
-        public function getImg_med(){
-            return $this->img_med;
+        public function getCC_user(){
+            return $this->cc_user;
+        }
+        public function getEmail_user(){
+            return $this->email_user;
+        }
+        public function getID_cargo(){
+            return $this->id_cargo;
+        }
+        public function getID_espec(){
+            return $this->id_espec;
         }
 
         public function consultar($cc_med=''){
             if ($cc_med != ''):
                 $this->query = "
-                    select cc_med, concat(nom_med,' ', ape_med) as medico, tel_med,
-                    sede, espec, img_med
-                    from medico
-                    where cc_med = '$cc_med'
-                    order by medico
+                   
                 ";
             $this->obtener_resultados_query();
             endif;
@@ -61,10 +70,14 @@
 
         public function listar(){
             $this->query = "
-                select cc_med, concat(nom_med,' ', ape_med) as medico, tel_med,
-                sede, espec, img_med
-                from medico
-                order by medico
+                SELECT
+                func.cc_user as Cedula, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
+                espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario
+                FROM
+                funcionarios as func 
+                INNER JOIN especialidad as espec ON (func.id_espec = espec.id_espec)
+                INNER JOIN cargo as car on (func.id_cargo = car.id_cargo)
+                ORDER BY Medico
             ";
             $this->obtener_resultados_query();
             return $this->rows;
