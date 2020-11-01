@@ -211,7 +211,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="imgs/cristian2.jpg" class="img-responsive" alt="">
+                              <img src="imgs/cristian.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Cristian Loaiza</h3>
@@ -223,6 +223,90 @@
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-twitter"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/andres.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Andres Londoño</h3>
+                                        <p>Nutricionista profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/esteban.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Esteban Peñaranda</h3>
+                                        <p>Ginecologo profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/diego.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Diego David</h3>
+                                        <p>Medico profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="imgs/vinasco.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Alberto Londoño</h3>
+                                        <p>Pediatra profesional</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> +(57) 300 324 5432</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
                                         </ul>
                                    </div>
 
