@@ -78,7 +78,7 @@
                          <li><a href="#team" class="smoothScroll">Doctores</a></li>
                          <li><a href="#news" class="smoothScroll">Noticias</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contactenos</a></li>
-                         <li class="appointment-btn"><a href="#appointment">Reserva tu cita</a></li>
+                         <li class="appointment-btn"><a href="../ipscecep/login.html">Login</a></li>
                     </ul>
                </div>
 
@@ -105,7 +105,7 @@
                               <div class="item item-second">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Acerca de nuestros laboratorios</h3>
+                                             <h3>Acerca de nosotros</h3>
                                              <h1>Nuevo estilo de vida</h1>
                                              <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">Más de nosotros</a>
                                         </div>
@@ -334,12 +334,12 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
                               <a href="news-detail.html">
-                                   <img src="images/news-image1.jpg" class="img-responsive" alt="">
+                                   <img src="imgs/investigacion.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>Febrero 5, 2019</span>
                                    <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
-                                   <p>No corremos riesgo, corremos con tecnologia la cual es potente para todos nosotros.</p>
+                                   <p>Mantenemos innovando acerca de los recursos que poseemos, haciendo que nuestros usuarios tengan la mejor atención y se sientan como en casa</p>
                                    <div class="author">
                                         <img src="imgs/rafa.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
@@ -355,12 +355,12 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
                               <a href="news-detail.html">
-                                   <img src="images/news-image2.jpg" class="img-responsive" alt="">
+                                   <img src="imgs/avance.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>February 20, 2018</span>
-                                   <h3><a href="news-detail.html">Introduciendo un nuevo proceso de salud</a></h3>
-                                   <p>Para nosotros, siempre la innovación irá de la mano, siempre buscamos cosas nuevas.</p>
+                                   <h3><a href="news-detail.html">Buscando opciones avanzar</a></h3>
+                                   <p>Siempre buscamos en como mejorar, para ello mantenemos en investigaciones frecuentes en tanto a las nuevas maneras de ayudar a las personas y el bien común</p>
                                    <div class="author">
                                         <img src="imgs/diego2.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
@@ -376,12 +376,12 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
                               <a href="news-detail.html">
-                                   <img src="images/news-image3.jpg" class="img-responsive" alt="">
+                                   <img src="imgs/indicadores.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>January 27, 2018</span>
-                                   <h3><a href="news-detail.html">Ver nuestras investigaciones anuales</a></h3>
-                                   <p>Vivamos todos las investigaciones realizadas por parte de nuestro equipo.</p>
+                                   <h3><a href="news-detail.html">¿Cómo nos fue en todo el año?</a></h3>
+                                   <p>Revive todo el proceso del pasado año con nosotros, para ello te mostramos todo lo que realizamos y a las personas que ayudamos en todo el año anterior gracias a nuestros pacientes.</p>
                                    <div class="author">
                                         <img src="imgs/beto.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
@@ -398,64 +398,7 @@
      </section>
 
 
-     <!-- MAKE AN APPOINTMENT -->
-     <section id="appointment" data-stellar-background-ratio="3">
-          <div class="container">
-               <div class="row">
 
-                    <div class="col-md-6 col-sm-6">
-                         <img src="imgs/logo_mo.png" class="img-responsive" alt="">
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- CONTACT FORM HERE -->
-                         <form id="appointment-form" role="form" method="post" action="#">
-
-                              <!-- SECTION TITLE -->
-                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                                   <h2>Separa tu cita</h2>
-                              </div>
-
-                              <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="name">Nombre</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="email">Correo</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electronico">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="date">Fecha de la cita</label>
-                                        <input type="date" name="date" value="" class="form-control">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="select">Selecione departamento:</label>
-                                        <select class="form-control">
-                                             <option>Medicina General</option>
-                                             <option>Traumatologia</option>
-                                             <option>Oftalmologia</option>
-                                             <option>Ginecologia</option>
-                                        </select>
-                                   </div>
-
-                                   <div class="col-md-12 col-sm-12">
-                                        <label for="telephone">Numero de telefono</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Numero de telefono">
-                                        <label for="Message">Mensajes adicionales</label>
-                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Mensaje adicional"></textarea>
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Aceptar</button>
-                                   </div>
-                              </div>
-                        </form>
-                    </div>
-
-               </div>
-          </div>
-     </section>
 
 
      <!-- GOOGLE MAP -->
