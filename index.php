@@ -94,7 +94,7 @@
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3>Hagamos tu vida más feliz</h3>
-                                             <h1>Healthy Living</h1>
+                                             <h1>Vida saludable</h1>
                                              <a href="#team" class="section-btn btn btn-default smoothScroll">Conoce nuestros doctores</a>
                                         </div>
                                    </div>
