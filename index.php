@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Health - Medical Website Template</title>
+     <title>IPS CECEP</title>
 <!--
 
 Template 2098 Health
@@ -45,7 +45,7 @@ http://www.tooplate.com/view/2098-health
                <div class="row">
 
                     <div class="col-md-4 col-sm-5">
-                         <p>Welcome to a Professional Health Care</p>
+                         <p>Bienvenido a un cuidado profesional</p>
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
@@ -77,11 +77,11 @@ http://www.tooplate.com/view/2098-health
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#top" class="smoothScroll">Home</a></li>
-                         <li><a href="#about" class="smoothScroll">About Us</a></li>
-                         <li><a href="#team" class="smoothScroll">Doctors</a></li>
-                         <li><a href="#news" class="smoothScroll">News</a></li>
-                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+                         <li><a href="#top" class="smoothScroll">Inicio</a></li>
+                         <li><a href="#about" class="smoothScroll">Acerca de nosotros</a></li>
+                         <li><a href="#team" class="smoothScroll">Doctores</a></li>
+                         <li><a href="#news" class="smoothScroll">Noticias</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contactenos</a></li>
                          <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li>
                     </ul>
                </div>
@@ -477,14 +477,14 @@ http://www.tooplate.com/view/2098-health
      </footer>
 
      <!-- SCRIPTS -->
-     <script src="../js/jquery.js"></script>
-     <script src="../js/bootstrap.min.js"></script>
-     <script src="../js/jquery.sticky.js"></script>
-     <script src="../js/jquery.stellar.min.js"></script>
-     <script src="../js/wow.min.js"></script>
-     <script src="../js/smoothscroll.js"></script>
-     <script src="../js/owl.carousel.min.js"></script>
-     <script src="../js/custom.js"></script>
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
 
 </body>
 </html>
