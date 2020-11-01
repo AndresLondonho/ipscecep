@@ -174,7 +174,7 @@
 
                                    <div class="team-info">
                                         <h3>Julian Ipia</h3>
-                                        <p>Profesional Oftalmologico</p>
+                                        <p>Oftalmologico profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(57) 300 324 5431</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">docoftalmo@ipscecep.com</a></p>
@@ -299,7 +299,7 @@
                                    <h3><a href="news-detail.html">Ver nuestras investigaciones anuales</a></h3>
                                    <p>Vivamos todos las investigaciones realizadas por parte de nuestro equipo.</p>
                                    <div class="author">
-                                        <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                        <img src="imgs/vinasco.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Carlos Vinasco</h5>
                                              <p>Agente publicitario</p>
@@ -408,21 +408,21 @@
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas nocticias</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="imgs/andres.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>Tecnologia fascinante</h5></a>
-                                        <span>Junio 28, 2019</span>
+                                        <a href="#"><h5>Acerca de nuestra tecnologia</h5></a>
+                                        <span>Febrero 5, 2019</span>
                                    </div>
                               </div>
 
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="imgs/diego.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>Nuevo proceso de curación</h5></a>
-                                        <span>Enero 23, 2017</span>
+                                        <a href="#"><h5>Introduciendo el proceso de salud</h5></a>
+                                        <span>Febrero 20, 2018</span>
                                    </div>
                               </div>
                          </div>
@@ -432,9 +432,9 @@
                          <div class="footer-thumb">
                               <div class="opening-hours">
                                    <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horarios de atención</h4>
-                                   <p>Lunes a Vierners <span>06:00 AM - 6:00 PM</span></p>
-                                   <p>Sabados <span>08:00 AM - 01:00 PM</span></p>
-                                   <p>Domingos <span>No atendemos / CERRADO</span></p>
+                                   <p>Lunes a Viernes:<span>06:00 AM - 6:00 PM</span></p>
+                                   <p>Sabados:<span>08:00 AM - 01:00 PM</span></p>
+                                   <p>Domingos:<span>No atendemos / CERRADO</span></p>
                               </div> 
 
                               <ul class="social-icon">
