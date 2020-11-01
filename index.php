@@ -67,7 +67,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>IPS Centro Cecep</a>
+                    <a href="index.html" class="navbar-brand"> </i>IPS CENTRO CECEP</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -135,7 +135,7 @@
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a <i class="fa fa-h-square"></i>centro de salud</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a ips cecep centro de salud</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p>En nuestro centro de salud contamos con profesionales de alta calidad para prestar un servivio de primera calidad.</p>
                                    <p>Para nuestro orgullo, acabamos de realizar el ingreso del Dr Esteban, el cual es profesional en no tocar a Kelly</p>
