@@ -4,6 +4,11 @@ function operaciones(){
         $("#login").removeClass("hide");
         $("#login").addClass("show");
     })
+
+    $("#login").on("click", "a#cerrar", function(){
+        $("#login").removeClass("show");
+        $("#login").addClass("hide");
+    })
 }
 
 $(document).ready(() => {

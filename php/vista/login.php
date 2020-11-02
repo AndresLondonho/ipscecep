@@ -13,6 +13,7 @@
     
 <!--AQUI SOLO IRIA EL FORMULARIO DEL LOGIN-->
     <form method="post" class="form-box">
+        <a href="#" id="cerrar">X</a>
         <input type="text" name= "username" id="username" placeholder="Usuario" required autofocus>
         <input type="password" name= "password" id="password" placeholder="Contraseña" required>
         <button type="submit" name="login" id="login" value="Login">Iniciar sesion </button>

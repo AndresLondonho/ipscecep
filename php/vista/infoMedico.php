@@ -2,7 +2,7 @@
 <div class="cardinfomed">
         <div class="hcardinfomed">
         <div class="cerrarcard">
-                <a href="#" title="Cerrar" id="cerrar"><img src="imgs/cerrar.png" alt=""></i></a>
+                <a href="#" title="Cerrar" id="cerrar"><img src="../../imgs/cerrar.png" alt=""></i></a>
             </div>
             <div class="imgcard">
                 <img src="imgs/andres.jpg" alt="" id="img_med">
@@ -20,7 +20,7 @@
                 <h5>Sede: <label id="sede"></label></h5>
             </div>
             <div class="editarcard">
-                <a href="#" title="Editar" id="editar"><img src="imgs/editar.png" alt=""></a>
+                <a href="#" title="Editar" id="editar"><img src="../../imgs/editar.png" alt=""></a>
             </div>
         </div>
     </div>
