@@ -53,10 +53,37 @@
             return $this->id_espec;
         }
 
+
+        public function getCedula(){
+            return $this->Cedula;
+        }
+        public function getMedico(){
+            return $this->Medico;
+        }
+        public function getEspecialidad(){
+            return $this->Especialidad;
+        }
+        public function getTelefono(){
+            return $this->Telefono;
+        }
+        public function getSede(){
+            return $this->Sede;
+        }
+
         public function consultar($cc_med=''){
             if ($cc_med != ''):
                 $this->query = "
-                   
+                    SELECT
+                    func.cc_user as Cedula, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
+                    espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario,
+                    sede.nom_sede as Sede
+                    FROM
+                    funcionarios as func 
+                    INNER JOIN especialidad as espec ON (func.id_espec = espec.id_espec)
+                    INNER JOIN cargo as car on (func.id_cargo = car.id_cargo)
+                    INNER JOIN sede as sede on (func.id_sede = sede.id_sede)
+                    WHERE func.cc_user = '$cc_med'
+                    ORDER BY Medico
                 ";
             $this->obtener_resultados_query();
             endif;
