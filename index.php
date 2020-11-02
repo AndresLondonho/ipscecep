@@ -183,6 +183,7 @@
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">oftalmologia@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
                                              <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
                                         </ul>
@@ -203,9 +204,9 @@
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">traumatologia@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
                                         </ul>
                                    </div>
 
@@ -225,6 +226,7 @@
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
                                         </ul>
                                    </div>
@@ -244,9 +246,9 @@
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">nutricionista@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
                                         </ul>
                                    </div>
 
@@ -265,9 +267,9 @@
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">ginecologia@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
                                         </ul>
                                    </div>
 
@@ -286,9 +288,9 @@
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">medicoprofe@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
                                         </ul>
                                    </div>
 
@@ -307,9 +309,9 @@
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">pediatria@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
                                         </ul>
                                    </div>
 
