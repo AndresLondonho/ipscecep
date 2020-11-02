@@ -120,7 +120,7 @@
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3>Consejos para tu salud</h3>
                                              <h1>Beneficios para tu salud</h1>
-                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Leer historias</a>
+                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Leer noticias</a>
                                         </div>
                                    </div>
                               </div>
@@ -140,8 +140,8 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a ips cecep centro de salud</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>En nuestro centro de salud contamos con profesionales de alta calidad para prestar un servivio de primera calidad.</p>
-                                   <p>Para nuestro orgullo, acabamos de realizar el ingreso del Dr Esteban, el cual es profesional en no tocar a Kelly</p>
+                                   <p>En nuestro centro de salud contamos con profesionales de alta calidad para prestar un servivio de primera, siempre dando lo mejor para la comunidad.</p>
+                                   <p>Para orgullo de la comunidad, hemos realizado la contratación de un excelente profesional, el Dr Esteban Peñaranda nos prestará sus servicios los proximos años</p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
                                    <img src="imgs/esteban.jpg" class="img-responsive" alt="">
@@ -180,7 +180,7 @@
                                         <p>Oftalmologico profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 2881</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">docoftalmo@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">oftalmologia@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-linkedin-square"></a></li>
@@ -200,7 +200,7 @@
                                         <p>Traumatologo profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 2669</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">traumatologia@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-facebook-square"></a></li>
@@ -221,7 +221,7 @@
                                         <p>Odontologo profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 3021</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">docodonto@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">odontologia@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-twitter"></a></li>
@@ -241,7 +241,7 @@
                                         <p>Nutricionista profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 4554</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">nutricionista@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-facebook-square"></a></li>
@@ -262,7 +262,7 @@
                                         <p>Ginecologo profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 6969</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">ginecologia@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-facebook-square"></a></li>
@@ -283,7 +283,7 @@
                                         <p>Medico profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 1391</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">medicoprofe@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-facebook-square"></a></li>
@@ -304,7 +304,7 @@
                                         <p>Pediatra profesional</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> +(572) 890 0520 ext. 0623</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">doctrauma@ipscecep.com</a></p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pediatria@ipscecep.com</a></p>
                                         </div>
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-facebook-square"></a></li>
@@ -340,7 +340,7 @@
                                    <img src="imgs/investigacion.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
-                                   <span>Febrero 5, 2019</span>
+                                   <span>Febrero 5, 2017</span>
                                    <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
                                    <p>Mantenemos innovando acerca de los recursos que poseemos, haciendo que nuestros usuarios tengan la mejor atención y se sientan como en casa</p>
                                    <div class="author">
@@ -382,7 +382,7 @@
                                    <img src="imgs/indicadores.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
-                                   <span>January 27, 2018</span>
+                                   <span>January 27, 2020</span>
                                    <h3><a href="news-detail.html">¿Cómo nos fue en todo el año?</a></h3>
                                    <p>Revive todo el proceso del pasado año con nosotros, para ello te mostramos todo lo que realizamos y a las personas que ayudamos en todo el año anterior gracias a nuestros pacientes.</p>
                                    <div class="author">
