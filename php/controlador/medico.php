@@ -17,17 +17,17 @@
             $medico = new Medico();
             $medico->consultar($datos['codigo']);
 
-            if($medico->getCC_cli() == null){
+            if($medico->getCedula() == null){
                 $respuesta = array(
                     'respuesta' => 'no existe'
                 );
             } else {
                 $respuesta = array (
-                    'codigo' => $medico->getCC_cli(),
-                    'nombre' => $medico->getNom_cli(),
-                    'telefono' => $medico->getTel_cli(),
-                    'direccion' => $medico->getDir_cli(),
-                    'genero' => $medico->getGen_cli(),
+                    'cedula' => $medico->getCedula(),
+                    'medico' => $medico->getMedico(),
+                    'telefono' => $medico->getTelefono(),
+                    'sede' => $medico->getSede(),
+                    'especialidad' => $medico->getEspecialidad(),
                     'respuesta' => 'existe'
                 );
             }

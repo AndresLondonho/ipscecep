@@ -20,23 +20,28 @@
 		<!-- div para cargar el formulario para un nuevo municipio o editar un municipio -->
 </div>
 
-
-    <div class="card Recent-Users">
-        <div class="card-header">
-            <h5>Medicos</h5>
-        </div>
-        <div class="card-block px-0 py-3">
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    
-                    <tbody id="tbody">
-                        
-                    </tbody>
-                </table>
+    <div class="container">
+        <div class="card Recent-Users">
+            <div class="card-header">
+                <h5>Medicos</h5>
+            </div>
+            <div class="card-block px-0 py-3">
+                <div id="lista" style="width:60%">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            
+                            <tbody id="tbody">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="detalle" style="wdith: 40%">
+            
+                </div>
             </div>
         </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Librearía para las funcionalidades de la tabla -->
