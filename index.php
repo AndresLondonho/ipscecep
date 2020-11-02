@@ -67,7 +67,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"> </i>IPS CENTRO CECEP</a>
+                    <a href="index.php" class="navbar-brand"> </i>IPS CENTRO CECEP</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -78,7 +78,7 @@
                          <li><a href="#team" class="smoothScroll">Doctores</a></li>
                          <li><a href="#news" class="smoothScroll">Noticias</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contactenos</a></li>
-                         <li class="appointment-btn"><a href="../ipscecep/login.html">Iniciar sesion</a></li>
+                         <li class="appointment-btn"><a href="login.php">Iniciar sesion</a></li>
                     </ul>
                </div>
 
