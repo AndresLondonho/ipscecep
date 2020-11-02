@@ -18,6 +18,7 @@
      <link rel="stylesheet" href="css/animate.css">
      <link rel="stylesheet" href="css/owl.carousel.css">
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/styles.css">
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-style.css">
@@ -71,17 +72,19 @@
                </div>
 
                <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
+               <div class="collapse navbar-collapse" id="menu">
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#top" class="smoothScroll">Inicio</a></li>
                          <li><a href="#about" class="smoothScroll">Acerca de nosotros</a></li>
                          <li><a href="#team" class="smoothScroll">Doctores</a></li>
                          <li><a href="#news" class="smoothScroll">Noticias</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contactenos</a></li>
-                         <li class="appointment-btn"><a href="php/vista/login.php">Iniciar sesion</a></li>
+                         <li><a href="#" id="btnlogin">Iniciar sesion</a></li>
                     </ul>
                </div>
-
+          </div>
+          <div class="login" id="login">
+               
           </div>
      </section>
 
@@ -508,6 +511,8 @@
      <script src="js/smoothscroll.js"></script>
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/custom.js"></script>
+     <script src="js/funcion.js"></script>
+     
 
 </body>
 </html>
