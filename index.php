@@ -443,8 +443,8 @@
                                         <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>Acerca de nuestra tecnologia</h5></a>
-                                        <span>Febrero 5, 2019</span>
+                                        <a href="#"><h5>Bioseguridad en nuestra vida</h5></a>
+                                        <span>Abril 30, 2020</span>
                                    </div>
                               </div>
 
@@ -453,8 +453,8 @@
                                         <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>Introduciendo el proceso de salud</h5></a>
-                                        <span>Febrero 20, 2018</span>
+                                        <a href="#"><h5>Una vida más fitness</h5></a>
+                                        <span>Febrero 5, 2020</span>
                                    </div>
                               </div>
                          </div>
