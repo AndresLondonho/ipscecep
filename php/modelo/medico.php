@@ -69,6 +69,9 @@
         public function getSede(){
             return $this->Sede;
         }
+        public function getImagen(){
+            return $this->Imagen;
+        }
 
         public function consultar($cc_med=''){
             if ($cc_med != ''):
@@ -76,7 +79,7 @@
                     SELECT
                     func.cc_user as Cedula, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
                     espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario,
-                    sede.nom_sede as Sede
+                    sede.nom_sede as Sede, func.img_user as Imagen
                     FROM
                     funcionarios as func 
                     INNER JOIN especialidad as espec ON (func.id_espec = espec.id_espec)
@@ -99,7 +102,8 @@
             $this->query = "
                 SELECT
                 func.cc_user as Cedula, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
-                espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario
+                espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario,
+                func.img_user as Imagen
                 FROM
                 funcionarios as func 
                 INNER JOIN especialidad as espec ON (func.id_espec = espec.id_espec)

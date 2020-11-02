@@ -2,13 +2,13 @@ var dt;
 
 function medico(){
 
+    //Funciones de la vista principal del medico
     $("#detalle").on("click", "a#cerrar", function(){
         $("#detalle").removeClass("show");
         $("#detalle").addClass("hide");
     })
 
-
-    $("#lista").on("click", "a#editar", function(){
+    $("#lista").on("click", "a#vcard", function(){
         var codigo = $(this).data('codigo');
         console.log(codigo);
 
@@ -28,16 +28,28 @@ function medico(){
                     text: 'El medico con cedula '+codigo+' no existe en la base de datos'
                 })
             } else {
+                document.getElementById("img_med").innerHTML = '<img src="../../imgs/'+medico.imagen+'">';
                 document.getElementById("nom_med").innerHTML = medico.medico;
                 document.getElementById("espec").innerHTML = medico.especialidad;
                 document.getElementById("ced_med").innerHTML = medico.cedula;
                 document.getElementById("tel_med").innerHTML = medico.telefono;
                 document.getElementById("sede").innerHTML = medico.sede;
+                document.getElementById("editarmed").innerHTML = '<a href="#" data-codigo="'+medico.cedula+' " title="Cerrar" id="editar"><img src="../../imgs/editar.png" alt=""></i></a>';
             }
         })
+
+        
+        
     })
     
-    
+
+
+    //Funciones de la vista de la información del medico
+
+    $("#detalle").on("click", "a#editar", function(){
+        var codigo = $(this).data('codigo');
+        console.log(codigo);
+    })
 
 }
 
@@ -55,9 +67,9 @@ $(document).ready(() => {
                 console.log("registros: "+js.data.length);
                 dt+= 
                 '<tr class="unread">'+
-                '<td><img class="rounded-circle" style="width:40px;" src="https://i.pinimg.com/236x/4d/99/80/4d9980910c0fed8d590c6cb896f8f862.jpg" alt="activity-user"></td>'+
+                '<td><img class="rounded-circle" style="width:40px;" src="../../imgs/'+js.data[i].Imagen+'" alt="activity-user"></td>'+
                 '<td>'+
-                    '<a class="mb-1" data-codigo="'+js.data[i].Cedula+'" href="#" id="editar">'+js.data[i].Medico+'</a>'+
+                    '<a class="mb-1" data-codigo="'+js.data[i].Cedula+'" href="#" id="vcard">'+js.data[i].Medico+'</a>'+
                     '<p class="m-0">'+js.data[i].Especialidad+'</p>'+
                 '</td>'+
                 '<td><a href="#!" class="label theme-bg2 text-white f-12">Historial</a></td>'+

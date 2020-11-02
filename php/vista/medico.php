@@ -26,7 +26,7 @@
                 <h5>Medicos</h5>
             </div>
             <div class="card-block px-0 py-3">
-                <div id="lista" style="width:60%">
+                <div id="lista" style="width:60%;">
                     <div class="table-responsive">
                         <table class="table table-hover">
                             

@@ -28,6 +28,7 @@
                     'telefono' => $medico->getTelefono(),
                     'sede' => $medico->getSede(),
                     'especialidad' => $medico->getEspecialidad(),
+                    'imagen' => $medico->getImagen(),
                     'respuesta' => 'existe'
                 );
             }
