@@ -1,4 +1,22 @@
 <?php
+
+	session_start();
+	if(isset($_POST['username']) && isset($_POST["password"])){
+		$user=mysqli_real_escape_string($connect, $_POST['username']);
+		$password=mysqli_real_escape_string($connect, $_POST['password']);
+		$sql = "SELECT username FROM funcionarios WHERE (username='$username' OR email_user='$username') AND password='$password'";
+		$result = mysqli_query($connect, $sql);
+		$num_row = mysqli_num_rows($result);
+		if($num_row == "1"){
+			$data= mysqli_fetch_array($result);
+			$_SESSION["username"] = $data["username"];
+			echo "1";
+		}else{
+			echo "Error";
+		}
+
+	}
+
     abstract class ConexionDB{
         private static $db_host = "localhost";
         private static $db_user = "root";
@@ -6,15 +24,13 @@
         protected $db_name = "ips_cecep";
         protected $query;
         protected $rows = array();
-        private $conexion;
-
-
+		private $conexion;
+		
         abstract protected function consultar();
         abstract protected function nuevo();
         abstract protected function editar();
         abstract protected function borrar();
-        abstract protected function listar();
-
+		abstract protected function listar();
 
         private function abrir_conexion(){
             $this->conexion = 
