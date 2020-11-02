@@ -4,22 +4,7 @@
         header("location:iniciolgejemplo.php");
     }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IPS Login</title>
-    <link rel="shortcut icon" href="imgs/icono.ico">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <script src="js/jquery-3.5.1.min.js" charset="utf-8"></script>
-</head>
-
-<body>
+<!--AQUI SOLO IRIA EL FORMULARIO DEL LOGIN-->
     <form method="post" class="form-box animated fadeInUp">
         <h1 class="form-title">IPS CECEP </h1>
         <input type="text" name= "user" id="user" placeholder="Usuario" required autofocus>
@@ -29,9 +14,9 @@
             <span id= "result"></span>
         </div>
     </form>
-</body>
+<!--Y PUES AQUI ABAJO LLAMARIAS EL ARCHIVO DONDE ESTAN LOS SCRIPITS-->
 
-</html>
+
 
 <script>
     $(document).ready(function(){
@@ -62,5 +47,3 @@
         });
     });
 </script>
-
-<!-- </body background="https://i.pinimg.com/originals/eb/f2/b1/ebf2b1e0b9de6ed73c0612f19ac9235c.jpg"> -->
