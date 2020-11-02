@@ -5,8 +5,7 @@
     }
 ?>
 <!--AQUI SOLO IRIA EL FORMULARIO DEL LOGIN-->
-    <form method="post" class="form-box animated fadeInUp">
-        <h1 class="form-title">IPS CECEP </h1>
+    <form method="post" class="form-box">
         <input type="text" name= "username" id="username" placeholder="Usuario" required autofocus>
         <input type="password" name= "password" id="password" placeholder="Contraseña" required>
         <button type="submit" name="login" id="login">Iniciar sesion </button>
