@@ -12,7 +12,7 @@
     </head>
     
 <!--AQUI SOLO IRIA EL FORMULARIO DEL LOGIN-->
-    <form method="post" class="form-box">
+    <form method="post" class="form-box" action="php/vista/dashboard.php">
         <a href="#" id="cerrar">X</a>
         <input type="text" name= "username" id="username" placeholder="Usuario" required autofocus>
         <input type="password" name= "password" id="password" placeholder="Contraseña" required>

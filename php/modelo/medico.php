@@ -77,7 +77,7 @@
             if ($cc_med != ''):
                 $this->query = "
                     SELECT
-                    func.cc_user as Cedula, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
+                    func.cc_user as Cedula, func.nom_user, func.ape_user, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
                     espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario,
                     sede.nom_sede as Sede, func.img_user as Imagen
                     FROM

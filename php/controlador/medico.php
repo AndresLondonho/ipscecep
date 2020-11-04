@@ -24,6 +24,8 @@
             } else {
                 $respuesta = array (
                     'cedula' => $medico->getCedula(),
+                    'nombre' => $medico->getNom_user(),
+                    'apellido' => $medico->getApe_user(),
                     'medico' => $medico->getMedico(),
                     'telefono' => $medico->getTelefono(),
                     'sede' => $medico->getSede(),

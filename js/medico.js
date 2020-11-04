@@ -2,6 +2,12 @@ var dt;
 
 function medico(){
 
+    $("#nuevo-editar").on("click","a#cerrar",function(){
+        $("#nuevo-editar").removeClass("show");
+        $("#nuevo-editar").addClass("hide");
+    })
+
+
     //Funciones de la vista principal del medico
     $("#detalle").on("click", "a#cerrar", function(){
         $("#detalle").removeClass("show");
@@ -12,8 +18,9 @@ function medico(){
         var codigo = $(this).data('codigo');
         console.log(codigo);
 
-        $("#detalle").load("infoMedico.php");
-        $("#detalle").addClass("show");
+        $("#nuevo-editar").load("medico/infoMedico.php");
+        $("#nuevo-editar").removeClass("hide");
+        $("#nuevo-editar").addClass("show");
 
         $.ajax({
             type: "get",
@@ -34,21 +41,49 @@ function medico(){
                 document.getElementById("ced_med").innerHTML = medico.cedula;
                 document.getElementById("tel_med").innerHTML = medico.telefono;
                 document.getElementById("sede").innerHTML = medico.sede;
-                document.getElementById("editarmed").innerHTML = '<a href="#" data-codigo="'+medico.cedula+' " title="Cerrar" id="editar"><img src="../../imgs/editar.png" alt=""></i></a>';
+                document.getElementById("editarmed").innerHTML = '<a href="#" data-codigo="'+medico.cedula+' " title="Editar" id="editar"><img src="../../imgs/editar.png" alt=""></i></a>';
             }
         })
 
-        
-        
     })
     
 
 
     //Funciones de la vista de la información del medico
 
-    $("#detalle").on("click", "a#editar", function(){
+    $("#nuevo-editar").on("click", "a#editar", function(){
         var codigo = $(this).data('codigo');
         console.log(codigo);
+        $("#nuevo-editar").load("medico/editarMedico.php");
+        $("#listar").addClass("hide");
+
+
+        $.ajax({
+            type: "get",
+            url: "../controlador/medico.php",
+            data: {codigo: codigo, accion: 'consultar'},
+            dataType: "json"
+        }).done(function (medico){
+            if (medico.respuesta === "no existe"){
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: 'El medico con cedula '+codigo+' no existe en la base de datos'
+                })
+            } else {
+                document.getElementById("cc_med").innerHTML = medico.cedula;
+                $("#nom_med").val(medico.nombre);
+                $("#ape_med").val(medico.apellido);
+                $("#tel_med").val(medico.telefono);
+                $("#espec_med").val(medico.especialidad);
+
+            }
+        })
+    })
+
+
+    $("#contenidoDash").on("click", "button#actualizar", function(){
+        var datos = $("#frmmedico").serialize();
     })
 
 }

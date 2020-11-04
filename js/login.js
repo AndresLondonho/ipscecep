@@ -25,3 +25,13 @@
         };
     });
 });*/
+
+function login(){
+    
+}
+
+$(document).ready(() => {
+
+
+    login();
+})
