@@ -24,10 +24,10 @@
             } else {
                 $respuesta = array (
                     'cedula' => $medico->getCedula(),
-                    'nombre' => $medico->getNom_user(),
-                    'apellido' => $medico->getApe_user(),
+                    'nom_user' => $medico->getNom_user(),
+                    'ape_user' => $medico->getApe_user(),
                     'medico' => $medico->getMedico(),
-                    'telefono' => $medico->getTelefono(),
+                    'tel_user' => $medico->getTelefono(),
                     'sede' => $medico->getSede(),
                     'especialidad' => $medico->getEspecialidad(),
                     'imagen' => $medico->getImagen(),

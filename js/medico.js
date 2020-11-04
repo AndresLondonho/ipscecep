@@ -31,8 +31,8 @@ function medico(){
                 document.getElementById("img_med").innerHTML = '<img src="../../imgs/'+medico.imagen+'">';
                 document.getElementById("nom_med").innerHTML = medico.medico;
                 document.getElementById("espec").innerHTML = medico.especialidad;
-                document.getElementById("ced_med").innerHTML = medico.cedula;
-                document.getElementById("tel_med").innerHTML = medico.telefono;
+                document.getElementById("ced_med").innerHTML = medico.cc_med;
+                document.getElementById("tel_med").innerHTML = medico.tel_user;
                 document.getElementById("sede").innerHTML = medico.sede;
                 document.getElementById("editarmed").innerHTML = '<a href="#" data-codigo="'+medico.cedula+' " title="Editar" id="editar"><img src="../../imgs/editar.png" alt=""></i></a>';
             }
@@ -62,10 +62,10 @@ function medico(){
                     text: 'El medico con cedula '+codigo+' no existe en la base de datos'
                 })
             } else {
-                document.getElementById("cc_med").innerHTML = medico.cedula;
-                $("#nom_med").val(medico.nombre);
-                $("#ape_med").val(medico.apellido);
-                $("#tel_med").val(medico.telefono);
+                document.getElementById("cc_med").innerHTML = '<input type="hidden" value="'+medico.cc_user+'">'+medico.cc_user;
+                $("#nom_med").val(medico.nom_user);
+                $("#ape_med").val(medico.ape_user);
+                $("#tel_med").val(medico.tel_user);
                 $("#espec_med").val(medico.especialidad);
 
             }
@@ -75,6 +75,29 @@ function medico(){
 
     $("#contenidoDash").on("click", "button#actualizar", function(){
         var datos = $("#frmmedico").serialize();
+        console.log(datos);
+        $.ajax({
+            type: "get",
+            url: "../controlador/medico.php",
+            data: datos,
+            dataType: "json"
+        }).done(function(resultado){
+            if(resultado.respuesta){
+                swal(
+                    'Actualizado',
+                    'Se actualizaron los datos correctamente',
+                    'success'
+                )
+            } else {
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: 'Algo ha salido mal'
+                })
+            }
+        })
+
+        console.log(datos);
     })
 
 }
