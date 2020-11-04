@@ -1,7 +1,7 @@
 
 function dashboard(){
     $(".sidebar").on("click","a#gestionM",function(){
-        $("#listar").load("medico/medico.php");
+        $("#contenidoDash").load("medico/medico.php");
     })
 
 }

@@ -122,7 +122,7 @@
                 $nom_med = utf8_decode($nom_med);
                 $ape_med = utf8_decode($ape_med);
                 $this->query = "
-                    insert into medico
+                    insert into funcionarios
                     (id_med, cc_med, nom_med, ape_med, tel_med, sede, espec, img_med)
                     values
                     (null, '$cc_med', '$nom_med', '$ape_med', '$tel_med', '$sede', '$espec', '$img_med')
@@ -135,24 +135,20 @@
             foreach ($datos as $campo => $valor):
                 $$campo = $valor;
             endforeach;
-            $nom_med = utf8_decode($nom_med);
-            $ape_med = utf8_decode($ape_med);
             $this->query = "
-                update medico 
+                update funcionarios 
                 set
-                nom_emp = '$nom_emp',
-                ape_emp = '$ape_emp',
-                tel_emp = '$tel_emp',
-                sede = '$sede',
-                espec = '$espec'
-                where cc_emp = '$cc_emp'
+                nom_user = '$nom_user',
+                ape_user = '$ape_user',
+                tel_user = '$tel_user'
+                where cc_user = '$cc_user'
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
         }
         public function borrar($cc_med=''){
             $this->query = "
-                delete from medico
+                delete from funcionarios
                 where cc_emp = '$cc_med'
             ";
             $resultado = $this->ejecutar_query_simple();

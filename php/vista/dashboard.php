@@ -66,11 +66,8 @@
 
     
 
-    <div class="content">
-    <div id="listar">
-      </div>
-      <div id="contenidoDash">
-      </div>
+    <div class="content" id="contenidoDash">
+      
     </div>
 
     <script type="text/javascript">
