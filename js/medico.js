@@ -2,12 +2,6 @@ var dt;
 
 function medico(){
 
-    $("#nuevo-editar").on("click","a#cerrar",function(){
-        $("#nuevo-editar").removeClass("show");
-        $("#nuevo-editar").addClass("hide");
-    })
-
-
     //Funciones de la vista principal del medico
     $("#detalle").on("click", "a#cerrar", function(){
         $("#detalle").removeClass("show");
@@ -18,9 +12,8 @@ function medico(){
         var codigo = $(this).data('codigo');
         console.log(codigo);
 
-        $("#nuevo-editar").load("medico/infoMedico.php");
-        $("#nuevo-editar").removeClass("hide");
-        $("#nuevo-editar").addClass("show");
+        $("#contenidoDash").load("medico/infoMedico.php");
+        $("#detalle").addClass("show");
 
         $.ajax({
             type: "get",
@@ -51,15 +44,10 @@ function medico(){
 
     //Funciones de la vista de la información del medico
 
-    $("#nuevo-editar").on("click", "a#editar", function(){
+    $("#contenidoDash").on("click", "a#editar", function(){
         var codigo = $(this).data('codigo');
         console.log(codigo);
-        $("#contenidoDash").load("medico/editarMedico.php");
-        $("#contenidoDash").removeClass("hide");
-        $("#contenidoDash").addClass("show");
-        $("#listar").removeClass("show");
-        $("#listar").addClass("hide");
-
+        $("#contenidoDash").load("medico/editarMedico.php")
 
         $.ajax({
             type: "get",
