@@ -1,8 +1,65 @@
 <?php
+    include_once '../modelo/conexionBD.php';
+
     session_start();
-    if(isset($_SESSION["username"])){
-        header("location:iniciolgejemplo.php");
+    
+    //Saber si debo cerrar sesion, pruebo con get para que me facilite las cosas por ahora
+
+    if(isset($_GET['cerrar_sesion'])){
+        session_unset();
+
+        session_destroy();
     }
+
+    //Revisar si hay sesión de rol
+
+    if(isset($_SESSION['rol'])){
+        switch($_SESSION['rol']){
+            case 1:
+                header('location:php/vista/dashboard.php');
+            break;
+
+            case 2:
+                header('location:php/vista/inter.php');
+            break;
+
+            default:
+        }
+    }
+
+    //Autenticar a un usuario
+
+    if(isset($POST['username']) && isset($POST['password'])){
+        $username = $POST['username'];
+        $password = $POST['password'];
+
+        $db = new ConexionDB();
+        $query = $db->ConexionDB::abrir_conexion()->prepare('SELECT * FROM funcionarios WHERE username = :username AND password = :password');
+        $query->execute(['username' => $username, 'password' => $password]);
+
+        $row = $query->fetch(PDO::FETCH_NUM);
+
+        if($row == true){
+            //validar el rol
+            $rol = $row[1];
+            $_SESSION['rol'] = $rol;
+
+            switch($_SESSION['rol']){
+                case 1:
+                    header('Location:php/vista/dashboard.php');
+                break;
+    
+                case 2:
+                    header('Location:php/vista/inter.php');
+                break;
+    
+                default:
+            }
+
+        }else{
+            echo "El usuario o contraseña son incorrectos";
+        }
+    } 
 ?>
     <head>
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
@@ -12,41 +69,12 @@
     </head>
     
 <!--AQUI SOLO IRIA EL FORMULARIO DEL LOGIN-->
-    <form method="post" class="form-box" action="php/vista/dashboard.php">
+    <form method="POST" class="form-box" action="#">
         <a href="#" id="cerrar">X</a>
-        <input type="text" name= "username" id="username" placeholder="Usuario" required autofocus>
-        <input type="password" name= "password" id="password" placeholder="Contraseña" required>
-        <button type="submit" name="login" id="login" value="Login">Iniciar sesion </button>
+        <input type="text" id="username" placeholder="Usuario" required autofocus>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Iniciar sesion </button>
         <div>
             <span id= "result"></span>
         </div>
     </form>
-<!--Y PUES AQUI ABAJO LLAMARIAS EL ARCHIVO DONDE ESTAN LOS SCRIPITS-->
-
-<script>
-    $(document).ready(function(){
-    $('#login').click(function(){
-        var username=('#username').val();
-        var password=('#password').val();
-        if($.trim(username).length > 0 && $.trim(password).length > 0){
-            $.ajax({
-                url:"conexionDB.php",
-                method:"POST",
-                data:{username:username, password:password},
-                cache:"false",
-                beforeSend: function(){
-                    $('#login').val("conectando...");
-                },
-                success:function(data){
-                    $('#login').val("Login");
-                    if(data=="1"){
-                        $(location).attr('href', 'php/vista/iniciolgejemplo.php')
-                    }else{
-                        $("#result").hmtl();    
-                    }
-                }
-            });
-        };
-    });
-});
-</script>
