@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-11-2020 a las 17:17:25
+-- Tiempo de generación: 04-11-2020 a las 02:14:10
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -37,7 +37,9 @@ CREATE TABLE `cargo` (
 --
 
 INSERT INTO `cargo` (`id_cargo`, `nom_cargo`) VALUES
-(1, 'Director de Sede');
+(1, 'Director de Sede'),
+(2, 'Medico'),
+(3, 'Asesor de clientes');
 
 -- --------------------------------------------------------
 
@@ -74,6 +76,58 @@ CREATE TABLE `ciudad` (
 
 INSERT INTO `ciudad` (`id_ciu`, `nom_ciu`, `id_pais`) VALUES
 (1001, 'Cali', 101);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `especialidad`
+--
+
+CREATE TABLE `especialidad` (
+  `id_espec` int(4) NOT NULL,
+  `nom_espec` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `especialidad`
+--
+
+INSERT INTO `especialidad` (`id_espec`, `nom_espec`) VALUES
+(1, 'Medico General'),
+(2, 'Odontologo'),
+(3, 'Ginecologo'),
+(4, 'Oftalmologo'),
+(5, 'Traumatologo');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `funcionarios`
+--
+
+CREATE TABLE `funcionarios` (
+  `id_func` int(4) NOT NULL,
+  `id_priv` int(4) NOT NULL,
+  `username` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `nom_user` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `ape_user` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `tel_user` int(10) NOT NULL,
+  `cc_user` bigint(10) NOT NULL,
+  `email_user` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `id_cargo` int(4) DEFAULT NULL,
+  `id_espec` int(4) DEFAULT NULL,
+  `id_sede` int(4) NOT NULL,
+  `img_user` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `funcionarios`
+--
+
+INSERT INTO `funcionarios` (`id_func`, `id_priv`, `username`, `password`, `nom_user`, `ape_user`, `tel_user`, `cc_user`, `email_user`, `id_cargo`, `id_espec`, `id_sede`, `img_user`) VALUES
+(101, 2, 'medico1', 'ytfrcyjvguyr', 'Cristian', 'Londono', 1234567, 1234894, 'yoquese@menos.com', 2, 3, 1011, 'cristian.jpg'),
+(102, 2, 'medico2', 'asaefcdv cdaff', 'Rafael', 'Loaiza', 5154861, 84512354, 'asdvausb@dufhs.com', 2, 1, 1011, 'andres.jpg');
 
 -- --------------------------------------------------------
 
@@ -149,28 +203,21 @@ INSERT INTO `pais` (`id_pais`, `nom_pais`, `cap_pais`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `rol`
+-- Estructura de tabla para la tabla `privilegios`
 --
 
-CREATE TABLE `rol` (
-  `id_rol` int(4) NOT NULL,
-  `tipo_rol` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `username` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `nom_user` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `ape_user` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `tel_user` int(10) NOT NULL,
-  `cc_user` bigint(10) NOT NULL,
-  `email_user` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `id_cargo` int(4) NOT NULL
+CREATE TABLE `privilegios` (
+  `id_priv` int(1) NOT NULL,
+  `nom_priv` varchar(20) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `rol`
+-- Volcado de datos para la tabla `privilegios`
 --
 
-INSERT INTO `rol` (`id_rol`, `tipo_rol`, `username`, `password`, `nom_user`, `ape_user`, `tel_user`, `cc_user`, `email_user`, `id_cargo`) VALUES
-(10001, 'Usuario Intermedio', 's6an', '12345', 'cristian', 'londoño', 1234567, 111248654, 'yoquese@menos.com', 1);
+INSERT INTO `privilegios` (`id_priv`, `nom_priv`) VALUES
+(1, 'Administrador'),
+(2, 'Intermedio');
 
 -- --------------------------------------------------------
 
@@ -184,7 +231,7 @@ CREATE TABLE `sede` (
   `dir_sede` varchar(30) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Direccion de la sede',
   `tel_sede` int(10) NOT NULL COMMENT 'Telefono de la sede',
   `id_ciu` int(4) NOT NULL COMMENT 'Codigo de la ciudad a la que pertenece la sede',
-  `id_rol` int(4) NOT NULL
+  `id_rol` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -192,7 +239,7 @@ CREATE TABLE `sede` (
 --
 
 INSERT INTO `sede` (`id_sede`, `nom_sede`, `dir_sede`, `tel_sede`, `id_ciu`, `id_rol`) VALUES
-(1011, 'Champagnat', 'Cl. 9b #29a67', 3828282, 1001, 10001);
+(1011, 'Champagnat', 'Cl. 9b #29a67', 3828282, 1001, NULL);
 
 -- --------------------------------------------------------
 
@@ -234,6 +281,23 @@ ALTER TABLE `ciudad`
   ADD KEY `id_pais` (`id_pais`);
 
 --
+-- Indices de la tabla `especialidad`
+--
+ALTER TABLE `especialidad`
+  ADD PRIMARY KEY (`id_espec`);
+
+--
+-- Indices de la tabla `funcionarios`
+--
+ALTER TABLE `funcionarios`
+  ADD PRIMARY KEY (`id_func`),
+  ADD UNIQUE KEY `cc_user` (`cc_user`),
+  ADD KEY `id_cargo` (`id_cargo`),
+  ADD KEY `id_priv` (`id_priv`),
+  ADD KEY `id_espec` (`id_espec`),
+  ADD KEY `id_sede` (`id_sede`);
+
+--
 -- Indices de la tabla `medico`
 --
 ALTER TABLE `medico`
@@ -254,12 +318,10 @@ ALTER TABLE `pais`
   ADD PRIMARY KEY (`id_pais`);
 
 --
--- Indices de la tabla `rol`
+-- Indices de la tabla `privilegios`
 --
-ALTER TABLE `rol`
-  ADD PRIMARY KEY (`id_rol`),
-  ADD UNIQUE KEY `cc_user` (`cc_user`),
-  ADD KEY `id_cargo` (`id_cargo`);
+ALTER TABLE `privilegios`
+  ADD PRIMARY KEY (`id_priv`);
 
 --
 -- Indices de la tabla `sede`
@@ -305,7 +367,7 @@ ALTER TABLE `pacientes`
 -- Filtros para la tabla `cita`
 --
 ALTER TABLE `cita`
-  ADD CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`),
+  ADD CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `funcionarios` (`id_func`),
   ADD CONSTRAINT `cita_ibfk_2` FOREIGN KEY (`id_cargo`) REFERENCES `cargo` (`id_cargo`),
   ADD CONSTRAINT `cita_ibfk_3` FOREIGN KEY (`id_serv`) REFERENCES `servicios` (`id_serv`),
   ADD CONSTRAINT `cita_ibfk_4` FOREIGN KEY (`id_pac`) REFERENCES `pacientes` (`cc_pac`),
@@ -318,23 +380,26 @@ ALTER TABLE `ciudad`
   ADD CONSTRAINT `ciudad_ibfk_1` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id_pais`);
 
 --
+-- Filtros para la tabla `funcionarios`
+--
+ALTER TABLE `funcionarios`
+  ADD CONSTRAINT `funcionarios_ibfk_1` FOREIGN KEY (`id_cargo`) REFERENCES `cargo` (`id_cargo`),
+  ADD CONSTRAINT `funcionarios_ibfk_2` FOREIGN KEY (`id_priv`) REFERENCES `privilegios` (`id_priv`),
+  ADD CONSTRAINT `funcionarios_ibfk_3` FOREIGN KEY (`id_espec`) REFERENCES `especialidad` (`id_espec`),
+  ADD CONSTRAINT `funcionarios_ibfk_4` FOREIGN KEY (`id_sede`) REFERENCES `sede` (`id_sede`);
+
+--
 -- Filtros para la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
   ADD CONSTRAINT `pacientes_ibfk_1` FOREIGN KEY (`id_ciu`) REFERENCES `ciudad` (`id_ciu`);
 
 --
--- Filtros para la tabla `rol`
---
-ALTER TABLE `rol`
-  ADD CONSTRAINT `rol_ibfk_1` FOREIGN KEY (`id_cargo`) REFERENCES `cargo` (`id_cargo`);
-
---
 -- Filtros para la tabla `sede`
 --
 ALTER TABLE `sede`
   ADD CONSTRAINT `sede_ibfk_1` FOREIGN KEY (`id_ciu`) REFERENCES `ciudad` (`id_ciu`),
-  ADD CONSTRAINT `sede_ibfk_2` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`);
+  ADD CONSTRAINT `sede_ibfk_2` FOREIGN KEY (`id_rol`) REFERENCES `funcionarios` (`id_func`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
