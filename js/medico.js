@@ -54,7 +54,10 @@ function medico(){
     $("#nuevo-editar").on("click", "a#editar", function(){
         var codigo = $(this).data('codigo');
         console.log(codigo);
-        $("#nuevo-editar").load("medico/editarMedico.php");
+        $("#contenidoDash").load("medico/editarMedico.php");
+        $("#contenidoDash").removeClass("hide");
+        $("#contenidoDash").addClass("show");
+        $("#listar").removeClass("show");
         $("#listar").addClass("hide");
 
 

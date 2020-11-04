@@ -67,11 +67,11 @@
     
 
     <div class="content">
-    <div id="listar">
+      <div id="listar">
       </div>
       <div id="contenidoDash">
       </div>
-    </div>
+      </div>
 
     <script type="text/javascript">
     $(document).ready(function(){
