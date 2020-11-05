@@ -79,7 +79,7 @@
                          <li><a href="#team" class="smoothScroll">Doctores</a></li>
                          <li><a href="#news" class="smoothScroll">Noticias</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contactenos</a></li>
-                         <li class="appointment-btn"><a href="#" id="btnlogin">Iniciar sesion</a></li>
+                         <li class="appointment-btn"><a href="php/vista/login.php" id="btnlogin">Iniciar sesion</a></li>
                     </ul>
                </div>
           </div>
