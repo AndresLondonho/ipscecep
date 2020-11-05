@@ -17,13 +17,6 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!-- fontawesome icon -->
-  <link rel="stylesheet" href="../../assets/fonts/fontawesome/css/fontawesome-all.min.css">
-  <!-- animation css -->
-  <link rel="stylesheet" href="../../assets/plugins/animation/css/animate.min.css">
-  <!-- vendor css -->
-  <link rel="stylesheet" href="../../assets/css/style.css">
-
 
 
 
@@ -56,8 +49,8 @@
       </div>
       <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
         <a href="#" id="gestionP"><i class="fas fa-cogs"></i><span>Gestion de Pacientes</span></a>
-        <a href="#" id="gestionM"><i class="fas fa-cogs"></i><span>Gestion de Medicos</span></a>
-        <a href="#" id="gestionC"><i class="fas fa-cogs"></i><span>Gestion de Citas</span></a>
+        <a href="medico/medico.php" id="gestionM"><i class="fas fa-cogs"></i><span>Gestion de Medicos</span></a>
+        <a href="citas/cita.php" id="gestionC"><i class="fas fa-cogs"></i><span>Gestion de Citas</span></a>
         <a href="#"><i class="fas fa-info-circle"></i><span>Informacion</span></a>
         <a href="#"><i class="fas fa-info-circle"></i><span>Ayuda</span></a>
         <a href="#"><i class="fas fa-sliders-h"></i><span>Obciones</span></a>
@@ -66,7 +59,7 @@
 
     
 
-    <div class="content" id="contenidoDash">
+    <div class="content hide" id="contenidoDash">
       
     </div>
 
@@ -102,6 +95,8 @@
 <script src="../../js/owl.carousel.min.js"></script>
 <script src="../../js/custom.js"></script>
 <script src="../../js/dashboard.js"></script>
+
+
 
   </body>
 </html>

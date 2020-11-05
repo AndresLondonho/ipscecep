@@ -71,18 +71,7 @@ body {
 .medico{
   display: flex;
 }
-#lista{
-  width: 40%;
-  margin-left: 5%;
-  border: 1px solid black;
-}
-#detalle{
-  width: 40%;
-  height: auto;
-  margin-left: 10%;
-  margin-right: 5%;
-  border: 1px solid black;
-}
+
 
 
 /**==================

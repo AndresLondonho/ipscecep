@@ -10,24 +10,25 @@
                             </div>
                             <div class="card-body">
                                 <form id="frmmedico">
-                                    <h3>Cedula: <label id="cc_med"></label></h3>
+                                    <h3>Cedula: <label id="ced"></label></h3>
+                                    <input type="hidden" id="cc_user" name="cc_user" value="">
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <h5>Información personal</h5>                                                        
                                             <div class="form-group">
                                                 <label for="nombre">Nombres:</label>
-                                                <input type="text" class="form-control" id="nom_med" value="">
+                                                <input type="text" class="form-control" id="nom_user" name="nom_user" value="">
                                                 <small class="form-text text-muted">Ingrese nombres para modificar.</small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="apellido">Apellidos:</label>
-                                                <input type="text" class="form-control" id="ape_med" value="">
+                                                <input type="text" class="form-control" id="ape_user" name="ape_user" value="">
                                                 <small class="form-text text-muted">Ingrese apellidos para modificar.</small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="telefono">Telefono:</label>
-                                                <input type="text" class="form-control" id="tel_med" value="">
+                                                <input type="text" class="form-control" id="tel_user" name="tel_user" value="">
                                                 <small class="form-text text-muted">Ingrese telefono para modificar.</small>
                                             </div>    
                                         </div>

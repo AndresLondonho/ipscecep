@@ -1,9 +1,15 @@
 
 function dashboard(){
-    $(".sidebar").on("click","a#gestionM",function(){
-        $("#contenidoDash").load("medico/medico.php");
+    $("#sidebar a").click(function(e){
+        e.preventDefault();
+        var url = $(this).attr("href");
+        $.post(url, function(resultado){
+            if(url!="#")
+            $("#contenidoDash").removeClass("hide");
+            $("#contenidoDash").addClass("show");
+            $("#contenidoDash").html(resultado);
+        })
     })
-
 }
 
 $(document).ready(() => {

@@ -31,7 +31,7 @@ function medico(){
                 document.getElementById("img_med").innerHTML = '<img src="../../imgs/'+medico.imagen+'">';
                 document.getElementById("nom_med").innerHTML = medico.medico;
                 document.getElementById("espec").innerHTML = medico.especialidad;
-                document.getElementById("ced_med").innerHTML = medico.cc_med;
+                document.getElementById("ced_med").innerHTML = medico.cedula;
                 document.getElementById("tel_med").innerHTML = medico.tel_user;
                 document.getElementById("sede").innerHTML = medico.sede;
                 document.getElementById("editarmed").innerHTML = '<a href="#" data-codigo="'+medico.cedula+' " title="Editar" id="editar"><img src="../../imgs/editar.png" alt=""></i></a>';
@@ -62,11 +62,11 @@ function medico(){
                     text: 'El medico con cedula '+codigo+' no existe en la base de datos'
                 })
             } else {
-                document.getElementById("cc_med").innerHTML = '<input type="hidden" value="'+medico.cc_user+'">'+medico.cc_user;
-                $("#nom_med").val(medico.nom_user);
-                $("#ape_med").val(medico.ape_user);
-                $("#tel_med").val(medico.tel_user);
-                $("#espec_med").val(medico.especialidad);
+                document.getElementById("ced").innerHTML = medico.cedula;
+                $("#cc_user").val(medico.cedula);
+                $("#nom_user").val(medico.nom_user);
+                $("#ape_user").val(medico.ape_user);
+                $("#tel_user").val(medico.tel_user);
 
             }
         })
@@ -75,7 +75,6 @@ function medico(){
 
     $("#contenidoDash").on("click", "button#actualizar", function(){
         var datos = $("#frmmedico").serialize();
-        console.log(datos);
         $.ajax({
             type: "get",
             url: "../controlador/medico.php",
@@ -96,14 +95,14 @@ function medico(){
                 })
             }
         })
-
-        console.log(datos);
+                $("#contenidoDash").load("medico/medico.php");
     })
 
 }
 
 $(document).ready(() => {
 
+dt= "";
 
     $.ajax({
         url : '../controlador/medico.php?accion=listar',
@@ -111,7 +110,7 @@ $(document).ready(() => {
         success : function(res){
             var js = JSON.parse(res);
             console.log(js);
-
+            
             for (var i = 0; i < js.data.length; i++){
                 console.log("registros: "+js.data.length);
                 dt+= 
