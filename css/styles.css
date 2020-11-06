@@ -1,54 +1,57 @@
-.login{
-    position: absolute;
-    transform: translate(420%, 5%);
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background:#abbab8;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* No Scrollbar */
+    overflow: hidden;
 }
 
 .form-box {
-    width: 250px;
-    padding: 20px;
+    width: 300px;
+    padding: 40px;
+    background: #edebe8;
     text-align: center;
-    border: 1px solid #a5c422;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.9);
 }
 
-.form-box input[type="text"], .form-box input[type="password"], .form-box button[type="submit"]{
+.form-title {
+    color: #30b834;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-box input[type="text"], .form-box input[type="password"], .form-box button[type="submit"] {
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #a5c422;
+    border: 2px solid #30b834;
     padding: 14px 10px;
     width: 200px;
     outline: none;
     color: #040405;
     border-radius: 24px;
-    color: #a5c422;
-    font-weight: bold;
-}  
-
-#cerrar {
-    width: 20px;
-    height: 20px;
-    background: #a5c422;
-    color: #ffffff;
-    text-align: center;
-    font-size: 10px;
-    border-radius: 50%;
-    border: 1px solid #a5c422;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    
 }
+
 
 .form-box button[type="submit"] {
     border: 0;
-    background: #a5c422;
+    background: #30b834;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #a5c422;
+    border: 2px solid #30b834;
     padding: 14px 40px;
     outline: none;
     color: #ffffff;
@@ -59,5 +62,4 @@
 
 .form-box button[type="submit"]:hover {
     background: none;
-    color: #a5c422;
 }
