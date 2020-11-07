@@ -36,6 +36,21 @@
             }
             echo json_encode($respuesta);
         break;
+		
+		case 'borrar':
+			$medico = new Medico();
+			$resultado = $medico->borrar($datos['codigo']);
+			if($resultado > 0){
+                $respuesta = array(
+                    'respuesta' => 'correcto'
+                );
+            } else {
+                $respuesta = array (
+                    'respuesta' => 'error'
+                );
+            }
+            echo json_encode($respuesta);
+		break;
 
         case 'listar':
             $medico = new Medico();

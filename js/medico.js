@@ -1,54 +1,11 @@
 var dt;
+function medicos(){
 
-function medico(){
-
-    //Funciones de la vista principal del medico
-    $("#detalle").on("click", "a#cerrar", function(){
-        $("#detalle").removeClass("show");
-        $("#detalle").addClass("hide");
-    })
-
-    $("#lista").on("click", "a#vcard", function(){
-        var codigo = $(this).data('codigo');
+    $("#tabla").on("click","a#editarM", function(){
+        var codigo = $(this).data("codigo");
         console.log(codigo);
-
-        $("#contenidoDash").load("medico/infoMedico.php");
-        $("#detalle").addClass("show");
-
-        $.ajax({
-            type: "get",
-            url: "../controlador/medico.php",
-            data: {codigo: codigo, accion: 'consultar'},
-            dataType: "json"
-        }).done(function (medico){
-            if (medico.respuesta === "no existe"){
-                swal({
-                    type: 'error',
-                    title: 'Error',
-                    text: 'El medico con cedula '+codigo+' no existe en la base de datos'
-                })
-            } else {
-                document.getElementById("img_med").innerHTML = '<img src="../../imgs/'+medico.imagen+'">';
-                document.getElementById("nom_med").innerHTML = medico.medico;
-                document.getElementById("espec").innerHTML = medico.especialidad;
-                document.getElementById("ced_med").innerHTML = medico.cedula;
-                document.getElementById("tel_med").innerHTML = medico.tel_user;
-                document.getElementById("sede").innerHTML = medico.sede;
-                document.getElementById("editarmed").innerHTML = '<a href="#" data-codigo="'+medico.cedula+' " title="Editar" id="editar"><img src="../../imgs/editar.png" alt=""></i></a>';
-            }
-        })
-
-    })
-    
-
-
-    //Funciones de la vista de la información del medico
-
-    $("#contenidoDash").on("click", "a#editar", function(){
-        var codigo = $(this).data('codigo');
-        console.log(codigo);
-        $("#contenidoDash").load("medico/editarMedico.php")
-
+        $("#modal_editar").load("medico/editarMedico.php"); 
+        
         $.ajax({
             type: "get",
             url: "../controlador/medico.php",
@@ -72,9 +29,78 @@ function medico(){
         })
     })
 
+    $("#editar").on("click",".btncerrar", function(){
+        $(".box-title").html("Listado de Comunas");
+        $("#editar").addClass('hide');
+        $("#editar").removeClass('show');
+        $("#listado").addClass('show');
+        $("#listado").removeClass('hide');  
+        $(".box #nuevo").show(); 
+    })  
 
-    $("#contenidoDash").on("click", "button#actualizar", function(){
-        var datos = $("#frmmedico").serialize();
+    $(".box").on("click","#nuevo", function(){
+        $(this).hide();
+        $(".box-title").html("Crear Comuna");
+        $("#editar").addClass('show');
+        $("#editar").removeClass('hide');
+        $("#listado").addClass('hide');
+        $("#listado").removeClass('show');
+        $("#editar").load('./Vistas/Comuna/nuevaComuna.php', function(){
+            $.ajax({
+               type:"get",
+               url:"./Controlador/controladorMunicipio.php",
+               data: {accion:'listar'},
+               dataType:"json"
+            }).done(function( resultado ) {                    ;
+                $.each(resultado.data, function (index, value) { 
+                  $("#editar #muni_codi").append("<option value='" + value.muni_codi + "'>" + value.muni_nomb + "</option>")
+                });
+            });
+        });
+        
+    })
+
+    $("#editar").on("click","button#grabar",function(){
+      var datos=$("#fcomuna").serialize();
+      //console.log(datos);
+      $.ajax({
+            type:"get",
+            url:"./Controlador/controladorComuna.php",
+            data: datos,
+            dataType:"json"
+          }).done(function( resultado ) {
+              if(resultado.respuesta){
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'La comuna fue grabada con éxito',
+                    showConfirmButton: false,
+                    timer: 1200
+                })     
+                    $(".box-title").html("Listado de Comunas");
+                    $(".box #nuevo").show();
+                    $("#editar").html('');
+                    $("#editar").addClass('hide');
+                    $("#editar").removeClass('show');
+                    $("#listado").addClass('show');
+                    $("#listado").removeClass('hide');
+                    dt.page( 'last' ).draw( 'page' );
+                    dt.ajax.reload(null, false);                   
+             } else {
+                swal({
+                    position: 'center',
+                    type: 'error',
+                    title: 'Ocurrió un erro al grabar',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+               
+            }
+        });
+    });
+
+    $("#modal_editar").on("click","button#actualizar",function(){
+         var datos = $("#frmmedico").serialize();
         $.ajax({
             type: "get",
             url: "../controlador/medico.php",
@@ -95,42 +121,89 @@ function medico(){
                 })
             }
         })
-                $("#contenidoDash").load("medico/medico.php");
     })
 
+    $("#tabla").on("click","a#borrarM",function(){
+        //Recupera datos del formulario
+        var codigo = $(this).data("codigo");
+        console.log(codigo);
+        swal({
+              title: '¿Está seguro?',
+              text: "¿Borrar el medico con cedula: " + codigo + " ?",
+              type: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Borrar!'
+        }).then((decision) => {
+                if (decision.value) {
+                    var request = $.ajax({
+                        method: "get",                  
+                        url: "../controlador/medico.php",
+                        data: {codigo: codigo, accion:'borrar'},
+                        dataType: "json"
+                    })
+                    request.done(function( resultado ) {
+                        if(resultado.respuesta == 'correcto'){
+                            swal({
+                              position: 'center',
+                              type: 'success',
+                              title: 'El medico con cedula ' + codigo + ' se ha borrado',
+                              showConfirmButton: false,
+                              timer: 1500
+                            })       
+                            var info = dt.page.info();   
+                            if((info.end-1) == info.length)
+                                dt.page( info.page-1 ).draw( 'page' );
+                            dt.ajax.reload(null, false);
+                            
+                        } else {
+                            swal({
+                              type: 'error',
+                              title: 'Oops...',
+                              text: 'Something went wrong!'                         
+                            })
+                        }
+                    });
+                     
+                    request.fail(function( jqXHR, textStatus ) {
+                        swal({
+                          type: 'error',
+                          title: 'Oops...',
+                          text: 'Something went wrong!' + textStatus                          
+                        })
+                    });
+                }
+        })
+
+    });
 }
 
 $(document).ready(() => {
-
-dt= "";
-
-    $.ajax({
-        url : '../controlador/medico.php?accion=listar',
-        type : 'GET',
-        success : function(res){
-            var js = JSON.parse(res);
-            console.log(js);
-            
-            for (var i = 0; i < js.data.length; i++){
-                console.log("registros: "+js.data.length);
-                dt+= 
-                '<tr class="unread">'+
-                '<td><img class="rounded-circle" style="width:40px;" src="../../imgs/'+js.data[i].Imagen+'" alt="activity-user"></td>'+
-                '<td>'+
-                    '<a class="mb-1" data-codigo="'+js.data[i].Cedula+'" href="#" id="vcard">'+js.data[i].Medico+'</a>'+
-                    '<p class="m-0">'+js.data[i].Especialidad+'</p>'+
-                '</td>'+
-                '<td><a href="#!" class="label theme-bg2 text-white f-12">Historial</a></td>'+
-                '<td><a href="#!" class="label theme-bg text-white f-12">Citas Proximas</a></td>'+
-            '</tr>';
-            }
-            $('#tbody').html(dt);
-        }
-
-    })
-
-
-    
-
-medico();
+    dt = $("#tabla").DataTable({
+        "ajax": "../controlador/medico.php?accion=listar",
+        "columns": [
+            { "data": "Cedula"} ,
+            { "data": "Medico" },
+            { "data": "Especialidad" },
+            { "data": "Telefono" },
+            { "data": "Email" },
+            { "data": "Sede" },
+            { "data": "Usuario" },
+          { "data": "Cedula",
+              render: function (data) {
+                        return '<div class="btn-group pull-right ">'+
+                        '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Acciones <span class="fa fa-caret-down"></span></button>'+
+                        '<ul class="dropdown-menu">'+
+                            '<li><a href="#" data-codigo="'+data+'" id="editarM" data-toggle="modal" data-target="#modal_editar"><i class="fa fa-edit"></i> Editar</a></li>'+
+                            '<li><a href="#" data-codigo="'+data+'" id="borrarM"><i class="fa fa-trash"></i> Borrar</a></li>'+
+                        '</ul>'+
+                        '</div>'
+              }
+          }
+        ]
 });
+
+medicos();
+
+})

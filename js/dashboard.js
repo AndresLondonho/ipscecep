@@ -3,12 +3,10 @@ function dashboard(){
     $("#sidebar a").click(function(e){
         e.preventDefault();
         var url = $(this).attr("href");
-        $.post(url, function(resultado){
+        $.post( url, {url:url},function(data) {
             if(url!="#")
-            $("#contenidoDash").removeClass("hide");
-            $("#contenidoDash").addClass("show");
-            $("#contenidoDash").html(resultado);
-        })
+                $("#contenidoDash" ).html(data);
+    });
     })
 }
 

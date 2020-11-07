@@ -1,27 +1,66 @@
+<h1>
+        Gestión de Medicos</h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Medicos</li>
+      </ol>
+    </section>
 
-<div id="nuevo-editar" class="hide">
-		<!-- div para cargar el formulario para un nuevo municipio o editar un municipio -->
-</div>
-
-    <div class="container">
-        <div class="card Recent-Users">
-            <div class="card-header">
-                <h5>Medicos</h5>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border">
+              <div class="box-tools pull-right">
+                  <button class="btn btn-info btn-sm" id="nuevo"  data-toggle="tooltip" 
+                      title="Nuevo Medico"><i class="fa fa-plus" aria-hidden="true"></i></button> 
+              </div>
             </div>
-            <div class="card-block px-0 py-3 medico">
-                <div id="lista">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            
-                            <tbody id="tbody">
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+           
+        
+            <!-- /.box-header -->
+            <div class="box-body">
+            <div id="editar"></div>
+            <div id="listado">
+              <table id="tabla" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Cedula</th>
+                  <th>Nombre</th>
+                  <th>Especialidad</th>
+                  <th>Telefono</th>
+                  <th>Email</th>
+                  <th>Sede</th>
+                  <th>Username</th>
+                  <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+                <tfoot>
+                <tr>
+                </tr>
+                </tfoot>
+              </table>
             </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
         </div>
-    </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  </div>
+  <!-- /.content-wrapper -->
 
+  <!--Div para editar los medicos-->
+  <div class="modal fade" id="modal_editar" tabidex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      
+  </div>
 
-    <script src="../../js/medico.js"></script>
+<script src="../../js/medico.js"></script>

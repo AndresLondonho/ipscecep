@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPS CECEP</title>
     <link rel="shortcut icon" href="../../imgs/icono.ico">
+
+    <!-- links de la plantilla adminlte-->
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+      <!-- overlayScrollbars -->
+      <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+      <!-- Google Font: Source Sans Pro -->
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- links de la plantilla adminlte-->
+
+
+
+
+
     <link rel="stylesheet" href="../../css/style_dash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
       <!-- fontawesome icon -->
@@ -59,8 +75,8 @@
 
     
 
-    <div class="content hide" id="contenidoDash">
-      
+    <div class="content " id="contenidoDash">
+
     </div>
 
     <script type="text/javascript">
@@ -83,19 +99,7 @@
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
-
-
-
-<script src="../../js/jquery.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/jquery.sticky.js"></script>
-<script src="../../js/jquery.stellar.min.js"></script>
-<script src="../../js/wow.min.js"></script>
-<script src="../../js/smoothscroll.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
-<script src="../../js/custom.js"></script>
 <script src="../../js/dashboard.js"></script>
-
 
 
   </body>

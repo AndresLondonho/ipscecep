@@ -26,7 +26,7 @@
             return $this->id_priv;
         }
         public function getUsername(){
-            return $this->username;
+            return $this->Usuario;
         }
         public function getPassword(){
             return $this->password;
@@ -44,7 +44,7 @@
             return $this->cc_user;
         }
         public function getEmail_user(){
-            return $this->email_user;
+            return $this->Email;
         }
         public function getID_cargo(){
             return $this->id_cargo;
@@ -78,7 +78,7 @@
                 $this->query = "
                     SELECT
                     func.cc_user as Cedula, func.nom_user, func.ape_user, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
-                    espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario,
+                    espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Email, func.username as Usuario,
                     sede.nom_sede as Sede, func.img_user as Imagen
                     FROM
                     funcionarios as func 
@@ -102,12 +102,13 @@
             $this->query = "
                 SELECT
                 func.cc_user as Cedula, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
-                espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Correo, func.username as Usuario,
-                func.img_user as Imagen
+                espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Email, func.username as Usuario,
+                func.img_user as Imagen, sede.nom_sede as Sede
                 FROM
                 funcionarios as func 
                 INNER JOIN especialidad as espec ON (func.id_espec = espec.id_espec)
                 INNER JOIN cargo as car on (func.id_cargo = car.id_cargo)
+                INNER JOIN sede as sede on (func.id_sede = sede.id_sede)
                 ORDER BY Medico
             ";
             $this->obtener_resultados_query();
@@ -146,14 +147,13 @@
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
         }
-        public function borrar($cc_med=''){
+        public function borrar($cc_user=''){
             $this->query = "
                 delete from funcionarios
-                where cc_emp = '$cc_med'
+                where cc_user = '$cc_user'
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
         }
-
     }
 ?>
