@@ -1,7 +1,7 @@
 <?php
     require_once("conexionBD.php");
 
-    class Medico extends ConexionDB{
+    class Medico extends ConexionBD{
         private $id_func;
         private $id_priv;
         private $username;
@@ -13,6 +13,7 @@
         private $email_user;
         private $id_cargo;
         private $id_espec;
+        private $id_sede;
         
 
         function __construct(){
@@ -52,6 +53,9 @@
         public function getID_espec(){
             return $this->id_espec;
         }
+        public function getID_sede(){
+            return $this->id_sede;
+        }
 
 
         public function getCedula(){
@@ -78,8 +82,8 @@
                 $this->query = "
                     SELECT
                     func.cc_user as Cedula, func.nom_user, func.ape_user, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
-                    espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Email, func.username as Usuario,
-                    sede.nom_sede as Sede, func.img_user as Imagen
+                    func.id_espec as Especialidad, func.tel_user as Telefono, func.email_user as Email, func.username as Usuario,
+                    func.id_sede as Sede, func.img_user as Imagen
                     FROM
                     funcionarios as func 
                     INNER JOIN especialidad as espec ON (func.id_espec = espec.id_espec)
@@ -141,7 +145,9 @@
                 set
                 nom_user = '$nom_user',
                 ape_user = '$ape_user',
-                tel_user = '$tel_user'
+                tel_user = '$tel_user',
+                id_espec = '$id_espec',
+                id_sede = '$id_sede'
                 where cc_user = '$cc_user'
             ";
             $resultado = $this->ejecutar_query_simple();

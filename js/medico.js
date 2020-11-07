@@ -3,6 +3,8 @@ function medicos(){
 
     $("#tabla").on("click","a#editarM", function(){
         var codigo = $(this).data("codigo");
+        var especialidad;
+        var sede;
         console.log(codigo);
         $("#modal_editar").load("medico/editarMedico.php"); 
         
@@ -24,8 +26,45 @@ function medicos(){
                 $("#nom_user").val(medico.nom_user);
                 $("#ape_user").val(medico.ape_user);
                 $("#tel_user").val(medico.tel_user);
+                especialidad = medico.especialidad;
+                sede = medico.sede;
+                console.log(especialidad);
+                console.log(sede);
 
             }
+        });
+        $.ajax({
+            type:"get",
+            url:"../controlador/especialidad.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            $("#espec option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+                if(especialidad === value.Codigo){
+                    $("#espec").append("<option selected value='" + value.Codigo + "'>" + value.Especialidad + "</option>")
+                } else {
+                    $("#espec").append("<option value='"+value.Codigo+"'>"+value.Especialidad+"</option>");
+                }
+            })
+        })
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/sede.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            $("#sede option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+                if(sede === value.Codigo){
+                    $("#sede").append("<option selected value='" + value.Codigo + "'>" + value.Sede + "</option>")
+                } else {
+                    $("#sede").append("<option value='"+value.Codigo+"'>"+value.Sede+"</option>");
+                }
+            })
         })
     })
 

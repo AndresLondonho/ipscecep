@@ -36,19 +36,13 @@
                                             <h5>Información laboral</h5>
                                             <div class="form-group">
                                                 <label for="especialidad">Especialidad:</label>
-                                                <select class="form-control" id="espec" disabled="disabled" value="Medico General">
-                                                    <option>Medico General</option>
-                                                    <option>Odontologo</option>
+                                                <select class="form-control" id="espec" name="id_espec" value="">
                                                 </select>
                                                 <small class="form-text text-muted">Especialidad no se puede modificar.</small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="sede">Sede:</label>
-                                                <select class="form-control" id="sede"  value="Cali">
-                                                    <option>Cali</option>
-                                                    <option>Jamundi</option>
-                                                    <option>Yumbo</option>
-                                                    <option>Palmira</option>
+                                                <select class="form-control" id="sede" name="id_sede" value="">
                                                 </select>
                                             </div>
                                         </div>

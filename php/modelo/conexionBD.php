@@ -1,6 +1,6 @@
 <?php
 
-    abstract class ConexionDB{
+    abstract class ConexionBD{
         private static $db_host = "localhost";
         private static $db_user = "root";
         private static $db_pass = "";
