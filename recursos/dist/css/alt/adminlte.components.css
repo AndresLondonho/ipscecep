@@ -383,7 +383,7 @@ textarea.form-control.is-warning {
 }
 
 .custom-switch.custom-switch-off-lightblue .custom-control-input ~ .custom-control-label::before {
-  background: #3c8dbc;
+  background:#067D0F;
   border-color: #23536f;
 }
 
@@ -396,7 +396,7 @@ textarea.form-control.is-warning {
 }
 
 .custom-switch.custom-switch-on-lightblue .custom-control-input:checked ~ .custom-control-label::before {
-  background: #3c8dbc;
+  background:#067D0F;
   border-color: #23536f;
 }
 
@@ -1213,7 +1213,7 @@ textarea.form-control.is-warning {
 }
 
 .custom-range.custom-range-lightblue::-webkit-slider-thumb {
-  background-color: #3c8dbc;
+  background-color:#067D0F;
 }
 
 .custom-range.custom-range-lightblue::-webkit-slider-thumb:active {
@@ -1221,7 +1221,7 @@ textarea.form-control.is-warning {
 }
 
 .custom-range.custom-range-lightblue::-moz-range-thumb {
-  background-color: #3c8dbc;
+  background-color:#067D0F;
 }
 
 .custom-range.custom-range-lightblue::-moz-range-thumb:active {
@@ -1229,7 +1229,7 @@ textarea.form-control.is-warning {
 }
 
 .custom-range.custom-range-lightblue::-ms-thumb {
-  background-color: #3c8dbc;
+  background-color:#067D0F;
 }
 
 .custom-range.custom-range-lightblue::-ms-thumb:active {
@@ -2576,7 +2576,7 @@ textarea.form-control.is-warning {
 }
 
 .card-lightblue:not(.card-outline) > .card-header {
-  background-color: #3c8dbc;
+  background-color:#067D0F;
 }
 
 .card-lightblue:not(.card-outline) > .card-header,
@@ -2589,7 +2589,7 @@ textarea.form-control.is-warning {
 }
 
 .card-lightblue.card-outline {
-  border-top: 3px solid #3c8dbc;
+  border-top: 3px solid#067D0F;
 }
 
 .card-lightblue.card-outline-tabs > .card-header a:hover {
@@ -2597,7 +2597,7 @@ textarea.form-control.is-warning {
 }
 
 .card-lightblue.card-outline-tabs > .card-header a.active {
-  border-top: 3px solid #3c8dbc;
+  border-top: 3px solid#067D0F;
 }
 
 .bg-lightblue .btn-tool,
@@ -4323,7 +4323,7 @@ html.maximized-card {
 }
 
 .todo-list .lightblue {
-  border-left-color: #3c8dbc;
+  border-left-color:#067D0F;
 }
 
 .todo-list .navy {

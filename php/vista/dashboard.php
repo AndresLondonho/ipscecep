@@ -31,15 +31,16 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../recursos/dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse ">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="dashboard.php" class="logo">
       <!-- mini logo para barra lateral mini 50x50 píxeles -->
       <span class="logo-mini"><img src="../../imgs/icono.ico"></span>
       <!-- logotipo para dispositivos móviles y estatales regulares -->
@@ -153,7 +154,7 @@
         <small>Panel de control</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.html"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -221,6 +222,7 @@
 <script src="../../recursos/dashboard/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../recursos/dashboard/dist/js/demo.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.2/sweetalert2.all.js"></script>
 
