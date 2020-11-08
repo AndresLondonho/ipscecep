@@ -13,15 +13,15 @@
      <meta name="author" content="Tooplate">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="recursos/css/bootstrap.min.css">
+     <link rel="stylesheet" href="recursos/css/font-awesome.min.css">
+     <link rel="stylesheet" href="recursos/css/animate.css">
+     <link rel="stylesheet" href="recursos/css/owl.carousel.css">
+     <link rel="stylesheet" href="recursos/css/owl.theme.default.min.css">
      <!-- link rel="stylesheet" href="css/styles.css"> -->
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/tooplate-style.css">
+     <link rel="stylesheet" href="recursos/css/tooplate-style.css">
 
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
