@@ -68,35 +68,8 @@ function medicos(){
         })
     })
 
-    $("#editar").on("click",".btncerrar", function(){
-        $(".box-title").html("Listado de Comunas");
-        $("#editar").addClass('hide');
-        $("#editar").removeClass('show');
-        $("#listado").addClass('show');
-        $("#listado").removeClass('hide');  
-        $(".box #nuevo").show(); 
-    })  
-
-    $(".box").on("click","#nuevo", function(){
-        $(this).hide();
-        $(".box-title").html("Crear Comuna");
-        $("#editar").addClass('show');
-        $("#editar").removeClass('hide');
-        $("#listado").addClass('hide');
-        $("#listado").removeClass('show');
-        $("#editar").load('./Vistas/Comuna/nuevaComuna.php', function(){
-            $.ajax({
-               type:"get",
-               url:"./Controlador/controladorMunicipio.php",
-               data: {accion:'listar'},
-               dataType:"json"
-            }).done(function( resultado ) {                    ;
-                $.each(resultado.data, function (index, value) { 
-                  $("#editar #muni_codi").append("<option value='" + value.muni_codi + "'>" + value.muni_nomb + "</option>")
-                });
-            });
-        });
-        
+    $(".box").on("click","button#nuevoM", function(){
+        $("#modal_editar").load("medico/nuevoMedico.php");
     })
 
     $("#editar").on("click","button#grabar",function(){
