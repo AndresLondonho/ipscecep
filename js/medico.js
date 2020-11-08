@@ -25,6 +25,8 @@ function medicos(){
                 $("#cc_user").val(medico.cedula);
                 $("#nom_user").val(medico.nom_user);
                 $("#ape_user").val(medico.ape_user);
+                $("#nom2_user").val(medico.nom2_user);
+                $("#ape2_user").val(medico.ape2_user);
                 $("#tel_user").val(medico.tel_user);
                 especialidad = medico.especialidad;
                 sede = medico.sede;
@@ -68,8 +70,96 @@ function medicos(){
         })
     })
 
+    $("#modal_editar").on("click","button#actualizar",function(){
+         var datos = $("#frmmedico").serialize();
+        $.ajax({
+            type: "get",
+            url: "../controlador/medico.php",
+            data: datos,
+            dataType: "json"
+        }).done(function(resultado){
+            if(resultado.respuesta){
+                swal(
+                    'Actualizado',
+                    'Se actualizaron los datos correctamente',
+                    'success'
+                )
+            } else {
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: 'Algo ha salido mal'
+                })
+            }
+        })
+    })
+
     $(".box").on("click","button#nuevoM", function(){
         $("#modal_editar").load("medico/nuevoMedico.php");
+        
+        $.ajax({
+            type:"get",
+            url:"../controlador/especialidad.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            $("#espec option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+            $("#espec").append("<option value='"+value.Codigo+"'>"+value.Especialidad+"</option>");
+            })
+        })
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/sede.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            $("#sede option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+            $("#sede").append("<option selected value='" + value.Codigo + "'>" + value.Sede + "</option>");
+            })
+        })
+    })
+
+    $("#modal_editar").on("click","button#registrar",function(){
+        var nombre = $("#nom_user").val();
+        var apellido = $("#ape_user").val();
+        var user = nombre.substr(0, 1)+apellido;
+        var usuario = user.toLowerCase();
+        var pass = $("#cc_user").val();
+        $("#username").val(usuario);
+        $("#password").val(pass);
+        var datos = $("#frmmedico").serialize();
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/medico.php",
+            data: datos,
+            dataType:"json"
+          }).done(function( resultado ) {
+            if(resultado.respuesta){
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'La comuna fue grabada con éxito',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
+                dt.ajax.reload();
+            } else {
+                swal({
+                    position: 'center',
+                    type: 'error',
+                    title: 'Ocurrió un erro al grabar',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+               
+            }
+        })
     })
 
     $("#editar").on("click","button#grabar",function(){
@@ -111,29 +201,6 @@ function medicos(){
         });
     });
 
-    $("#modal_editar").on("click","button#actualizar",function(){
-         var datos = $("#frmmedico").serialize();
-        $.ajax({
-            type: "get",
-            url: "../controlador/medico.php",
-            data: datos,
-            dataType: "json"
-        }).done(function(resultado){
-            if(resultado.respuesta){
-                swal(
-                    'Actualizado',
-                    'Se actualizaron los datos correctamente',
-                    'success'
-                )
-            } else {
-                swal({
-                    type: 'error',
-                    title: 'Error',
-                    text: 'Algo ha salido mal'
-                })
-            }
-        })
-    })
 
     $("#tabla").on("click","a#borrarM",function(){
         //Recupera datos del formulario

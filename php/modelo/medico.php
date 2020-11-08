@@ -8,12 +8,15 @@
         private $password;
         private $nom_user;
         private $ape_user;
+        private $nom2_user;
+        private $ape2_user;
         private $tel_user;
         private $cc_user;
         private $email_user;
         private $id_cargo;
         private $id_espec;
         private $id_sede;
+        private $img_user;
         
 
         function __construct(){
@@ -38,6 +41,12 @@
         public function getApe_user(){
             return $this->ape_user;
         }
+        public function getNom2_user(){
+            return $this->nom2_user;
+        }
+        public function getApe2_user(){
+            return $this->ape2_user;
+        }
         public function getTel_user(){
             return $this->tel_user;
         }
@@ -55,6 +64,9 @@
         }
         public function getID_sede(){
             return $this->id_sede;
+        }
+        public function getImg_User(){
+            return $this->img_user;
         }
 
 
@@ -81,7 +93,8 @@
             if ($cc_med != ''):
                 $this->query = "
                     SELECT
-                    func.cc_user as Cedula, func.nom_user, func.ape_user, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
+                    func.cc_user as Cedula, func.nom_user, func.nom2_user, func.ape_user, func.ape2_user, 
+                    concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user)as Medico, car.nom_cargo as Cargo,
                     func.id_espec as Especialidad, func.tel_user as Telefono, func.email_user as Email, func.username as Usuario,
                     func.id_sede as Sede, func.img_user as Imagen
                     FROM
@@ -105,7 +118,7 @@
         public function listar(){
             $this->query = "
                 SELECT
-                func.cc_user as Cedula, concat(func.nom_user,' ',func.ape_user)as Medico, car.nom_cargo as Cargo,
+                func.cc_user as Cedula, concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user)as Medico, car.nom_cargo as Cargo,
                 espec.nom_espec as Especialidad, func.tel_user as Telefono, func.email_user as Email, func.username as Usuario,
                 func.img_user as Imagen, sede.nom_sede as Sede
                 FROM
@@ -120,17 +133,15 @@
         }
 
         public function nuevo($datos=array()){
-            if(array_key_exists('cc_med', $datos)):
+            if(array_key_exists('cc_user', $datos)):
                 foreach ($datos as $campo => $valor):
                     $$campo = $valor;
                 endforeach;
-                $nom_med = utf8_decode($nom_med);
-                $ape_med = utf8_decode($ape_med);
                 $this->query = "
                     insert into funcionarios
-                    (id_med, cc_med, nom_med, ape_med, tel_med, sede, espec, img_med)
+                    (id_func, id_priv, username, password, nom_user, nom2_user, ape_user, ape2_user, tel_user, cc_user, email_user, id_cargo, id_espec, id_sede, img_user)
                     values
-                    (null, '$cc_med', '$nom_med', '$ape_med', '$tel_med', '$sede', '$espec', '$img_med')
+                    ('$id_func', '$id_priv', '$username', '$password', '$nom_user', '$nom2_user', '$ape_user', '$ape2_user', '$tel_user', '$cc_user', '$email_user', '$id_cargo', '$id_espec', '$id_sede', '$img_user')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;

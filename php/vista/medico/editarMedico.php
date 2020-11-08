@@ -4,7 +4,7 @@
             
         </div>
         <div class="box-body">
-            <div class="panel-group"><div class="panel panel-primary">
+            <div class="panel-group"><div class="panel panel-success">
                     <div class="panel-heading">Editar</div>
                         <div class="panel-body">
                             <form id="frmmedico">
@@ -16,13 +16,29 @@
                                         <h5>Información personal</h5>                                                        
                                         <div class="form-group">
                                             <label for="nombre">Nombres:</label>
-                                            <input type="text" class="form-control" id="nom_user" name="nom_user" value="">
-                                            <small class="form-text text-muted">Ingrese nombres para modificar.</small>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="nom_user" name="nom_user" value="">
+                                                    <small class="form-text text-muted">Ingrese primer nombre para modificar.</small>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="nom2_user" name="nom2_user" value="">
+                                                    <small class="form-text text-muted">Ingrese segundo nombre para modificar.</small>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="apellido">Apellidos:</label>
-                                            <input type="text" class="form-control" id="ape_user" name="ape_user" value="">
-                                            <small class="form-text text-muted">Ingrese apellidos para modificar.</small>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="ape_user" name="ape_user" value="">
+                                                    <small class="form-text text-muted">Ingrese primer apellido para modificar.</small>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="ape2_user" name="ape2_user" value="">
+                                                    <small class="form-text text-muted">Ingrese segundo apellido para modificar.</small>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="telefono">Telefono:</label>
@@ -35,7 +51,7 @@
                                         <h5>Información laboral</h5>
                                         <div class="form-group">
                                             <label for="especialidad">Especialidad:</label>
-                                            <select class="form-control" id="espec" name="id_espec" value="">
+                                            <select class="form-control" id="espec" name="id_espec" value="" disabled="true">
                                             </select>
                                             <small class="form-text text-muted">Especialidad no se puede modificar.</small>
                                         </div>

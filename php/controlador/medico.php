@@ -2,10 +2,10 @@
     require_once("../modelo/medico.php");
 
     $datos = $_GET;
+    $medico = new Medico();
     switch($_GET['accion']){
 
         case 'editar':
-            $medico = new Medico();
             $resultado = $medico->editar($datos);
             $respuesta = array(
                 'respuesta' => $resultado
@@ -14,7 +14,6 @@
         break;
 
         case 'consultar':
-            $medico = new Medico();
             $medico->consultar($datos['codigo']);
 
             if($medico->getCedula() == null){
@@ -26,6 +25,8 @@
                     'cedula' => $medico->getCedula(),
                     'nom_user' => $medico->getNom_user(),
                     'ape_user' => $medico->getApe_user(),
+                    'nom2_user' => $medico->getNom2_user(),
+                    'ape2_user' => $medico->getApe2_user(),
                     'medico' => $medico->getMedico(),
                     'tel_user' => $medico->getTelefono(),
                     'sede' => $medico->getSede(),
@@ -38,7 +39,6 @@
         break;
 		
 		case 'borrar':
-			$medico = new Medico();
 			$resultado = $medico->borrar($datos['codigo']);
 			if($resultado > 0){
                 $respuesta = array(
@@ -53,9 +53,22 @@
 		break;
 
         case 'listar':
-            $medico = new Medico();
             $listado = $medico->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
+        break;
+
+        case 'nuevo':
+            $resultado = $medico->nuevo($datos);
+            if($resultado > 0){
+                $respuesta = array(
+                    'respuesta' => 'correcto'
+                );
+            } else {
+                $respuesta = array(
+                'respuesta' => 'error'
+                );
+            }
+            echo json_encode($respuesta);
         break;
     }
 ?>
