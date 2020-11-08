@@ -1,12 +1,12 @@
 <?php
-    require_once("../modelo/sede.php");
+    require_once("../modelo/servicio.php");
 
     $datos = $_GET;
     switch($_GET['accion']){
 
         case 'editar':
-            $sede = new Sede();
-            $resultado = $sede->editar($datos);
+            $servicio = new Servicio();
+            $resultado = $servicio->editar($datos);
             $respuesta = array(
                 'respuesta' => $resultado
             );
@@ -14,29 +14,26 @@
         break;
 
         case 'consultar':
-            $sede = new Sede();
-            $sede->consultar($datos['codigo']);
+            $servicio = new Servicio();
+            $servicio->consultar($datos['codigo']);
 
-            if($sede->getNOM_SEDE() == null){
+            if($servicio->getNUMERO() == null){
                 $respuesta = array(
                     'respuesta' => 'no existe'
                 );
             } else {
                 $respuesta = array (
-                    'Sede' => $sede->getSEDE(),
-                    'Direccion' => $sede->getDIRECCION(),
-                    'Telefono' => $sede->getTELEFONO(),
-                    'Ciudad' => $sede->getCIUDAD(),
-                    'Director' => $sede->getDIRECTOR(),
+                    'Numero' => $servicio->getNUMERO(),
+                    'Servicio' => $servicio->getSERVICIO(),
                     'respuesta' => 'existe'
                 );
             }
             echo json_encode($respuesta);
         break;
-
-        case 'borrar':
-			$sede = new Sede();
-			$resultado = $sede->borrar($datos['codigo']);
+		
+		case 'borrar':
+			$servicio = new Servicio();
+			$resultado = $servicio->borrar($datos['codigo']);
 			if($resultado > 0){
                 $respuesta = array(
                     'respuesta' => 'correcto'
@@ -47,11 +44,11 @@
                 );
             }
             echo json_encode($respuesta);
-        break;
-        
+		break;
+
         case 'listar':
-            $sede = new Sede();
-            $listado = $sede->listar();
+            $servicio = new Servicio();
+            $listado = $servicio->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
     }
