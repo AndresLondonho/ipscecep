@@ -39,7 +39,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="dashboard.php" class="logo">
       <!-- mini logo para barra lateral mini 50x50 píxeles -->
       <span class="logo-mini"><img src="../../imgs/icono.ico"></span>
       <!-- logotipo para dispositivos móviles y estatales regulares -->
@@ -153,7 +153,7 @@
         <small>Panel de control</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.html"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
