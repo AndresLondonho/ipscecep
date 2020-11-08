@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>VIDA SALUDABLE | Dashboard</title>
+  <title>IPS CECEP</title>
+  <link rel="shortcut icon" href="../../imgs/icono.ico">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../../recursos/dashboard/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -38,9 +41,9 @@
     <!-- Logo -->
     <a href="index.html" class="logo">
       <!-- mini logo para barra lateral mini 50x50 píxeles -->
-      <span class="logo-mini"><b>V</b>IDA</span>
+      <span class="logo-mini"><img src="../../imgs/icono.ico"></span>
       <!-- logotipo para dispositivos móviles y estatales regulares -->
-      <span class="logo-lg"><b>VIDA</b>SALUDABLE</span>
+      <span class="logo-lg"><img src="../../imgs/icono.ico"><b>IPS</b> CECEP</span>
     </a>
     <!-- Barra de navegación de encabezado -->
     <nav class="navbar navbar-static-top">
