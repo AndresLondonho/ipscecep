@@ -43,7 +43,7 @@
       <!-- mini logo para barra lateral mini 50x50 píxeles -->
       <span class="logo-mini"><img src="../../imgs/icono.ico"></span>
       <!-- logotipo para dispositivos móviles y estatales regulares -->
-      <span class="logo-lg"><img src="../../imgs/icono.ico"><b>IPS</b> CECEP</span>
+      <span class="logo-lg"><img src="../../imgs/icono.ico"><b>IPS</b>CECEP</span>
     </a>
     <!-- Barra de navegación de encabezado -->
     <nav class="navbar navbar-static-top">

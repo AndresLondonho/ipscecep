@@ -11461,13 +11461,13 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 
 .sidebar-dark-lightblue .nav-sidebar > .nav-item > .nav-link.active,
 .sidebar-light-lightblue .nav-sidebar > .nav-item > .nav-link.active {
-  background-color: #3c8dbc;
+  background-color:#067D0F;
   color: #ffffff;
 }
 
 .sidebar-dark-lightblue .nav-sidebar.nav-legacy > .nav-item > .nav-link.active,
 .sidebar-light-lightblue .nav-sidebar.nav-legacy > .nav-item > .nav-link.active {
-  border-color: #3c8dbc;
+  border-color:#067D0F;
 }
 
 .sidebar-dark-navy .nav-sidebar > .nav-item > .nav-link.active,
@@ -12872,7 +12872,7 @@ body.text-sm .control-sidebar {
 }
 
 .navbar-lightblue {
-  background-color: #3c8dbc;
+  background-color:#067D0F;
 }
 
 .navbar-navy {
@@ -13486,7 +13486,7 @@ blockquote.quote-dark h6 {
 }
 
 blockquote.quote-lightblue {
-  border-color: #3c8dbc;
+  border-color:#067D0F;
 }
 
 blockquote.quote-lightblue h1,
@@ -13495,7 +13495,7 @@ blockquote.quote-lightblue h3,
 blockquote.quote-lightblue h4,
 blockquote.quote-lightblue h5,
 blockquote.quote-lightblue h6 {
-  color: #3c8dbc;
+  color:#067D0F;
 }
 
 blockquote.quote-navy {
@@ -13816,7 +13816,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .text-lightblue {
-  color: #3c8dbc;
+  color:#067D0F;
 }
 
 .text-navy {
@@ -14076,7 +14076,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .bg-lightblue {
-  background-color: #3c8dbc !important;
+  background-color:#067D0F !important;
 }
 
 .bg-lightblue,
@@ -14728,7 +14728,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .bg-gradient-lightblue {
-  background: #3c8dbc linear-gradient(180deg, #599ec6, #3c8dbc) repeat-x !important;
+  background:#067D0F linear-gradient(180deg, #599ec6,#067D0F) repeat-x !important;
 }
 
 .bg-gradient-lightblue.btn.disabled, .bg-gradient-lightblue.btn:disabled, .bg-gradient-lightblue.btn:not(:disabled):not(.disabled):active, .bg-gradient-lightblue.btn:not(:disabled):not(.disabled).active,
@@ -15794,7 +15794,7 @@ a.text-muted:hover {
 
 .accent-lightblue .btn-link,
 .accent-lightblue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
-  color: #3c8dbc;
+  color:#067D0F;
 }
 
 .accent-lightblue .btn-link:hover,
@@ -15803,12 +15803,12 @@ a.text-muted:hover {
 }
 
 .accent-lightblue .dropdown-item:active, .accent-lightblue .dropdown-item.active {
-  background: #3c8dbc;
+  background:#067D0F;
   color: #ffffff;
 }
 
 .accent-lightblue .custom-control-input:checked ~ .custom-control-label::before {
-  background: #3c8dbc;
+  background:#067D0F;
   border-color: #23536f;
 }
 
@@ -15824,8 +15824,8 @@ a.text-muted:hover {
 }
 
 .accent-lightblue .page-item.active .page-link {
-  background-color: #3c8dbc;
-  border-color: #3c8dbc;
+  background-color:#067D0F;
+  border-color:#067D0F;
 }
 
 .accent-lightblue .page-item.disabled .page-link {
