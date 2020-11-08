@@ -222,6 +222,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../recursos/dashboard/dist/js/demo.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.2/sweetalert2.all.js"></script>
+
 <script src="../../js/dashboard.js"></script>
 </body>
 </html>
