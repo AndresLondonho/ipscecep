@@ -28,12 +28,10 @@
                 <tr>
                   <th>Cedula</th>
                   <th>Nombre</th>
-                  <!-- <th>Especialidad</th> -->
                   <th>Email</th>
                   <th>Telefono</th>
                   <th>Direccion</th>
                   <th>Ciudad</th>
-                  <!-- <th>Sede</th> -->
                   <th>Acciones</th>
                 </tr>
                 </thead>

@@ -133,7 +133,7 @@
         }
         public function borrar($cc_pac=''){
             $this->query = "
-                delete from pacientescc_pac
+                delete from pacientes
                 where cc_pac = '$cc_pac'
             ";
             $resultado = $this->ejecutar_query_simple();

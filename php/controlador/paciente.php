@@ -5,7 +5,7 @@
     switch($_GET['accion']){
 
         case 'editar':
-            $paciente = new paciente();
+            $paciente = new Paciente();
             $resultado = $paciente->editar($datos);
             $respuesta = array(
                 'respuesta' => $resultado
@@ -14,7 +14,7 @@
         break;
 
         case 'consultar':
-            $paciente = new paciente();
+            $paciente = new Paciente();
             $paciente->consultar($datos['codigo']);
 
             if($paciente->getCEDULA() == null){
@@ -38,7 +38,7 @@
         break;
 
         case 'listar':
-            $paciente = new paciente();
+            $paciente = new Paciente();
             $listado = $paciente->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
