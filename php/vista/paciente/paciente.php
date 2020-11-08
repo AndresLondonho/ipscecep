@@ -34,8 +34,7 @@
                   <th>Direccion</th>
                   <th>Ciudad</th>
                   <!-- <th>Sede</th> -->
-                  <!-- <th>Username</th>
-                  <th>Acciones</th> -->
+                  <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>

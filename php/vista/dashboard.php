@@ -39,7 +39,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo para barra lateral mini 50x50 píxeles -->
       <span class="logo-mini"><img src="../../imgs/icono.ico"></span>
       <!-- logotipo para dispositivos móviles y estatales regulares -->

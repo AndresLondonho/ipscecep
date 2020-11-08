@@ -228,13 +228,13 @@ $(document).ready(() => {
             { "data": "Telefono" },
             { "data": "Direccion" },
             { "data": "Ciudad" },
-          { "data": "Cedula",
+            { "data": "Cedula",
               render: function (data) {
                         return '<div class="btn-group pull-right ">'+
                         '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Acciones <span class="fa fa-caret-down"></span></button>'+
                         '<ul class="dropdown-menu">'+
-                            '<li><a href="#" data-codigo="'+data+'" id="editarM" data-toggle="modal" data-target="#modal_editar"><i class="fa fa-edit"></i> Editar</a></li>'+
-                            '<li><a href="#" data-codigo="'+data+'" id="borrarM"><i class="fa fa-trash"></i> Borrar</a></li>'+
+                            '<li><a href="#" data-codigo="'+data+'" id="editarP" data-toggle="modal" data-target="#modal_editar"><i class="fa fa-edit"></i> Editar</a></li>'+
+                            '<li><a href="#" data-codigo="'+data+'" id="borrarP"><i class="fa fa-trash"></i> Borrar</a></li>'+
                         '</ul>'+
                         '</div>'
               }
