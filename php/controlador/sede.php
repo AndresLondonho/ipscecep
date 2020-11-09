@@ -2,10 +2,10 @@
     require_once("../modelo/sede.php");
 
     $datos = $_GET;
+    $sede = new Sede();
     switch($_GET['accion']){
 
         case 'editar':
-            $sede = new Sede();
             $resultado = $sede->editar($datos);
             $respuesta = array(
                 'respuesta' => $resultado
@@ -14,7 +14,6 @@
         break;
 
         case 'consultar':
-            $sede = new Sede();
             $sede->consultar($datos['codigo']);
 
             if($sede->getNOM_SEDE() == null){
@@ -35,7 +34,6 @@
         break;
 
         case 'borrar':
-			$sede = new Sede();
 			$resultado = $sede->borrar($datos['codigo']);
 			if($resultado > 0){
                 $respuesta = array(
@@ -50,7 +48,6 @@
         break;
         
         case 'listar':
-            $sede = new Sede();
             $listado = $sede->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;

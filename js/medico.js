@@ -28,6 +28,7 @@ function medicos(){
                 $("#nom2_user").val(medico.nom2_user);
                 $("#ape2_user").val(medico.ape2_user);
                 $("#tel_user").val(medico.tel_user);
+                $("#email_user").val(medico.email_user);
                 especialidad = medico.especialidad;
                 sede = medico.sede;
                 console.log(especialidad);
@@ -71,7 +72,7 @@ function medicos(){
     })
 
     $("#modal_editar").on("click","button#actualizar",function(){
-         var datos = $("#frmmedico").serialize();
+        var datos = $("#frmmedico").serialize();
         $.ajax({
             type: "get",
             url: "../controlador/medico.php",
@@ -124,16 +125,16 @@ function medicos(){
         })
     })
 
-    $("#modal_editar").on("click","button#registrar",function(){
+    $("#modal_editar").on("submit","#registrar",function(e){
+        e.preventDefault();
         var nombre = $("#nom_user").val();
         var apellido = $("#ape_user").val();
         var user = nombre.substr(0, 1)+apellido;
-        var usuario = user.toLowerCase();
-        var pass = $("#cc_user").val();
-        $("#username").val(usuario);
-        $("#password").val(pass);
+        var cedula = $("#cc_user").val();
+        $("#id_func").val(cedula);
+        $("#username").val(user.toLowerCase());
+        $("#password").val(cedula);
         var datos = $("#frmmedico").serialize();
-
         $.ajax({
             type:"get",
             url:"../controlador/medico.php",
@@ -161,46 +162,6 @@ function medicos(){
             }
         })
     })
-
-    $("#editar").on("click","button#grabar",function(){
-      var datos=$("#fcomuna").serialize();
-      //console.log(datos);
-      $.ajax({
-            type:"get",
-            url:"./Controlador/controladorComuna.php",
-            data: datos,
-            dataType:"json"
-          }).done(function( resultado ) {
-              if(resultado.respuesta){
-                swal({
-                    position: 'center',
-                    type: 'success',
-                    title: 'La comuna fue grabada con éxito',
-                    showConfirmButton: false,
-                    timer: 1200
-                })     
-                    $(".box-title").html("Listado de Comunas");
-                    $(".box #nuevo").show();
-                    $("#editar").html('');
-                    $("#editar").addClass('hide');
-                    $("#editar").removeClass('show');
-                    $("#listado").addClass('show');
-                    $("#listado").removeClass('hide');
-                    dt.page( 'last' ).draw( 'page' );
-                    dt.ajax.reload(null, false);                   
-             } else {
-                swal({
-                    position: 'center',
-                    type: 'error',
-                    title: 'Ocurrió un erro al grabar',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-               
-            }
-        });
-    });
-
 
     $("#tabla").on("click","a#borrarM",function(){
         //Recupera datos del formulario
@@ -254,7 +215,6 @@ function medicos(){
                     });
                 }
         })
-
     });
 }
 

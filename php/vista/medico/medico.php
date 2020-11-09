@@ -1,12 +1,4 @@
-<h1>
-        Gestión de Medicos</h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Medicos</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
+<input type="hidden" id="modulo" value="Medicos">
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
@@ -14,11 +6,8 @@
             <div class="box-header with-border">
               <button type="button" data-toggle="modal" data-target="#modal_editar" class="btn btn-success" id="nuevoM" title="Nuevo Medico" >Nuevo</button>
             </div>
-           
-            
             <!-- /.box-header -->
             <div class="box-body">
-            <div id="editar"></div>
             <div id="listado">
               <table id="tabla" class="table table-bordered table-striped">
                 <thead>

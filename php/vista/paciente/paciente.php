@@ -1,11 +1,4 @@
-      <h1>
-        Gestión de pacientes</h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">pacientes</li>
-      </ol>
-    </section>
-
+<input type="hidden" id="modulo" value="Pacientes">
     <!-- Main content -->
     <section class="content">
       <div class="row">

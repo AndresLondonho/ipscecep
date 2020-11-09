@@ -5,13 +5,14 @@ function dashboard(){
         var url = $(this).attr("href");
         $.post( url, {url:url},function(data) {
             if(url!="#")
-                $("#contenido" ).html(data);
+                $("#contenido").html(data);
+                document.getElementById("seccion_activa").innerHTML = $("#modulo").val();
     });
     })
 }
 
 $(document).ready(() => {
-
+    $("#contenido").load("home.php");
 
     dashboard();
 })

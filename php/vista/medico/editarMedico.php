@@ -41,9 +41,18 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="telefono">Telefono:</label>
-                                            <input type="text" class="form-control" id="tel_user" name="tel_user" value="">
-                                            <small class="form-text text-muted">Ingrese telefono para modificar.</small>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label for="telefono">Telefono:</label>
+                                                    <input type="text" class="form-control" id="tel_user" name="tel_user" value="" placeholder="3152614512" required>
+                                                    <small class="form-text text-muted">Ingrese numero de telefono para modificar.</small>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="telefono">Email:</label>
+                                                    <input type="email" class="form-control" id="email_user" name="email_user" placeholder="andres@hotmail.com" required>
+                                                    <small class="form-text text-muted">Ingrese corrreo electronico para modificar.</small>
+                                                </div>
+                                            </div>
                                         </div>    
                                     </div>
                                     

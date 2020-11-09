@@ -52,7 +52,7 @@
         public function consultar($id_sede=''){
             if ($id_sede != ''):
                 $this->query = "
-                    SELECT sed.nom_sede as Sede, sed.dir_sede as Direccion, sed.tel_sede as Telefono, ciu.nom_ciu as Ciudad, fun.nom_user as Director
+                    SELECT sed.id_sede as Codigo, sed.nom_sede as Sede, sed.dir_sede as Direccion, sed.tel_sede as Telefono, ciu.nom_ciu as Ciudad, fun.nom_user as Director
                     FROM sede as sed
                     INNER JOIN ciudad as ciu ON (sed.id_ciu = ciu.id_ciu)
                     INNER JOIN funcionarios as fun ON (sed.id_rol = fun.id_func)
@@ -71,7 +71,7 @@
 
         public function listar(){
             $this->query = "
-                SELECT sed.nom_sede as Sede, sed.dir_sede as Direccion, sed.tel_sede as Telefono, ciu.nom_ciu as Ciudad, fun.nom_user as Director
+                SELECT sed.id_sede as Codigo, sed.nom_sede as Sede, sed.dir_sede as Direccion, sed.tel_sede as Telefono, ciu.nom_ciu as Ciudad, fun.nom_user as Director
                 FROM sede as sed
                 INNER JOIN ciudad as ciu ON (sed.id_ciu = ciu.id_ciu)
                 INNER JOIN funcionarios as fun ON (sed.id_rol = fun.id_func)

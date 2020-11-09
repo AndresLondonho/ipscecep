@@ -3,7 +3,7 @@
 <head>
 
      <title>IPS CECEP</title>
-     <link rel="shortcut icon" href="imgs/icono.ico">
+     <link rel="shortcut icon" href="recursos/imgs/icono.ico">
 
 
      <meta charset="UTF-8">
@@ -144,7 +144,7 @@
                                    <p>Para orgullo de la comunidad, hemos realizado la contratación de un excelente profesional, el Dr Esteban Peñaranda nos prestará sus servicios los proximos años</p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                                   <img src="imgs/esteban.jpg" class="img-responsive" alt="">
+                                   <img src="recursos/imgs/esteban.jpg" class="img-responsive" alt="">
                                    <figcaption>
                                         <h3>Esteban Peñaranda</h3>
                                         <p>Ginecologo profesional</p>
@@ -173,7 +173,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <img src="imgs/julian.jpg" class="img-responsive" alt="">
+                              <img src="recursos/imgs/julian.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Julian Ipia</h3>
@@ -194,7 +194,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="imgs/sebastian.jpg" class="img-responsive" alt="">
+                              <img src="recursos/imgs/sebastian.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Sebastian Idrobo</h3>
@@ -215,7 +215,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="imgs/cristian.jpg" class="img-responsive" alt="">
+                              <img src="recursos/imgs/cristian.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Cristian Loaiza</h3>
@@ -236,7 +236,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="imgs/andres.jpg" class="img-responsive" alt="">
+                              <img src="recursos/imgs/andres.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Andres Londoño</h3>
@@ -257,7 +257,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="imgs/esteban2.jpg" class="img-responsive" alt="">
+                              <img src="recursos/imgs/esteban2.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Esteban Peñaranda</h3>
@@ -278,7 +278,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="imgs/diego.jpg" class="img-responsive" alt="">
+                              <img src="recursos/imgs/diego.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Diego David</h3>
@@ -299,7 +299,7 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="imgs/vinasco.jpg" class="img-responsive" alt="">
+                              <img src="recursos/imgs/vinasco.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
                                         <h3>Alberto Londoño</h3>
@@ -339,14 +339,14 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
                               <a href="news-detail.html">
-                                   <img src="imgs/investigacion.jpg" class="img-responsive" alt="">
+                                   <img src="recursos/imgs/investigacion.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>Febrero 5, 2017</span>
                                    <h3><a href="news-detail.html">Acerca de nuestra tecnologia</a></h3>
                                    <p>Mantenemos innovando acerca de los recursos que poseemos, haciendo que nuestros usuarios tengan la mejor atención y se sientan como en casa</p>
                                    <div class="author">
-                                        <img src="imgs/rafa.jpg" class="img-responsive" alt="">
+                                        <img src="recursos/imgs/rafa.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Rafael Londoño</h5>
                                              <p>CEO / Founder</p>
@@ -360,14 +360,14 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
                               <a href="news-detail.html">
-                                   <img src="imgs/avance.jpg" class="img-responsive" alt="">
+                                   <img src="recursos/imgs/avance.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>February 20, 2018</span>
                                    <h3><a href="news-detail.html">Buscando opciones avanzar</a></h3>
                                    <p>Siempre buscamos en como mejorar, para ello mantenemos en investigaciones frecuentes en tanto a las nuevas maneras de ayudar a las personas y el bien común</p>
                                    <div class="author">
-                                        <img src="imgs/diego2.jpg" class="img-responsive" alt="">
+                                        <img src="recursos/imgs/diego2.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Diego David</h5>
                                              <p>Medico General</p>
@@ -381,14 +381,14 @@
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
                               <a href="news-detail.html">
-                                   <img src="imgs/indicadores.jpg" class="img-responsive" alt="">
+                                   <img src="recursos/imgs/indicadores.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
                                    <span>January 27, 2020</span>
                                    <h3><a href="news-detail.html">¿Cómo nos fue en todo el año?</a></h3>
                                    <p>Revive todo el proceso del pasado año con nosotros, para ello te mostramos todo lo que realizamos y a las personas que ayudamos en todo el año anterior gracias a nuestros pacientes.</p>
                                    <div class="author">
-                                        <img src="imgs/beto.jpg" class="img-responsive" alt="">
+                                        <img src="recursos/imgs/beto.jpg" class="img-responsive" alt="">
                                         <div class="author-info">
                                              <h5>Carlos Vinasco</h5>
                                              <p>Agente publicitario</p>
@@ -440,7 +440,7 @@
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas nocticias</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="recursos/imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>Bioseguridad en nuestra vida</h5></a>
@@ -450,7 +450,7 @@
 
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="imgs/news.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="recursos/imgs/news.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>Una vida más fitness</h5></a>

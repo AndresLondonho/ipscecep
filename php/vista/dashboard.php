@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>IPS CECEP</title>
-  <link rel="shortcut icon" href="../../imgs/icono.ico">
+  <link rel="shortcut icon" href="../../recursos/imgs/icono.ico">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -42,9 +42,9 @@
     <!-- Logo -->
     <a href="dashboard.php" class="logo">
       <!-- mini logo para barra lateral mini 50x50 píxeles -->
-      <span class="logo-mini"><img src="../../imgs/icono.ico"></span>
+      <span class="logo-mini"><img src="../../recursos/imgs/icono.ico"></span>
       <!-- logotipo para dispositivos móviles y estatales regulares -->
-      <span class="logo-lg"><img src="../../imgs/icono.ico"><b>IPS</b> CECEP</span>
+      <span class="logo-lg"><img src="../../recursos/imgs/icono.ico"><b>IPS</b> CECEP</span>
     </a>
     <!-- Barra de navegación de encabezado -->
     <nav class="navbar navbar-static-top">
@@ -116,6 +116,12 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">NAVEGACIÓN PRINCIPAL</li>
         <li class="treeview">
+          <a href="home.php">
+            <i class="fa fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Gestion</span>
             <span class="pull-right-container">
@@ -125,7 +131,7 @@
           <ul class="treeview-menu">
             <li class="active"><a href="paciente/paciente.php"><i class="fa fa-circle-o"></i> Pacientes</a></li>
             <li class="active"><a href="medico/medico.php"><i class="fa fa-circle-o"></i> Medicos</a></li>
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Citas</a></li>
+            <li class="active"><a href="citas/cita.php"><i class="fa fa-circle-o"></i> Citas</a></li>
             <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Sedes</a></li>
             <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Ciudades</a></li>
           </ul>
@@ -154,8 +160,8 @@
         <small>Panel de control</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Dashboard</li>
+        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active" id="seccion_activa">Inicio</li>
       </ol>
     </section>
 

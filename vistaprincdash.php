@@ -1,5 +1,7 @@
 <!--SECCION DE NUESTROS MEDICOS-->
-<div class="card">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="card">
                   <div class="card-header">
                     <h3 class="card-title">Nuestros Medicos</h3>
 
@@ -58,13 +60,3 @@
             </div>
             <!-- /.row -->
 <!-- FIN NUESTROS MEDICOS -->
-
-<!-- BOTON PARA LA ACCION DE EDITAR-ELIMINAR-->
-<div class="btn-group pull-right open">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Acciones <span class="fa fa-caret-down"></span></button>
-    <ul class="dropdown-menu">
-        <li><a href="#" data-toggle="modal" data-target="#modal_update" data-nombres="ALBERTO" data-apellidos="VERDEJO" data-telefono="9999" data-direccion="Av arequipa 301 Lima " data-email="unodostres@outlook.com" data-id_especialidad="58" data-id="60"><i class="fa fa-edit"></i> Editar</a></li>
-        <li><a href="#" onclick="eliminar('60')"><i class="fa fa-trash"></i> Borrar</a></li>
-    </ul>
-</div>
-<!-- FIN BOTON PARA LA ACCION DE EDITAR-ELIMINAR-->

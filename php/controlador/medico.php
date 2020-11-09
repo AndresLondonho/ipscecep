@@ -3,8 +3,8 @@
 
     $datos = $_GET;
     $medico = new Medico();
-    switch($_GET['accion']){
 
+    switch($_GET['accion']){
         case 'editar':
             $resultado = $medico->editar($datos);
             $respuesta = array(
@@ -32,6 +32,7 @@
                     'sede' => $medico->getSede(),
                     'especialidad' => $medico->getEspecialidad(),
                     'imagen' => $medico->getImagen(),
+                    'email_user' => $medico->getEmail_user(),
                     'respuesta' => 'existe'
                 );
             }
