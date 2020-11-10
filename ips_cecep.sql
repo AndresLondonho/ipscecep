@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2020 a las 03:32:57
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.6
+-- Tiempo de generación: 10-11-2020 a las 04:58:27
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.2.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,6 +63,7 @@ CREATE TABLE `cita` (
 --
 
 INSERT INTO `cita` (`nro_cita`, `id_func`, `id_pac`, `id_sede`, `id_espec`, `fecha`, `hora`, `Detalle`) VALUES
+(1, 102, 225563622, 1015, 1, '2020-11-13', '15:53:27', 'Me duele el estomago y tengo nauseas creo que Ipia me embarazó'),
 (6, 101, 1112486444, 1011, 1, '2020-11-09', '16:40:00', NULL);
 
 -- --------------------------------------------------------
@@ -82,7 +83,11 @@ CREATE TABLE `ciudad` (
 --
 
 INSERT INTO `ciudad` (`id_ciu`, `nom_ciu`, `id_pais`) VALUES
-(1001, 'Cali', 101);
+(1001, 'Cali', 101),
+(1002, 'Bogota', 101),
+(1003, 'Barranquilla', 101),
+(1004, 'Medellin', 101),
+(1005, 'Pereira', 101);
 
 -- --------------------------------------------------------
 
@@ -105,7 +110,10 @@ INSERT INTO `especialidad` (`id_espec`, `nom_espec`, `derivacion`) VALUES
 (2, 'Odontologia', 'Odontologo(a)'),
 (3, 'Ginecologia', 'Ginecologo(a)'),
 (4, 'Oftalmologia', 'Oftalmologo(a)'),
-(5, 'Traumatologia', 'Traumatologo(a)');
+(5, 'Traumatologia', 'Traumatologo(a)'),
+(6, 'Pediatria', 'Pediatra'),
+(7, 'Dermatologia', 'Dermatologo(a)'),
+(8, 'Cardiologia', 'Cardiologo(a)');
 
 -- --------------------------------------------------------
 
@@ -139,9 +147,13 @@ INSERT INTO `funcionarios` (`id_func`, `id_priv`, `username`, `password`, `nom_u
 (101, 2, 'medico1', 'ytfrcyjvguyr', 'Cristian', 'David', 'Loaiza', 'Estrada', 3017505543, 1234894, 'yoquese@menos.com', 2, 3, 1011, 'cristian.jpg'),
 (102, 2, 'medico2', '8548413165651', 'rafael', '', 'Londono', '', 5154861, 33265154, 'asdsda@gmail.com', 2, 1, 1011, NULL),
 (103, 2, 'iwachu', 'ufaisdjbvyasvfbwñevbiñsubvuñsbvIWACHU', 'rafael', 'David', 'Londono', 'Estrada', 1234567, 12348945, 'asdvausb@dufhs.com', 1, NULL, 1011, NULL),
-(4444, 2, 'jtiro', '4444', 'Jhin', 'Cuarto', 'Tiro', 'Sublime', 4444444, 4444, 'elvirtuoso@cuatro.com', 2, 1, 1011, ''),
-(5151, 2, 'andres', '123456', 'Rafael', 'Andres', 'Londono', 'Loaiza', 3182665156, 1112486446, 'andreslondonho@gmail.com', 2, 1, 1011, ''),
-(5152, 2, 'rlondono', '1112486447', 'Rafael', 'David', 'Londono', 'Loaiza', 3017505543, 1112486447, 'andres@gmail.com', 2, 4, 1011, '');
+(104, 2, 'jtiro', '4444', 'Jhin', 'Cuarto', 'Tiro', 'Sublime', 4444444, 4444, 'elvirtuoso@cuatro.com', 2, 1, 1011, ''),
+(105, 2, 'andres', '123456', 'Rafael', 'Andres', 'Londono', 'Loaiza', 3182665156, 1112486446, 'andreslondonho@gmail.com', 2, 1, 1011, ''),
+(106, 2, 'rlondono', '1112486447', 'Rafael', 'David', 'Londono', 'Loaiza', 3017505543, 1112486447, 'andres@gmail.com', 2, 4, 1011, ''),
+(107, 2, 'mrogada', '100505040', 'Mariana', 'Rogada', 'Rogada', 'Mariana', 301205020, 100505040, 'marianarogada@gmail.com', 1, NULL, 1012, NULL),
+(108, 2, 'lperez', '98205050', 'luisa', 'andrea', 'perez', 'palacio', 301252020, 98205050, 'luisaperezpalacio@gmail.com', 1, NULL, 1013, NULL),
+(109, 2, 'jramirez', '89526600', 'juan', 'andres', 'ramirez', 'ramirez', 32002020, 89526600, 'juanramirez@gmail.com', 1, NULL, 1014, NULL),
+(110, 2, 'mgonzalez', '67520520', 'marily', 'paola', 'gonzalez', 'herrera', 316205055, 67520520, 'marilygonzalez@gmail.com', 1, NULL, 1015, NULL);
 
 -- --------------------------------------------------------
 
@@ -165,6 +177,10 @@ CREATE TABLE `pacientes` (
 --
 
 INSERT INTO `pacientes` (`id_pac`, `nom_pac`, `ape_pac`, `cc_pac`, `email_pac`, `tel_pac`, `dir_pac`, `id_ciu`) VALUES
+(15256250, 'Valery', 'Rivera', 15256250, 'valeryrivera@gmail.com', 3155500, 'carrera 20 #4-2', 1002),
+(65828220, 'Julian', 'Valeria', 65828220, 'julianvaleria@gmail.com', 31202020, 'avenida 3 norte #20-20', 1004),
+(98552520, 'Kevin', 'Trujillo', 98552520, 'kevintrujillo@gmail.com', 31505250, 'carrera 35 A', 1003),
+(225563622, 'valeria', 'capote', 225563622, 'valeriacapote@gmail.com', 30250520, 'calle 50 #30-40', 1005),
 (1112486444, 'rafael', 'loaiza', 1112486444, 'jfytf@hjhb.com', 3215465, 'cra34#54-98', 1001);
 
 -- --------------------------------------------------------
@@ -225,7 +241,11 @@ CREATE TABLE `sede` (
 --
 
 INSERT INTO `sede` (`id_sede`, `nom_sede`, `dir_sede`, `tel_sede`, `id_ciu`, `id_rol`) VALUES
-(1011, 'Champagnat', 'Cl. 9b #29a67', 3828282, 1001, 103);
+(1011, 'Champagnat', 'Cl. 9b #29a67', 3828282, 1001, 103),
+(1012, 'Bosa', 'Carrera 80 con avenida 3', 4050520, 1002, 107),
+(1013, 'Riomar', 'Calle 110 avenida circunvalar', 1002020, 1003, 108),
+(1014, 'Belen', 'Calle 29A #69b-2 a 69b-92', 6505050, 1004, 109),
+(1015, 'Consota', 'Kilometro 11 Vía Pereira, Pere', 542020, 1005, 110);
 
 -- --------------------------------------------------------
 
@@ -243,7 +263,14 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id_serv`, `nom_serv`) VALUES
-(1, 'odontologia');
+(1, 'odontologia'),
+(2, 'Medicina general'),
+(3, 'Ginecologia'),
+(4, 'Oftamologia'),
+(5, 'Traumatologia'),
+(6, 'Pediatria'),
+(7, 'Dermatologia'),
+(8, 'Cardiologia');
 
 --
 -- Índices para tablas volcadas
