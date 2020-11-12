@@ -1,54 +1,71 @@
-<?php include_once ("../../Funciones/sessiones.php"); ?>
-<!-- quick email widget -->
 
-    <div class="box-body">
-        <div class="panel-group"><div class="panel panel-primary">
-            <div class="panel-heading">Datos</div>
-            <div class="panel-body">    
-                <form class="form-horizontal" role="form"  id="fcomuna">
- 					<div class="form-group">
-                        <label class="control-label col-sm-1" for="comu_codi">Codigo:</label>
-                        <div class="input-group col-sm-10">
-                            <span class="input-group-addon"><i class="fas fa-tags"></i></span>
-                            <input type="text" class="form-control " id="comu_codi" name="comu_codi" placeholder="Ingrese Codigo"
-                            value = "" readonly="true"  data-validation="length alphanumeric" data-validation-length="3-12">
+<div class="container">
+    <div id="seccion-paciente">
+        <div class="box-header">
+        </div>
+        <div class="box-body">
+            <div class="panel-group">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Nuevo</div>
+                        <div class="panel-body">
+                            <form id="frmpaciente" enctype="multipart/form-data">
+                                <h3>Cedula:</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Información personal</h5>
+                                        <input type="hidden" id="id_func" name="id_func" value="">                                                        
+                                        <div class="form-group">
+                                            <label for="nombre">Cedula:</label>
+                                            <input type="text" class="form-control" id="cc_pac" name="cc_pac" value="" placeholder="1005828611" required>
+                                            <small class="form-text text-muted">Ingrese numero de cedula.</small>
+                                        </div>                                                        
+                                        <div class="form-group">
+                                            <label for="nombre">Nombres:</label>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="nom_pac" name="nom_pac" value="" placeholder="Cristian" required>
+                                                    <small class="form-text text-muted">Ingrese nombre del paciente.</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="apellido">Apellidos:</label>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="ape_pac" name="ape_pac" value="" placeholder="Loaiza" required>
+                                                    <small class="form-text text-muted">Ingrese apellidos del paciente.</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label for="telefono">Email:</label>
+                                                    <input type="email" class="form-control" id="email_pac" name="email_pac" placeholder="cristian@hotmail.com" required>
+                                                    <small class="form-text text-muted">Ingrese corrreo electronico.</small>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="telefono">Telefono:</label>
+                                                    <input type="text" class="form-control" id="tel_pac" name="tel_pac" value="" placeholder="3017505543" required>
+                                                    <small class="form-text text-muted">Ingrese numero de telefono.</small>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="form-group">
+                                            <label for="ciudad">Ciudad:</label>
+                                            <select class="form-control" id="id_ciu" name="id_ciu" value="">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                                   
+                                <button type="submit" id="registrar" class="btn btn-primary">Registrar</button>
+                                <input type="hidden" id="editar" value="nuevo" name="accion"/>
+                            </form>    
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-1" for="comu_nomb">Nombre:</label>
-                        <div class="input-group col-sm-10">
-                            <span class="input-group-addon"><i class="fas fa-building"></i></span>
-                            <input type="text" class="form-control" id="comu_nomb" name="comu_nomb" placeholder="Ingrese Nombre comuna"
-                            value = "">
-                        </div>                    
-                    </div>
-					
-					
-                    <div class="form-group">
-                        <label class="control-label col-sm-1" for="muni_codi">Municipio:</label>
-                        <div class="input-group col-sm-10">
-                            <span class="input-group-addon"><i class="fa fa-city"></i></span>
-                            <select class="form-control" id="muni_codi" name="muni_codi">
-                            <option value="" selected>Seleccione ...</option>
-								<?php foreach($listaMunicipio as $fila){ ?>
-								<option value="<?php echo trim($fila['muni_codi']); ?>" >
-								<?php echo utf8_encode(trim($fila['muni_nomb'])); ?> </option>
-
-								<?php } ?>
-							</select>	
-                        </div>
-                    </div>
-
-					 <div class="form-group">        
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" id="grabar" class="btn btn-primary" data-toggle="tooltip" title="Grabar Comuna">Grabar Comuna</button>
-                            <button type="button" id="cerrar" class="btn btn-success btncerrar" data-toggle="tooltip" title="Cancelar">Cancelar</button>
-                        </div>
-                    </div>
-
-					<input type="hidden" id="nuevo" value="nuevo" name="accion"/>
-			</fieldset>
-
-		</form>
-	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,14 +4,10 @@
       <div class="row">
         <div class="col-xs-12">
          <div class="box">
-            <div class="box-header with-border">
-              <div class="box-tools pull-right">
-                  <button class="btn btn-info btn-sm" id="nuevo"  data-toggle="tooltip" 
-                      title="Nuevo paciente"><i class="fa fa-plus" aria-hidden="true"></i></button> 
-              </div>
+         <div class="box-header with-border">
+              <button type="button" data-toggle="modal" data-target="#modal_editar" class="btn btn-success" id="nuevoP" title="Nuevo Paciente" >Nuevo</button>
             </div>
            
-        
             <!-- /.box-header -->
             <div class="box-body">
             <div id="editar"></div>

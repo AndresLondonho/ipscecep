@@ -1,4 +1,4 @@
-<?php
+    <?php
     require_once("conexionBD.php");
 
     class Paciente extends ConexionBD{
@@ -108,7 +108,7 @@
                     insert into funcionarios
                     (id_pac, nom_pac, ape_pac, cc_pac, email_pac, tel_med, dir_pac, id_ciu)
                     values
-                    (null, '$nom_pac', '$nom_med', '$ape_med', '$cc_pac', '$email_pac', '$tel_pac', '$dir_pac', '$id_ciu')
+                    (null, '$nom_pac', '$nom_pac', '$ape_pac', '$cc_pac', '$email_pac', '$tel_pac', '$dir_pac', '$id_ciu')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;

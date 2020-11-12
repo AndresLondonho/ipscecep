@@ -1,10 +1,9 @@
 var dt;
 function pacientes(){
 
-    $("#tabla").on("click","a#editarM", function(){
+    $("#tabla").on("click","a#editarP", function(){
         var codigo = $(this).data("codigo");
-        var especialidad;
-        var sede;
+        var Ciudad;
         console.log(codigo);
         $("#modal_editar").load("paciente/editarPaciente.php"); 
         
@@ -22,110 +21,97 @@ function pacientes(){
                 })
             } else {
                 document.getElementById("ced").innerHTML = paciente.Cedula;
-                $("#cc_user").val(paciente.cedula);
-                $("#nom_user").val(paciente.nom_user);
-                $("#ape_user").val(paciente.ape_user);
-                $("#tel_user").val(paciente.tel_user);
-                especialidad = paciente.especialidad;
-                sede = paciente.sede;
-                console.log(especialidad);
-                console.log(sede);
+                $("#cc_pac").val(paciente.Cedula);
+                $("#nom_pac").val(paciente.nom_user);
+                $("#ape_pac").val(paciente.ape_user);
+                $("#email_pac").val(paciente.email_pac);
+                $("#tel_pac").val(paciente.tel_user);
+                $("#dir_pac").val(paciente.dir_pac);
+                Ciudad = paciente.Ciudad;
+                console.log(Ciudad);
 
             }
         });
         $.ajax({
             type:"get",
-            url:"../controlador/especialidad.php",
+            url:"../controlador/ciudad.php",
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
             $("#espec option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-                if(especialidad === value.Codigo){
-                    $("#espec").append("<option selected value='" + value.Codigo + "'>" + value.Especialidad + "</option>")
+                if(ciudad === value.Codigo){
+                    $("#espec").append("<option selected value='" + value.Codigo + "'>" + value.Ciudad + "</option>")
                 } else {
-                    $("#espec").append("<option value='"+value.Codigo+"'>"+value.Especialidad+"</option>");
+                    $("#espec").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
                 }
             })
         })
+    })
 
+    $("#modal_editar").on("click","button#actualizar",function(){
+        var datos = $("#frmpaciente").serialize();
+       $.ajax({
+           type: "get",
+           url: "../controlador/paciente.php",
+           data: datos,
+           dataType: "json"
+       }).done(function(resultado){
+           if(resultado.respuesta){
+               swal(
+                   'Actualizado',
+                   'Se actualizaron los datos correctamente',
+                   'success'
+               )
+           } else {
+               swal({
+                   type: 'error',
+                   title: 'Error',
+                   text: 'Algo ha salido mal'
+               })
+           }
+       })
+    })
+   
+    $(".box").on("click","button#nuevoP", function(){
+        $("#modal_editar").load("paciente/nuevoPaciente.php");
+        
         $.ajax({
             type:"get",
-            url:"../controlador/sede.php",
+            url:"../controlador/ciudad.php",
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#sede option").remove();
+            $("#espec option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-                if(sede === value.Codigo){
-                    $("#sede").append("<option selected value='" + value.Codigo + "'>" + value.Sede + "</option>")
-                } else {
-                    $("#sede").append("<option value='"+value.Codigo+"'>"+value.Sede+"</option>");
-                }
+            $("#espec").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
             })
         })
     })
 
-    $("#editar").on("click",".btncerrar", function(){
-        $(".box-title").html("Listado de Comunas");
-        $("#editar").addClass('hide');
-        $("#editar").removeClass('show');
-        $("#listado").addClass('show');
-        $("#listado").removeClass('hide');  
-        $(".box #nuevo").show(); 
-    })  
-
-    $(".box").on("click","#nuevo", function(){
-        $(this).hide();
-        $(".box-title").html("Crear Comuna");
-        $("#editar").addClass('show');
-        $("#editar").removeClass('hide');
-        $("#listado").addClass('hide');
-        $("#listado").removeClass('show');
-        $("#editar").load('./Vistas/Comuna/nuevaComuna.php', function(){
-            $.ajax({
-               type:"get",
-               url:"./Controlador/controladorMunicipio.php",
-               data: {accion:'listar'},
-               dataType:"json"
-            }).done(function( resultado ) {                    ;
-                $.each(resultado.data, function (index, value) { 
-                  $("#editar #muni_codi").append("<option value='" + value.muni_codi + "'>" + value.muni_nomb + "</option>")
-                });
-            });
-        });
-        
-    })
-
-    $("#editar").on("click","button#grabar",function(){
-      var datos=$("#fcomuna").serialize();
-      //console.log(datos);
-      $.ajax({
+    $("#modal_editar").on("submit","#registrar",function(e){
+        e.preventDefault();
+        var cedula = $("#cc_pac").val();
+        $("#id_pac").val(cedula);
+        var datos = $("#frmpaciente").serialize();
+        $.ajax({
             type:"get",
-            url:"./Controlador/controladorComuna.php",
+            url:"../controlador/paciente.php",
             data: datos,
             dataType:"json"
           }).done(function( resultado ) {
-              if(resultado.respuesta){
+            if(resultado.respuesta){
                 swal({
                     position: 'center',
                     type: 'success',
-                    title: 'La comuna fue grabada con éxito',
+                    title: 'El paciente fue grabado con éxito',
                     showConfirmButton: false,
                     timer: 1200
-                })     
-                    $(".box-title").html("Listado de Comunas");
-                    $(".box #nuevo").show();
-                    $("#editar").html('');
-                    $("#editar").addClass('hide');
-                    $("#editar").removeClass('show');
-                    $("#listado").addClass('show');
-                    $("#listado").removeClass('hide');
-                    dt.page( 'last' ).draw( 'page' );
-                    dt.ajax.reload(null, false);                   
-             } else {
+                })
+                dt.ajax.reload();
+            } else {
                 swal({
                     position: 'center',
                     type: 'error',
@@ -135,40 +121,16 @@ function pacientes(){
                 });
                
             }
-        });
-    });
-
-    $("#modal_editar").on("click","button#actualizar",function(){
-         var datos = $("#frmmedico").serialize();
-        $.ajax({
-            type: "get",
-            url: "../controlador/medico.php",
-            data: datos,
-            dataType: "json"
-        }).done(function(resultado){
-            if(resultado.respuesta){
-                swal(
-                    'Actualizado',
-                    'Se actualizaron los datos correctamente',
-                    'success'
-                )
-            } else {
-                swal({
-                    type: 'error',
-                    title: 'Error',
-                    text: 'Algo ha salido mal'
-                })
-            }
         })
     })
 
-    $("#tabla").on("click","a#borrarM",function(){
+    $("#tabla").on("click","a#borrarP",function(){
         //Recupera datos del formulario
         var codigo = $(this).data("codigo");
         console.log(codigo);
         swal({
               title: '¿Está seguro?',
-              text: "¿Borrar el medico con cedula: " + codigo + " ?",
+              text: "¿Borrar el paciente con cedula: " + codigo + " ?",
               type: 'warning',
               showCancelButton: true,
               confirmButtonColor: '#3085d6',
@@ -178,7 +140,7 @@ function pacientes(){
                 if (decision.value) {
                     var request = $.ajax({
                         method: "get",                  
-                        url: "../controlador/medico.php",
+                        url: "../controlador/paciente.php",
                         data: {codigo: codigo, accion:'borrar'},
                         dataType: "json"
                     })
@@ -187,7 +149,7 @@ function pacientes(){
                             swal({
                               position: 'center',
                               type: 'success',
-                              title: 'El medico con cedula ' + codigo + ' se ha borrado',
+                              title: 'El paciente con cedula ' + codigo + ' se ha borrado',
                               showConfirmButton: false,
                               timer: 1500
                             })       
@@ -214,7 +176,6 @@ function pacientes(){
                     });
                 }
         })
-
     });
 }
 
