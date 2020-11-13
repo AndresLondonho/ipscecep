@@ -38,6 +38,23 @@
             }
             echo json_encode($respuesta);
         break;
+
+        case 'consultarE':
+            $medico->consultarE($datos['codigo']);
+
+            if($medico->getID_espec() == null){
+                $respuesta = array(
+                    'respuesta' => 'no existe'
+                );
+            } else {
+                $respuesta = array (
+                    'cedula' => $medico->getCedula(),
+                    'medico' => $medico->getMedico(),
+                    'respuesta' => 'existe'
+                );
+            }
+            echo json_encode($respuesta);
+        break;
 		
 		case 'borrar':
 			$resultado = $medico->borrar($datos['codigo']);
@@ -56,6 +73,10 @@
         case 'listar':
             $listado = $medico->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
+        break;
+
+        case 'listarM':
+            
         break;
 
         case 'nuevo':

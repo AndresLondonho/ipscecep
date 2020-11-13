@@ -22,11 +22,11 @@ function pacientes(){
             } else {
                 document.getElementById("ced").innerHTML = paciente.Cedula;
                 $("#cc_pac").val(paciente.Cedula);
-                $("#nom_pac").val(paciente.nom_user);
-                $("#ape_pac").val(paciente.ape_user);
-                $("#email_pac").val(paciente.email_pac);
-                $("#tel_pac").val(paciente.tel_user);
-                $("#dir_pac").val(paciente.dir_pac);
+                $("#nom_pac").val(paciente.nom_pac);
+                $("#ape_pac").val(paciente.ape_pac);
+                $("#email_pac").val(paciente.Email);
+                $("#tel_pac").val(paciente.Telefono);
+                $("#dir_pac").val(paciente.Direccion);
                 Ciudad = paciente.Ciudad;
                 console.log(Ciudad);
 
@@ -38,13 +38,13 @@ function pacientes(){
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#espec option").remove();
+            $("#id_ciu option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-                if(ciudad === value.Codigo){
-                    $("#espec").append("<option selected value='" + value.Codigo + "'>" + value.Ciudad + "</option>")
+                if(Ciudad === value.Codigo){
+                    $("#id_ciu").append("<option selected value='" + value.Codigo + "'>" + value.Ciudad + "</option>")
                 } else {
-                    $("#espec").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
+                    $("#id_ciu").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
                 }
             })
         })
@@ -83,17 +83,17 @@ function pacientes(){
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#espec option").remove();
+            $("#id_ciu option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-            $("#espec").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
+            $("#id_ciu").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
             })
         })
     })
 
-    $("#modal_editar").on("submit","#registrar",function(e){
-        e.preventDefault();
+    $("#modal_editar").on("click","button#registrar",function(){
         var cedula = $("#cc_pac").val();
+        console.log(cedula);
         $("#id_pac").val(cedula);
         var datos = $("#frmpaciente").serialize();
         $.ajax({

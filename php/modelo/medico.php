@@ -111,8 +111,7 @@
                 foreach ($this->rows[0] as $propiedad => $valor):
                     $this-> $propiedad = $valor;
                 endforeach;
-            endif;
-                
+            endif;  
         }
 
         public function listar(){
@@ -132,6 +131,22 @@
             return $this->rows;
         }
 
+        public function consultarE($id_espec=''){
+            if ($id_espec!=''):
+                $this->query ="
+                    select cc_user as Cedula, concat(nom_user,' ',ape_user) as Medico, id_espec
+                    from funcionarios
+                    where id_espec = '$id_espec'
+                ";
+                $this->obtener_resultados_query();
+            endif;
+            if(count($this->rows) == 1):
+                foreach ($this->rows[0] as $propiedad => $valor):
+                    $this-> $propiedad = $valor;
+                endforeach;
+            endif;
+        }
+
         public function nuevo($datos=array()){
             if(array_key_exists('cc_user', $datos)):
                 foreach ($datos as $campo => $valor):
@@ -139,9 +154,9 @@
                 endforeach;
                 $this->query = "
                     insert into funcionarios
-                    (id_func, id_priv, username, password, nom_user, nom2_user, ape_user, ape2_user, tel_user, cc_user, email_user, id_cargo, id_espec, id_sede, img_user)
+                    (id_func, id_priv, username, password, nom_user, nom2_user, ape_user, ape2_user, tel_user, cc_user, email_user, id_cargo, id_espec, id_sede)
                     values
-                    ('$id_func', '$id_priv', '$username', '$password', '$nom_user', '$nom2_user', '$ape_user', '$ape2_user', '$tel_user', '$cc_user', '$email_user', '$id_cargo', '$id_espec', '$id_sede', '$img_user')
+                    ('$id_func', '$id_priv', '$username', '$password', '$nom_user', '$nom2_user', '$ape_user', '$ape2_user', '$tel_user', '$cc_user', '$email_user', '$id_cargo', '$id_espec', '$id_sede')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;

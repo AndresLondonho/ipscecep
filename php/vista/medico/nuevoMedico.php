@@ -8,7 +8,7 @@
                 <div class="panel panel-success">
                     <div class="panel-heading">Nuevo</div>
                         <div class="panel-body">
-                            <form id="frmmedico" enctype="multipart/form-data">
+                            <form id="frmmedico">
                                 <h3>Cedula:</h3>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -59,10 +59,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="imagen">Imagen:</label>
                                             <input type="file" id="img_user" name="img_user">
-                                        </div>    
+                                        </div>   -->  
                                     </div>
                                     <div class="col-md-6">
                                         <h5>Información laboral</h5>

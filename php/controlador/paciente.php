@@ -2,10 +2,11 @@
     require_once("../modelo/paciente.php");
 
     $datos = $_GET;
+    
+    $paciente = new Paciente();
     switch($_GET['accion']){
 
         case 'editar':
-            $paciente = new Paciente();
             $resultado = $paciente->editar($datos);
             $respuesta = array(
                 'respuesta' => $resultado
@@ -14,7 +15,6 @@
         break;
 
         case 'consultar':
-            $paciente = new Paciente();
             $paciente->consultar($datos['codigo']);
 
             if($paciente->getCEDULA() == null){
@@ -28,7 +28,7 @@
                     'ape_pac' => $paciente->getAPE_PAC(),
                     'Paciente' => $paciente->getPACIENTE(),
                     'Email' => $paciente->getEMAIL(),
-                    'Telefono' => $paciente->geTELEFONO(),
+                    'Telefono' => $paciente->getTELEFONO(),
                     'Direccion' => $paciente->getDIRECCION(),
                     'Ciudad' => $paciente->getCIUDAD(),
                     'respuesta' => 'existe'
@@ -52,7 +52,6 @@
 		break;
 
         case 'listar':
-            $paciente = new Paciente();
             $listado = $paciente->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;

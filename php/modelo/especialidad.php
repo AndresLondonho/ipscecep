@@ -36,7 +36,7 @@ class Especialidad extends ConexionBD{
         $this->query = "
                 select id_espec as Codigo, nom_espec as Especialidad
                 from especialidad
-                order by id_espec
+                order by Codigo asc
             ";
             $this->obtener_resultados_query();
             return $this->rows;

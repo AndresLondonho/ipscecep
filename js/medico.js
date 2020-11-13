@@ -125,12 +125,12 @@ function medicos(){
         })
     })
 
-    $("#modal_editar").on("submit","#registrar",function(e){
-        e.preventDefault();
+    $("#modal_editar").on("click","button#registrar",function(){
         var nombre = $("#nom_user").val();
         var apellido = $("#ape_user").val();
         var user = nombre.substr(0, 1)+apellido;
         var cedula = $("#cc_user").val();
+        console.log(cedula);
         $("#id_func").val(cedula);
         $("#username").val(user.toLowerCase());
         $("#password").val(cedula);
@@ -145,7 +145,7 @@ function medicos(){
                 swal({
                     position: 'center',
                     type: 'success',
-                    title: 'La comuna fue grabada con éxito',
+                    title: 'El medico con cedula '+cedula+' fue grabado con éxito',
                     showConfirmButton: false,
                     timer: 1200
                 })

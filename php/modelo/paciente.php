@@ -105,10 +105,10 @@
                 $nom_pac = utf8_decode($nom_pac);
                 $ape_pac = utf8_decode($ape_pac);
                 $this->query = "
-                    insert into funcionarios
-                    (id_pac, nom_pac, ape_pac, cc_pac, email_pac, tel_med, dir_pac, id_ciu)
+                    insert into pacientes
+                    (id_pac, nom_pac, ape_pac, cc_pac, email_pac, tel_pac, dir_pac, id_ciu)
                     values
-                    (null, '$nom_pac', '$nom_pac', '$ape_pac', '$cc_pac', '$email_pac', '$tel_pac', '$dir_pac', '$id_ciu')
+                    ('$id_pac', '$nom_pac', '$ape_pac', '$cc_pac', '$email_pac', '$tel_pac', '$dir_pac', '$id_ciu')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;
@@ -125,7 +125,8 @@
                 ape_pac = '$ape_pac',
                 email_pac = '$email_pac',
                 tel_pac = '$tel_pac',
-                dir_pac = '$dir_pac'
+                dir_pac = '$dir_pac',
+                id_ciu = '$id_ciu'
                 where cc_pac = '$cc_pac'
             ";
             $resultado = $this->ejecutar_query_simple();

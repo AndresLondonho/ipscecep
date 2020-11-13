@@ -48,7 +48,7 @@
 
         public function listar(){
             $this->query = "
-                SELECT ciu.nom_ciu as Ciudad, pai.nom_pais as Pais
+                SELECT ciu.id_ciu as Codigo, ciu.nom_ciu as Ciudad, pai.nom_pais as Pais
                 FROM ciudad as ciu
                 INNER JOIN pais as pai ON (ciu.id_pais=pai.id_pais)
                 ORDER BY Ciudad
