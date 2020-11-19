@@ -1,40 +1,32 @@
 <?php
     require_once("conexionBD.php");
 
-    class Ciudad extends ConexionBD{
-        private $id_ciu;
-        private $nom_ciu;
+    class Pais extends ConexionBD{
         private $id_pais;
+        private $nom_pais;
+        private $cap_pais;
          
         function __construct(){
 
         }
 
-        public function getID_CIU(){
-            return $this->id_ciu;
-        }
-        public function getNOM_CIU(){
-            return $this->nom_ciu;
-        }
         public function getID_PAIS(){
             return $this->id_pais;
         }
-
-        public function getCIUDAD(){
-            return $this->Ciudad;
+        public function getNOM_PAIS(){
+            return $this->nom_pais;
         }
-        public function getPAIS(){
-            return $this->Pais;
+        public function getCAP_PAIS(){
+            return $this->cap_pais;
         }
         
-        public function consultar($id_ciu=''){
-            if ($id_ciu != ''):
+        public function consultar($id_pais=''){
+            if ($id_pais != ''):
                 $this->query = "
-                SELECT ciu.nom_ciu as Ciudad, pai.nom_pais as Pais
-                FROM ciudad as ciu
-                INNER JOIN pais as pai ON (ciu.id_pais=pai.id_pais)
-                WHERE ciu.id_ciu = '$id_ciu'
-                ORDER BY Ciudad
+                SELECT pais.id_pais Codigo, pais.nom_pais as pais, pais.cap_pais as Capital
+                FROM pais
+                WHERE pais.id_pais = '$id_pais'
+                ORDER BY Codigo
                 ";
             $this->obtener_resultados_query();
             endif;
@@ -48,26 +40,25 @@
 
         public function listar(){
             $this->query = "
-                SELECT ciu.id_ciu as Codigo, ciu.nom_ciu as Ciudad, pai.nom_pais as Pais
-                FROM ciudad as ciu
-                INNER JOIN pais as pai ON (ciu.id_pais=pai.id_pais)
-                ORDER BY Ciudad
+                SELECT pais.id_pais Codigo, pais.nom_pais as pais, pais.cap_pais as Capital
+                FROM pais
+                ORDER BY Codigo
             ";
             $this->obtener_resultados_query();
             return $this->rows;
         }
 
         public function nuevo($datos=array()){
-            if(array_key_exists('id_ciu', $datos)):
+            if(array_key_exists('id_pais', $datos)):
                 foreach ($datos as $campo => $valor):
                     $$campo = $valor;
                 endforeach;
 
                 $this->query = "
-                    insert into ciudad
-                    (id_ciu, nom_ciu, id_pais)
+                    insert into pais
+                    (id_pais, nom_pais, cap_pais)
                     values
-                    ('$id_ciu', '$nom_ciu', '$id_pais')
+                    ('$id_pais', '$nom_pais', '$cap_pais')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;
@@ -78,19 +69,19 @@
                 $$campo = $valor;
             endforeach;
             $this->query = "
-                update ciudad
+                update pais
                 set
-                nom_ciu = '$nom_ciu',
-                id_pais = '$id_pais'
-                where id_ciu = '$id_ciu'
+                nom_pais = '$nom_pais',
+                cap_pais = '$cap_pais'
+                where id_pais = '$id_pais'
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
         }
-        public function borrar($id_ciu=''){
+        public function borrar($id_pais=''){
             $this->query = "
-                delete from ciudad
-                where id_ciu = '$id_ciu'
+                delete from pais
+                where id_pais = '$id_pais'
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
