@@ -119,7 +119,6 @@ function pacientes(){
                     showConfirmButton: false,
                     timer: 1500
                 });
-               
             }
         })
     })
