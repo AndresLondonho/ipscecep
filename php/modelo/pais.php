@@ -5,7 +5,6 @@
         private $id_pais;
         private $nom_pais;
         private $cap_pais;
-
         function __construct(){
 
         }
@@ -62,7 +61,6 @@
                 return $resultado;
             endif;
         }
-
         public function editar($datos=array()){
             foreach ($datos as $campo => $valor):
                 $$campo = $valor;
@@ -78,7 +76,6 @@
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
         }
-
         public function borrar($id_pais=''){
             $this->query = "
                 delete from pais
