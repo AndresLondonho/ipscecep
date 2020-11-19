@@ -35,7 +35,7 @@
         public function getSEDE(){
             return $this->Sede;
         }
-        public function getDIRECION(){
+        public function getDIRECCION(){
             return $this->Direccion;
         }
         public function getTELEFONO(){

@@ -72,13 +72,13 @@
                 </p>
               </li>
               
-              <!-- obciones de cuenta-->
+              <!-- opciones de cuenta-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Cerrar seccion</a>
+                  <a href="#" class="btn btn-default btn-flat">Cerrar sesion</a>
                 </div>
               </li>
             </ul>
@@ -133,18 +133,30 @@
             <li class="active"><a href="medico/medico.php"><i class="fa fa-circle-o"></i> Medicos</a></li>
             <li class="treeview">
               <a href="#">
-              <span>Citas</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
+                <span>Citas</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
               <ul class="treeview-menu">
-              <li class="active"><a href="citas/nuevacita.php"><i class="fa fa-circle-o"></i>Asignar Cita</a></li>
-              <li class="active"><a href="citas/cita.php"><i class="fa fa-circle-o"></i>Historial Cita</a></li>
+                <li class="active"><a href="citas/nuevacita.php"><i class="fa fa-circle-o"></i>Asignar Cita</a></li>
+                <li class="active"><a href="citas/cita.php"><i class="fa fa-circle-o"></i>Historial Cita</a></li>
               </ul>
             </li>
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Sedes</a></li>
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Ciudades</a></li>
+            <li class="treeview">
+              <a href="#">
+                <span>Convenios</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="sede/sede.php"><i class="fa fa-circle-o"></i> Sedes</a></li>
+                <li class="active"><a href="ciudad/ciudad.php"><i class="fa fa-circle-o"></i> Ciudades</a></li>
+                <li class="active"><a href="pais/pais.php"><i class="fa fa-circle-o"></i> Paises</a></li>
+              </ul>
+            </li>
+            
           </ul>
         </li>
         
