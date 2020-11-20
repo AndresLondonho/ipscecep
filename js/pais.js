@@ -47,7 +47,7 @@ function pais(){
                 swal({
                     type: 'error',
                     title: 'Error',
-                    text: 'El paciente con cedula '+codigo+' no existe en la base de datos'
+                    text: 'El pais con codigo '+codigo+' no existe en la base de datos'
                 })
             } else {
                 document.getElementById("id").innerHTML = pais.ID_pais;
@@ -58,7 +58,7 @@ function pais(){
         })
     })
 
-    $("#modal_editar").on("clic", "button#actualizar", function(){
+    $("#modal_editar").on("click", "button#actualizar", function(){
         var datos = $("#frmpais").serialize();
         $.ajax({
             type: "get",
@@ -136,6 +136,7 @@ function pais(){
     })
 
 }
+
 $(document).ready(() => {
     dt = $("#tabla").DataTable({
         "ajax": "../controlador/pais.php?accion=listar",

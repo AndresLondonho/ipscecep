@@ -76,7 +76,8 @@
         break;
 
         case 'listarM':
-            
+            $listado = $medico->directores();
+            echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
 
         case 'nuevo':

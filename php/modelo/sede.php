@@ -32,6 +32,9 @@
             return $this->id_rol;
         }
 
+        public function getCODIGO(){
+            return $this->Codigo;
+        }
         public function getSEDE(){
             return $this->Sede;
         }
@@ -56,7 +59,7 @@
                     FROM sede as sed
                     INNER JOIN ciudad as ciu ON (sed.id_ciu = ciu.id_ciu)
                     INNER JOIN funcionarios as fun ON (sed.id_rol = fun.id_func)
-                    WHERE sed.id_sede = '$id_sede' AND fun.id_cargo = 1
+                    WHERE sed.id_sede = '$id_sede'
                     ORDER BY Sede
                     ";
             $this->obtener_resultados_query();
@@ -71,7 +74,9 @@
 
         public function listar(){
             $this->query = "
-                SELECT sed.id_sede as Codigo, sed.nom_sede as Sede, sed.dir_sede as Direccion, sed.tel_sede as Telefono, ciu.nom_ciu as Ciudad, fun.nom_user as Director
+                SELECT sed.id_sede as Codigo, sed.nom_sede as Sede, sed.dir_sede as Direccion,
+                sed.tel_sede as Telefono, ciu.nom_ciu as Ciudad,
+                concat(fun.nom_user,' ',' ',fun.ape_user)as Director
                 FROM sede as sed
                 INNER JOIN ciudad as ciu ON (sed.id_ciu = ciu.id_ciu)
                 INNER JOIN funcionarios as fun ON (sed.id_rol = fun.id_func)
@@ -82,12 +87,10 @@
         }
 
         public function nuevo($datos=array()){
-            if(array_key_exists('cc_pac', $datos)):
+            if(array_key_exists('id_ciu', $datos)):
                 foreach ($datos as $campo => $valor):
                     $$campo = $valor;
                 endforeach;
-                $nom_pac = utf8_decode($nom_pac);
-                $ape_pac = utf8_decode($ape_pac);
                 $this->query = "
                     insert into sede
                     (id_sede, nom_sede, dir_sede, tel_sede, id_ciu, id_rol)
@@ -98,6 +101,9 @@
                 return $resultado;
             endif;
         }
+
+
+
         public function editar($datos=array()){
             foreach ($datos as $campo => $valor):
                 $$campo = $valor;
@@ -105,10 +111,11 @@
             $this->query = "
                 update sede
                 set
-                nom_sede = '$nom_pac',
-                dir_sede = '$ape_pac',
-                tel_sede = '$email_pac',
-                id_rol = '$tel_pac'
+                nom_sede = '$nom_sede',
+                dir_sede = '$dir_sede',
+                tel_sede = '$tel_sede',
+                id_ciu = '$id_ciu'
+                id_rol = '$id_rol'
                 where id_sede = '$id_sede'
             ";
             $resultado = $this->ejecutar_query_simple();

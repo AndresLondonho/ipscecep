@@ -57,7 +57,6 @@
                                         <div class="form-group">
                                                 <label for="ciudad">Ciudad:</label>
                                                 <select class="form-control" id="id_ciu" name="id_ciu" value="">
-                                                <option>1001</option>
                                                 </select>
                                                 <small>Ciudad de residencia</small>
                                         </div>
