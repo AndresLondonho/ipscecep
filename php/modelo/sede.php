@@ -55,7 +55,8 @@
         public function consultar($id_sede=''){
             if ($id_sede != ''):
                 $this->query = "
-                    SELECT sed.id_sede as Codigo, sed.nom_sede as Sede, sed.dir_sede as Direccion, sed.tel_sede as Telefono, ciu.nom_ciu as Ciudad, fun.nom_user as Director
+                    SELECT sed.id_sede as Codigo, sed.nom_sede as Sede, sed.dir_sede as Direccion, 
+                    sed.tel_sede as Telefono, sed.id_ciu, ciu.nom_ciu as Ciudad, sed.id_rol, fun.nom_user as Director
                     FROM sede as sed
                     INNER JOIN ciudad as ciu ON (sed.id_ciu = ciu.id_ciu)
                     INNER JOIN funcionarios as fun ON (sed.id_rol = fun.id_func)
@@ -102,8 +103,6 @@
             endif;
         }
 
-
-
         public function editar($datos=array()){
             foreach ($datos as $campo => $valor):
                 $$campo = $valor;
@@ -114,7 +113,7 @@
                 nom_sede = '$nom_sede',
                 dir_sede = '$dir_sede',
                 tel_sede = '$tel_sede',
-                id_ciu = '$id_ciu'
+                id_ciu = '$id_ciu',
                 id_rol = '$id_rol'
                 where id_sede = '$id_sede'
             ";

@@ -123,7 +123,7 @@ function sede(){
             data: {codigo: codigo, accion: 'consultar'},
             dataType: "json"
         }).done(function(sede){
-            if (paciente.respuesta === "no existe"){
+            if (sede.respuesta === "no existe"){
                 swal({
                     type: 'error',
                     title: 'Error',
@@ -135,8 +135,10 @@ function sede(){
                 $("#nom_sede").val(sede.Sede);
                 $("#tel_sede").val(sede.Telefono);
                 $("#dir_sede").val(sede.Direccion);
-                ciudad = sede.Ciudad;
-                director = sede.Director;
+                ciudad = sede.id_ciu;
+                director = sede.id_rol;
+                console.log(ciudad);
+                console.log(director);
             }
         });
 

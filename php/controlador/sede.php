@@ -26,7 +26,9 @@
                     'Sede' => $sede->getSEDE(),
                     'Direccion' => $sede->getDIRECCION(),
                     'Telefono' => $sede->getTELEFONO(),
+                    'id_ciu' => $sede->getID_CIU(),
                     'Ciudad' => $sede->getCIUDAD(),
+                    'id_rol' => $sede->getID_ROL(),
                     'Director' => $sede->getDIRECTOR(),
                     'respuesta' => 'existe'
                 );
