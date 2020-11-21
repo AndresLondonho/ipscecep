@@ -166,6 +166,103 @@ function funcionarios(){
       })
     })
 
+    $(".box").on("click","button#nuevoF",function(){
+        $("#modal_editar").load("funcionario/nuevofuncionario.php");
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/privilegios.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            //$("#id_cargo option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+                $("#id_priv").append("<option value='"+value.id_priv+"'>"+value.nom_priv+"</option>");
+            })
+        });
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/cargo.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            //$("#id_cargo option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+                $("#id_cargo").append("<option value='"+value.id_cargo+"'>"+value.nom_cargo+"</option>");
+            })
+        });
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/especialidad.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            //$("#id_espec option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+                $("#id_espec").append("<option value='"+value.Codigo+"'>"+value.Especialidad+"</option>");
+                
+            })
+        });
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/sede.php",
+            data: {accion:'listar'},
+            dataType: "json"
+        }).done(function(resultado){
+            //$("#id_sede option").remove();
+            $.each(resultado.data, function(index, value){
+            console.log(value.Codigo);
+                $("#id_sede").append("<option value='"+value.Codigo+"'>"+value.Sede+"</option>");
+            })
+        });
+    })
+
+    $("#modal_editar").on("click","button#registrar",function(){
+        var nombre = $("#nom_user").val();
+        var apellido = $("#ape_user").val();
+        var user = nombre.substr(0, 1)+apellido;
+        var cedula = $("#cc_user").val();
+        $("#id_func").val(cedula);
+        $("#username").val(user.toLowerCase());
+        $("#password").val(cedula);
+
+        var datos = $("#frmfunc").serialize();
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/funcionario.php",
+            data: datos,
+            dataType:"json"
+          }).done(function( resultado ) {
+            if(resultado.respuesta){
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'El funcionario con cedula '+cedula+' fue grabado con éxito',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
+                $('#modal_editar').modal('toggle');
+                dt.ajax.reload();
+            } else {
+                swal({
+                    position: 'center',
+                    type: 'error',
+                    title: 'Ocurrió un erro al grabar',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+               
+            }
+        })
+    })
+
 }
 
 $(document).ready(() => {

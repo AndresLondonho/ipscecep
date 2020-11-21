@@ -9,7 +9,6 @@
                     <div class="panel-heading">Nuevo</div>
                         <div class="panel-body">
                             <form id="frmmedico">
-                                <h3>Cedula:</h3>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h5>Información personal</h5>
