@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2020 a las 04:58:27
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.2.32
+-- Tiempo de generación: 21-11-2020 a las 23:28:26
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cargo` (
   `id_cargo` int(4) NOT NULL,
-  `nom_cargo` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+  `nom_cargo` varchar(30) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -39,7 +39,8 @@ CREATE TABLE `cargo` (
 INSERT INTO `cargo` (`id_cargo`, `nom_cargo`) VALUES
 (1, 'Director de Sede'),
 (2, 'Medico'),
-(3, 'Asesor de clientes');
+(3, 'Asesor de clientes'),
+(4, 'Ingeniero de Sistema');
 
 -- --------------------------------------------------------
 
@@ -113,7 +114,10 @@ INSERT INTO `especialidad` (`id_espec`, `nom_espec`, `derivacion`) VALUES
 (5, 'Traumatologia', 'Traumatologo(a)'),
 (6, 'Pediatria', 'Pediatra'),
 (7, 'Dermatologia', 'Dermatologo(a)'),
-(8, 'Cardiologia', 'Cardiologo(a)');
+(8, 'Cardiologia', 'Cardiologo(a)'),
+(9, 'Coordinador', 'Coordinador'),
+(10, 'Manager', 'Manager'),
+(11, 'SAC', 'Asesor de clientes');
 
 -- --------------------------------------------------------
 
@@ -144,16 +148,35 @@ CREATE TABLE `funcionarios` (
 --
 
 INSERT INTO `funcionarios` (`id_func`, `id_priv`, `username`, `password`, `nom_user`, `nom2_user`, `ape_user`, `ape2_user`, `tel_user`, `cc_user`, `email_user`, `id_cargo`, `id_espec`, `id_sede`, `img_user`) VALUES
-(101, 2, 'medico1', 'ytfrcyjvguyr', 'Cristian', 'David', 'Loaiza', 'Estrada', 3017505543, 1234894, 'yoquese@menos.com', 2, 3, 1011, 'cristian.jpg'),
+(101, 2, 'medico1', 'ytfrcyjvguyr', 'Cristian', 'David', 'Loaiza', 'Estrada', 3017505543, 1234894, 'yoquese@menos.com', 2, 3, 1021, 'cristian.jpg'),
 (102, 2, 'medico2', '8548413165651', 'rafael', '', 'Londono', '', 5154861, 33265154, 'asdsda@gmail.com', 2, 1, 1011, NULL),
-(103, 2, 'iwachu', 'ufaisdjbvyasvfbwñevbiñsubvuñsbvIWACHU', 'rafael', 'David', 'Londono', 'Estrada', 1234567, 12348945, 'asdvausb@dufhs.com', 1, NULL, 1011, NULL),
-(104, 2, 'jtiro', '4444', 'Jhin', 'Cuarto', 'Tiro', 'Sublime', 4444444, 4444, 'elvirtuoso@cuatro.com', 2, 1, 1011, ''),
-(105, 2, 'andres', '123456', 'Rafael', 'Andres', 'Londono', 'Loaiza', 3182665156, 1112486446, 'andreslondonho@gmail.com', 2, 1, 1011, ''),
-(106, 2, 'rlondono', '1112486447', 'Rafael', 'David', 'Londono', 'Loaiza', 3017505543, 1112486447, 'andres@gmail.com', 2, 4, 1011, ''),
-(107, 2, 'mrogada', '100505040', 'Mariana', 'Rogada', 'Rogada', 'Mariana', 301205020, 100505040, 'marianarogada@gmail.com', 1, NULL, 1012, NULL),
-(108, 2, 'lperez', '98205050', 'luisa', 'andrea', 'perez', 'palacio', 301252020, 98205050, 'luisaperezpalacio@gmail.com', 1, NULL, 1013, NULL),
-(109, 2, 'jramirez', '89526600', 'juan', 'andres', 'ramirez', 'ramirez', 32002020, 89526600, 'juanramirez@gmail.com', 1, NULL, 1014, NULL),
-(110, 2, 'mgonzalez', '67520520', 'marily', 'paola', 'gonzalez', 'herrera', 316205055, 67520520, 'marilygonzalez@gmail.com', 1, NULL, 1015, NULL);
+(103, 2, 'iwachu', '$2y$12$TlUviODMVkF9AfIhKXVgiu8KB0eN7ZXbBY7Moe6SbxYarehNnz2hu', 'rafael', 'David', 'Londono', 'Estrada', 1234567, 12348945, 'asdvausb@dufhs.com', 1, 9, 1021, NULL),
+(104, 2, 'jtiro', '4444', 'Jhin', 'Cuarto', 'Tiro', 'Sublime', 4444444, 4444, 'elvirtuoso@cuatro.com', 2, 1, 1015, ''),
+(107, 2, 'mrogada', '100505040', 'Mariana', 'Rogada', 'Rogada', 'Mariana', 301205020, 100505040, 'marianarogada@gmail.com', 1, 9, 1012, NULL),
+(108, 2, 'lperez', '98205050', 'luisa', 'andrea', 'perez', 'palacio', 301252020, 98205050, 'luisaperezpalacio@gmail.com', 1, 9, 1013, NULL),
+(109, 2, 'jramirez', '89526600', 'juan', 'andres', 'ramirez', 'ramirez', 32002020, 89526600, 'juanramirez@gmail.com', 3, 11, 1014, NULL),
+(110, 2, 'mgonzalez', '67520520', 'marily', 'paola', 'gonzalez', 'herrera', 316205055, 67520520, 'marilygonzalez@gmail.com', 1, 9, 1015, NULL),
+(1112486446, 1, 'rlondono', '1112486446', 'Rafael', 'Andres', 'Londono', 'Loaiza', 3182665156, 1112486446, 'andreslondonho@gmail.com', 4, 10, 1021, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `medicamentos`
+--
+
+CREATE TABLE `medicamentos` (
+  `id_medcto` int(4) NOT NULL,
+  `nom_medcto` varchar(20) NOT NULL,
+  `stock` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `medicamentos`
+--
+
+INSERT INTO `medicamentos` (`id_medcto`, `nom_medcto`, `stock`) VALUES
+(2, 'Acetaminofen', 90),
+(3, 'Ibuprofeno', 100);
 
 -- --------------------------------------------------------
 
@@ -177,10 +200,10 @@ CREATE TABLE `pacientes` (
 --
 
 INSERT INTO `pacientes` (`id_pac`, `nom_pac`, `ape_pac`, `cc_pac`, `email_pac`, `tel_pac`, `dir_pac`, `id_ciu`) VALUES
-(15256250, 'Valery', 'Rivera', 15256250, 'valeryrivera@gmail.com', 3155500, 'carrera 20 #4-2', 1002),
+(15256250, 'Valeria', 'Rivera', 15256250, 'valeryrivera@gmail.com', 3155500, 'carrera 20 #4-2', 1003),
 (65828220, 'Julian', 'Valeria', 65828220, 'julianvaleria@gmail.com', 31202020, 'avenida 3 norte #20-20', 1004),
 (98552520, 'Kevin', 'Trujillo', 98552520, 'kevintrujillo@gmail.com', 31505250, 'carrera 35 A', 1003),
-(225563622, 'valeria', 'capote', 225563622, 'valeriacapote@gmail.com', 30250520, 'calle 50 #30-40', 1005),
+(225563622, 'valeria andrea', 'capote sandoval', 225563622, 'valeriacapote@gmail.com', 30250520, 'calle 50 #30-40', 1003),
 (1112486444, 'rafael', 'loaiza', 1112486444, 'jfytf@hjhb.com', 3215465, 'cra34#54-98', 1001);
 
 -- --------------------------------------------------------
@@ -200,7 +223,11 @@ CREATE TABLE `pais` (
 --
 
 INSERT INTO `pais` (`id_pais`, `nom_pais`, `cap_pais`) VALUES
-(101, 'Colombia', 'Bogota D.C.');
+(101, 'Colombia', 'Bogota D.C.'),
+(102, 'Canada', 'Ottawa'),
+(103, 'Estados Unidos', 'Washintong D.C.'),
+(104, 'Espana', 'Madrid'),
+(107, 'Mexico', 'Ciudad de Mexico');
 
 -- --------------------------------------------------------
 
@@ -219,7 +246,9 @@ CREATE TABLE `privilegios` (
 
 INSERT INTO `privilegios` (`id_priv`, `nom_priv`) VALUES
 (1, 'Administrador'),
-(2, 'Intermedio');
+(2, 'Medico'),
+(3, 'Asesor'),
+(4, 'Director');
 
 -- --------------------------------------------------------
 
@@ -244,8 +273,9 @@ INSERT INTO `sede` (`id_sede`, `nom_sede`, `dir_sede`, `tel_sede`, `id_ciu`, `id
 (1011, 'Champagnat', 'Cl. 9b #29a67', 3828282, 1001, 103),
 (1012, 'Bosa', 'Carrera 80 con avenida 3', 4050520, 1002, 107),
 (1013, 'Riomar', 'Calle 110 avenida circunvalar', 1002020, 1003, 108),
-(1014, 'Belen', 'Calle 29A #69b-2 a 69b-92', 6505050, 1004, 109),
-(1015, 'Consota', 'Kilometro 11 Vía Pereira, Pere', 542020, 1005, 110);
+(1014, 'Belensito', 'Calle 29A #69b-2 a 69b-92', 6505050, 1003, 103),
+(1015, 'Consota', 'Kilometro 11 Vía Pereira, Pere', 542020, 1005, 110),
+(1021, 'Autonoma', 'Cll 43 # 45-845', 5555555, 1001, 110);
 
 -- --------------------------------------------------------
 
@@ -263,7 +293,7 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id_serv`, `nom_serv`) VALUES
-(1, 'odontologia'),
+(1, 'Odontologia'),
 (2, 'Medicina general'),
 (3, 'Ginecologia'),
 (4, 'Oftamologia'),
@@ -317,6 +347,12 @@ ALTER TABLE `funcionarios`
   ADD KEY `id_sede` (`id_sede`);
 
 --
+-- Indices de la tabla `medicamentos`
+--
+ALTER TABLE `medicamentos`
+  ADD PRIMARY KEY (`id_medcto`);
+
+--
 -- Indices de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
@@ -359,6 +395,36 @@ ALTER TABLE `servicios`
 --
 ALTER TABLE `cita`
   MODIFY `nro_cita` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `ciudad`
+--
+ALTER TABLE `ciudad`
+  MODIFY `id_ciu` int(4) NOT NULL AUTO_INCREMENT COMMENT 'Codigoo de la ciudad', AUTO_INCREMENT=1008;
+
+--
+-- AUTO_INCREMENT de la tabla `medicamentos`
+--
+ALTER TABLE `medicamentos`
+  MODIFY `id_medcto` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `pais`
+--
+ALTER TABLE `pais`
+  MODIFY `id_pais` int(4) NOT NULL AUTO_INCREMENT COMMENT 'Codigo del pais', AUTO_INCREMENT=108;
+
+--
+-- AUTO_INCREMENT de la tabla `sede`
+--
+ALTER TABLE `sede`
+  MODIFY `id_sede` int(4) NOT NULL AUTO_INCREMENT COMMENT 'Codigo de la sede', AUTO_INCREMENT=1022;
+
+--
+-- AUTO_INCREMENT de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  MODIFY `id_serv` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
