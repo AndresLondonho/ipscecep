@@ -15,8 +15,10 @@
               <table id="tabla" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                  <th>ID</th>
                   <th>Ciudad</th>
                   <th>Pais</th>
+                  <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>

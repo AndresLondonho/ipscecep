@@ -1,12 +1,12 @@
 <?php
-    require_once("../modelo/ciudad.php");
+    require_once("../modelo/servicio.php");
 
     $datos = $_GET;
-    $ciudad = new Ciudad();
+    $servicio = new Servicio();
     switch($_GET['accion']){
 
         case 'editar':
-            $resultado = $ciudad->editar($datos);
+            $resultado = $servicio->editar($datos);
             $respuesta = array(
                 'respuesta' => $resultado
             );
@@ -14,17 +14,16 @@
         break;
 
         case 'consultar':
-            $ciudad->consultar($datos['codigo']);
+            $servicio->consultar($datos['codigo']);
 
-            if($ciudad->getID_CIU() == null){
+            if($servicio->getNUMERO() == null){
                 $respuesta = array(
                     'respuesta' => 'no existe'
                 );
             } else {
                 $respuesta = array (
-                    'Codigo' => $ciudad->getID_CIU(),
-                    'Ciudad' => $ciudad->getNOM_CIU(),
-                    'Pais' => $ciudad->getID_PAIS(),
+                    'Numero' => $servicio->getNUMERO(),
+                    'Servicio' => $servicio->getSERVICIO(),
                     'respuesta' => 'existe'
                 );
             }
@@ -32,7 +31,7 @@
         break;
 
         case 'nuevo':
-            $resultado = $ciudad->nuevo($datos);
+            $resultado = $servicio->nuevo($datos);
             if($resultado > 0){
                 $respuesta = array(
                     'respuesta' => 'correcto'
@@ -46,7 +45,7 @@
         break;
 		
 		case 'borrar':
-			$resultado = $ciudad->borrar($datos['codigo']);
+			$resultado = $servicio->borrar($datos['codigo']);
 			if($resultado > 0){
                 $respuesta = array(
                     'respuesta' => 'correcto'
@@ -60,7 +59,7 @@
 		break;
 
         case 'listar':
-            $listado = $ciudad->listar();
+            $listado = $servicio->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
     }

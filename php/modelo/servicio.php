@@ -1,31 +1,35 @@
 <?php
     require_once("conexionBD.php");
 
-    class Ciudad extends ConexionBD{
-        private $id_ciu;
-        private $nom_ciu;
-        private $id_pais;
+    class Servicio extends ConexionBD{
+        private $id_serv;
+        private $nom_serv;
          
         function __construct(){
 
         }
 
-        public function getID_CIU(){
-            return $this->id_ciu;
+        public function getID_SERV(){
+            return $this->id_serv;
         }
-        public function getNOM_CIU(){
-            return $this->nom_ciu;
-        }
-        public function getID_PAIS(){
-            return $this->id_pais;
+        public function getNOM_SERV(){
+            return $this->nom_serv;
         }
 
-        public function consultar($id_ciu=''){
-            if ($id_ciu != ''):
+        public function getNUMERO(){
+            return $this->Numero;
+        }
+        public function getSERVICIO(){
+            return $this->Servicio;
+        }
+        
+        public function consultar($id_serv=''){
+            if ($id_serv != ''):
                 $this->query = "
-                SELECT id_ciu, nom_ciu, id_pais 
-                FROM ciudad 
-                WHERE id_ciu = '$id_ciu'
+                    SELECT id_serv as Numero, nom_serv as Servicio
+                    FROM servicios 
+                    WHERE id_serv = '$id_serv'
+                    ORDER BY Numero
                 ";
             $this->obtener_resultados_query();
             endif;
@@ -39,26 +43,24 @@
 
         public function listar(){
             $this->query = "
-                SELECT ciu.id_ciu as Codigo, ciu.nom_ciu as Ciudad, pai.nom_pais as Pais
-                FROM ciudad as ciu
-                INNER JOIN pais as pai ON (ciu.id_pais=pai.id_pais)
-                ORDER BY Ciudad
+                SELECT id_serv as Numero, nom_serv as Servicio
+                FROM servicios 
+                ORDER BY Numero
             ";
             $this->obtener_resultados_query();
             return $this->rows;
         }
 
         public function nuevo($datos=array()){
-            if(array_key_exists('id_ciu', $datos)):
+            if(array_key_exists('id_serv', $datos)):
                 foreach ($datos as $campo => $valor):
                     $$campo = $valor;
                 endforeach;
-
                 $this->query = "
-                    insert into ciudad
-                    (id_ciu, nom_ciu, id_pais)
+                    insert into servicios
+                    (id_serv, nom_serv)
                     values
-                    ('', '$nom_ciu', '$id_pais')
+                    ('', '$nom_serv')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;
@@ -69,19 +71,18 @@
                 $$campo = $valor;
             endforeach;
             $this->query = "
-                update ciudad
+                update servicios
                 set
-                nom_ciu = '$nom_ciu',
-                id_pais = '$id_pais'
-                where id_ciu = '$id_ciu'
+                nom_serv = '$nom_serv'
+                where id_serv = '$id_serv'
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
         }
-        public function borrar($id_ciu=''){
+        public function borrar($id_serv=''){
             $this->query = "
-                delete from ciudad
-                where id_ciu = '$id_ciu'
+                delete from servicios
+                where id_serv = '$id_serv'
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
