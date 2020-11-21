@@ -359,7 +359,7 @@
                     <div class="col-md-4 col-sm-6">
                          <!-- NEWS THUMB -->
                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <a href="news-detail.html">
+                              <a href="php/investigacion.php">
                                    <img src="recursos/imgs/avance.jpg" class="img-responsive" alt="">
                               </a>
                               <div class="news-info">
