@@ -64,6 +64,8 @@ function pacientes(){
                    'Se actualizaron los datos correctamente',
                    'success'
                )
+               $('#modal_editar').modal('toggle');
+               dt.ajax.reload();
            } else {
                swal({
                    type: 'error',
@@ -110,6 +112,7 @@ function pacientes(){
                     showConfirmButton: false,
                     timer: 1200
                 })
+                $('#modal_editar').modal('toggle');
                 dt.ajax.reload();
             } else {
                 swal({

@@ -58,11 +58,7 @@
                                                     <small class="form-text text-muted">Ingrese corrreo electronico.</small>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- <div class="form-group">
-                                            <label for="imagen">Imagen:</label>
-                                            <input type="file" id="img_user" name="img_user">
-                                        </div>   -->  
+                                        </div> 
                                     </div>
                                     <div class="col-md-6">
                                         <h5>Información laboral</h5>
@@ -71,18 +67,20 @@
                                         <div class="form-group">
                                             <label for="especialidad">Especialidad:</label>
                                             <select class="form-control" id="espec" name="id_espec" value="">
+                                                <option>Seleccione especialidad...</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="sede">Sede:</label>
                                             <select class="form-control" id="sede" name="id_sede" value="">
+                                                <option>Seleccione sede...</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <input type="hidden" id="username" value="" name="username">                                
                                 <input type="hidden" id="password" value="" name="password"/>                   
-                                <button type="submit" id="registrar" class="btn btn-primary">Registrar</button>
+                                <button type="button" id="registrar" class="btn btn-primary">Registrar</button>
                                 <input type="hidden" id="editar" value="nuevo" name="accion"/>
                             </form>    
                         </div>

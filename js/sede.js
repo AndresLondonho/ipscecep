@@ -45,6 +45,7 @@ function sede(){
                     showConfirmButton: false,
                     timer: 1200
                 })
+                $('#modal_editar').modal('toggle');
                 dt.ajax.reload();
             } else {
                 swal({
@@ -182,13 +183,15 @@ function sede(){
             url: "../controlador/sede.php",
             data: datos,
             dataType: "json"
-        }).don(function(resultado){
+        }).done(function(resultado){
             if(resultado.respuesta){
                 swal(
                     'Actualizado',
                     'Se actualizaron los datos correctamente',
                     'success'
                 )
+                $('#modal_editar').modal('toggle');
+                dt.ajax.reload();
             } else {
                 swal({
                     type: 'error',

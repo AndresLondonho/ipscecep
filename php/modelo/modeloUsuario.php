@@ -64,7 +64,19 @@
 			endif;
 		}
 
-		public function lista(){
+		public function listar(){
+			
+		}
+		
+		public function nuevo(){
+			
+		}
+		
+		public function editar(){
+			
+		}
+		
+		public function borrar(){
 			
 		}
 		

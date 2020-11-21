@@ -13,13 +13,14 @@ function pais(){
             dataType:"json"
         }).done(function(resultado){
             if(resultado.respuesta){
-                swall({
+                swal({
                     position: 'center',
                     type: 'success',
-                    title: 'El paciente fue grabado con éxito',
+                    title: 'El pais fue grabado con éxito',
                     showConfirmButton: false,
                     timer: 1200
                 })
+                $('#modal_editar').modal('toggle');
                 dt.ajax.reload();
             }else {
                 swal({
@@ -72,6 +73,8 @@ function pais(){
                     'Se actualizaron los datos correctamente',
                     'success'
                 )
+                $('#modal_editar').modal('toggle');
+                dt.ajax.reload();
             } else {
                 swal({
                     type: 'error',

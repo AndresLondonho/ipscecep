@@ -1,7 +1,7 @@
 <?php
     function usuarioAutenticado(){
         if(!verificarUsuario()){
-            header("location:./php/vista/login.php");
+            header("location:./login.php");
             exit();
         }
     }

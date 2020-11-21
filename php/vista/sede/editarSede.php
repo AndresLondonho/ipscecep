@@ -54,7 +54,7 @@
                                         </div>                                         
                                     </div>
                                 </div>         
-                                <button type="submit" id="actualizar" class="btn btn-primary">Actualizar</button>
+                                <button type="button" id="actualizar" class="btn btn-primary">Actualizar</button>
                                 <input type="hidden" id="editar" value="editar" name="accion"/>
                             </form>    
                         </div>

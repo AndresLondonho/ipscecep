@@ -170,9 +170,11 @@
                 update funcionarios 
                 set
                 nom_user = '$nom_user',
+                nom2_user = '$nom2_user',
                 ape_user = '$ape_user',
+                ape2_user = '$ape2_user',
                 tel_user = '$tel_user',
-                id_espec = '$id_espec',
+                email_user = '$email_user',
                 id_sede = '$id_sede'
                 where cc_user = '$cc_user'
             ";

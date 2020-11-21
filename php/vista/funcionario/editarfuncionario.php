@@ -7,9 +7,9 @@
             <div class="panel-group"><div class="panel panel-success">
                     <div class="panel-heading">Editar</div>
                         <div class="panel-body">
-                            <form id="frmmedico">
-                                <h3>Cedula: <label id="ced"></label></h3>
-                                <input type="hidden" id="cc_user" name="cc_user" value="">
+                            <form id="frmfunc">
+                                <h3>ID: <label id="id"></label></h3>
+                                <input type="hidden" id="id_func" name="id_func" value="">
 
                                 <div class="row">
                                     <div class="col-md-6">
@@ -59,15 +59,23 @@
                                     <div class="col-md-6">
                                         <h5>Información laboral</h5>
                                         <div class="form-group">
+                                            <label for="sede">Cargo:</label>
+                                            <select class="form-control" id="id_cargo" name="id_cargo" value="" disabled>
+                                                <option>1</option>
+                                            </select>
+                                            <small class="form-text text-muted">Cargo no se puede modificar.</small>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="especialidad">Especialidad:</label>
-                                            <select class="form-control" id="espec" name="id_espec" value="" disabled="true">
+                                            <select class="form-control" id="id_espec" name="id_espec" value="" disabled="true">
                                             </select>
                                             <small class="form-text text-muted">Especialidad no se puede modificar.</small>
                                         </div>
                                         <div class="form-group">
                                             <label for="sede">Sede:</label>
-                                            <select class="form-control" id="sede" name="id_sede" value="">
+                                            <select class="form-control" id="id_sede" name="id_sede" value="">
                                             </select>
+                                            <small class="form-text text-muted">Seleccione la sede a cambiar.</small>
                                         </div>
                                     </div>
                                 </div>                    
