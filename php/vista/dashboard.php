@@ -1,3 +1,6 @@
+<?php
+  include_once ("../sesiones.php"); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +38,7 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini sidebar-collapse ">
+<body class="skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -72,13 +75,13 @@
                 </p>
               </li>
               
-              <!-- obciones de cuenta-->
+              <!-- opciones de cuenta-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Cerrar seccion</a>
+                  <a href="#" class="btn btn-default btn-flat">Cerrar sesion</a>
                 </div>
               </li>
             </ul>
@@ -114,6 +117,9 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
+<<<<<<< Updated upstream
+      <?php include_once ('navegacion.php') ?>
+=======
         <li class="header">NAVEGACIÓN PRINCIPAL</li>
         <li class="treeview">
           <a href="home.php">
@@ -129,22 +135,36 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="paciente/paciente.php"><i class="fa fa-circle-o"></i> Pacientes</a></li>
+            <li class="active"><a href="servicio/servicio.php"><i class="fa fa-circle-o"></i> Servicios</a></li>
+            <li class="active"><a href="funcionario/funcionario.php"><i class="fa fa-circle-o"></i> Funcionarios</a></li>
             <li class="active"><a href="medico/medico.php"><i class="fa fa-circle-o"></i> Medicos</a></li>
+            <li class="active"><a href="paciente/paciente.php"><i class="fa fa-circle-o"></i> Pacientes</a></li>
             <li class="treeview">
               <a href="#">
-              <span>Citas</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
+                <span>Citas</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
               <ul class="treeview-menu">
-              <li class="active"><a href="citas/nuevacita.php"><i class="fa fa-circle-o"></i>Asignar Cita</a></li>
-              <li class="active"><a href="citas/cita.php"><i class="fa fa-circle-o"></i>Historial Cita</a></li>
+                <li class="active"><a href="citas/nuevacita.php"><i class="fa fa-circle-o"></i>Asignar Cita</a></li>
+                <li class="active"><a href="citas/cita.php"><i class="fa fa-circle-o"></i>Historial Cita</a></li>
               </ul>
             </li>
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Sedes</a></li>
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Ciudades</a></li>
+            <li class="treeview">
+              <a href="#">
+                <span>Convenios</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="sede/sede.php"><i class="fa fa-circle-o"></i> Sedes</a></li>
+                <li class="active"><a href="ciudad/ciudad.php"><i class="fa fa-circle-o"></i> Ciudades</a></li>
+                <li class="active"><a href="pais/pais.php"><i class="fa fa-circle-o"></i> Paises</a></li>
+              </ul>
+            </li>
+            
           </ul>
         </li>
         
@@ -154,9 +174,10 @@
             <span>Inventario</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Medicamentos</a></li>
+            <li><a href="medicamento/medicamento.php"><i class="fa fa-circle-o"></i> Medicamentos</a></li>
           </ul>
         </li>
+>>>>>>> Stashed changes
       </ul>
     </section>
     <!-- /.sidebar -->

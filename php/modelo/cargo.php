@@ -15,5 +15,32 @@
         public function getNom_cargo(){
             return $this->nom_cargo;
         }
+
+        public function listar(){
+            $this->query ="
+                select id_cargo, nom_cargo
+                from cargo
+            ";
+            $this->obtener_resultados_query();
+            
+            return $this->rows;
+        }
+        
+        public function consultar(){
+
+        }
+        
+        public function nuevo(){
+
+        }
+        
+        public function editar(){
+
+        }
+        
+        public function borrar(){
+
+        }
+        
     }
 ?>

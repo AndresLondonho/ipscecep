@@ -16,16 +16,19 @@
         case 'consultar':
             $sede->consultar($datos['codigo']);
 
-            if($sede->getNOM_SEDE() == null){
+            if($sede->getCODIGO() == null){
                 $respuesta = array(
                     'respuesta' => 'no existe'
                 );
             } else {
                 $respuesta = array (
+                    'Codigo' => $sede->getCODIGO(),
                     'Sede' => $sede->getSEDE(),
                     'Direccion' => $sede->getDIRECCION(),
                     'Telefono' => $sede->getTELEFONO(),
+                    'id_ciu' => $sede->getID_CIU(),
                     'Ciudad' => $sede->getCIUDAD(),
+                    'id_rol' => $sede->getID_ROL(),
                     'Director' => $sede->getDIRECTOR(),
                     'respuesta' => 'existe'
                 );
@@ -41,6 +44,20 @@
                 );
             } else {
                 $respuesta = array (
+                    'respuesta' => 'error'
+                );
+            }
+            echo json_encode($respuesta);
+        break;
+
+        case 'nuevo':
+            $resultado = $sede->nuevo($datos);
+            if($resultado > 0){
+                $respuesta = array(
+                    'respuesta' => 'correcto'
+                );
+            } else {
+                $respuesta = array(
                     'respuesta' => 'error'
                 );
             }

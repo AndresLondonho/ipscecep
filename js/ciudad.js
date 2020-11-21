@@ -1,60 +1,56 @@
 var dt;
-function pacientes(){
+function ciudades(){
 
-    $("#tabla").on("click","a#editarP", function(){
+    $("#tabla").on("click","a#editarC", function(){
         var codigo = $(this).data("codigo");
-        var Ciudad;
+        var Pais;
         console.log(codigo);
-        $("#modal_editar").load("paciente/editarPaciente.php"); 
+        $("#modal_editar").load("ciudad/editarCiudad.php"); 
         
         $.ajax({
             type: "get",
-            url: "../controlador/paciente.php",
+            url: "../controlador/ciudad.php",
             data: {codigo: codigo, accion: 'consultar'},
             dataType: "json"
-        }).done(function (paciente){
-            if (paciente.respuesta === "no existe"){
+        }).done(function (ciudad){
+            if (ciudad.respuesta === "no existe"){
                 swal({
                     type: 'error',
                     title: 'Error',
-                    text: 'El paciente con cedula '+codigo+' no existe en la base de datos'
+                    text: 'La ciudad con numero de ciudad '+codigo+' no existe en la base de datos'
                 })
             } else {
-                document.getElementById("ced").innerHTML = paciente.Cedula;
-                $("#cc_pac").val(paciente.Cedula);
-                $("#nom_pac").val(paciente.nom_pac);
-                $("#ape_pac").val(paciente.ape_pac);
-                $("#email_pac").val(paciente.Email);
-                $("#tel_pac").val(paciente.Telefono);
-                $("#dir_pac").val(paciente.Direccion);
-                Ciudad = paciente.Ciudad;
-                console.log(Ciudad);
+                document.getElementById("num").innerHTML = ciudad.Codigo;
+                $("#id_ciu").val(ciudad.Codigo);
+                $("#nom_ciu").val(ciudad.nom_ciu);
+                Pais = ciudad.Pais;
+                console.log(Pais);
 
             }
         });
         $.ajax({
             type:"get",
-            url:"../controlador/ciudad.php",
+            url:"../controlador/pais.php",
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#id_ciu option").remove();
+            $("#id_pais option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-                if(Ciudad === value.Codigo){
-                    $("#id_ciu").append("<option selected value='" + value.Codigo + "'>" + value.Ciudad + "</option>")
+                if(Pais === value.Codigo){
+                    $("#id_pais").append("<option selected value='" + value.Codigo + "'>" + value.Pais + "</option>")
                 } else {
-                    $("#id_ciu").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
+                    $("#id_pais").append("<option value='"+value.Codigo+"'>"+value.Pais+"</option>");
                 }
             })
         })
     })
 
     $("#modal_editar").on("click","button#actualizar",function(){
-        var datos = $("#frmpaciente").serialize();
+        var datos = $("#frmciudad").serialize();
        $.ajax({
            type: "get",
-           url: "../controlador/paciente.php",
+           url: "../controlador/ciudad.php",
            data: datos,
            dataType: "json"
        }).done(function(resultado){
@@ -64,8 +60,6 @@ function pacientes(){
                    'Se actualizaron los datos correctamente',
                    'success'
                )
-               $('#modal_editar').modal('toggle');
-               dt.ajax.reload();
            } else {
                swal({
                    type: 'error',
@@ -76,8 +70,8 @@ function pacientes(){
        })
     })
    
-    $(".box").on("click","button#nuevoP", function(){
-        $("#modal_editar").load("paciente/nuevoPaciente.php");
+    $(".box").on("click","button#nuevoC", function(){
+        $("#modal_editar").load("ciudad/nuevaCiudad.php");
         
         $.ajax({
             type:"get",
@@ -85,22 +79,19 @@ function pacientes(){
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#id_ciu option").remove();
+            $("#id_pais option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-            $("#id_ciu").append("<option value='"+value.Codigo+"'>"+value.Ciudad+"</option>");
+            $("#id_pais").append("<option value='"+value.Codigo+"'>"+value.Pais+"</option>");
             })
         })
     })
 
     $("#modal_editar").on("click","button#registrar",function(){
-        var cedula = $("#cc_pac").val();
-        console.log(cedula);
-        $("#id_pac").val(cedula);
-        var datos = $("#frmpaciente").serialize();
+        var datos = $("#frmciudad").serialize();
         $.ajax({
             type:"get",
-            url:"../controlador/paciente.php",
+            url:"../controlador/ciudad.php",
             data: datos,
             dataType:"json"
           }).done(function( resultado ) {
@@ -108,11 +99,10 @@ function pacientes(){
                 swal({
                     position: 'center',
                     type: 'success',
-                    title: 'El paciente fue grabado con éxito',
+                    title: 'La ciudad fue grabada con éxito',
                     showConfirmButton: false,
                     timer: 1200
                 })
-                $('#modal_editar').modal('toggle');
                 dt.ajax.reload();
             } else {
                 swal({
@@ -122,17 +112,18 @@ function pacientes(){
                     showConfirmButton: false,
                     timer: 1500
                 });
+               
             }
         })
     })
 
-    $("#tabla").on("click","a#borrarP",function(){
+    $("#tabla").on("click","a#borrarC",function(){
         //Recupera datos del formulario
         var codigo = $(this).data("codigo");
         console.log(codigo);
         swal({
               title: '¿Está seguro?',
-              text: "¿Borrar el paciente con cedula: " + codigo + " ?",
+              text: "¿Borrar la ciudad numero: " + codigo + " ?",
               type: 'warning',
               showCancelButton: true,
               confirmButtonColor: '#3085d6',
@@ -142,7 +133,7 @@ function pacientes(){
                 if (decision.value) {
                     var request = $.ajax({
                         method: "get",                  
-                        url: "../controlador/paciente.php",
+                        url: "../controlador/ciudad.php",
                         data: {codigo: codigo, accion:'borrar'},
                         dataType: "json"
                     })
@@ -151,7 +142,7 @@ function pacientes(){
                             swal({
                               position: 'center',
                               type: 'success',
-                              title: 'El paciente con cedula ' + codigo + ' se ha borrado',
+                              title: 'La ciudad numero ' + codigo + ' se ha borrado',
                               showConfirmButton: false,
                               timer: 1500
                             })       
@@ -183,21 +174,17 @@ function pacientes(){
 
 $(document).ready(() => {
     dt = $("#tabla").DataTable({
-        "ajax": "../controlador/paciente.php?accion=listar",
+        "ajax": "../controlador/ciudad.php?accion=listar",
         "columns": [
-            { "data": "Cedula"} ,
-            { "data": "Paciente" },
-            { "data": "Email" },
-            { "data": "Telefono" },
-            { "data": "Direccion" },
-            { "data": "Ciudad" },
-            { "data": "Cedula",
+            { "data": "Ciudad"} ,
+            { "data": "Pais" },
+            { "data": "Ciudad",
               render: function (data) {
                         return '<div class="btn-group pull-right ">'+
                         '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Acciones <span class="fa fa-caret-down"></span></button>'+
                         '<ul class="dropdown-menu">'+
-                            '<li><a href="#" data-codigo="'+data+'" id="editarP" data-toggle="modal" data-target="#modal_editar"><i class="fa fa-edit"></i> Editar</a></li>'+
-                            '<li><a href="#" data-codigo="'+data+'" id="borrarP"><i class="fa fa-trash"></i> Borrar</a></li>'+
+                            '<li><a href="#" data-codigo="'+data+'" id="editarC" data-toggle="modal" data-target="#modal_editar"><i class="fa fa-edit"></i> Editar</a></li>'+
+                            '<li><a href="#" data-codigo="'+data+'" id="borrarC"><i class="fa fa-trash"></i> Borrar</a></li>'+
                         '</ul>'+
                         '</div>'
               }
@@ -205,6 +192,6 @@ $(document).ready(() => {
         ]
 });
 
-pacientes();
+ciudades();
 
 })

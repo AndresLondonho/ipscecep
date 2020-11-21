@@ -1,3 +1,11 @@
+<?php
+  session_start();
+
+  if(isset($_GET["cerrar_session"]) and $_GET["cerrar_session"]==true){
+    session_destroy();
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +23,29 @@
 </head>
 
 <body>
-    <form action="index.html" class="form-box animated fadeInUp">
+    <form action="" id="login-form" method="post" class="form-box animated fadeInUp">
         <h1 class="form-title">Inicia Sesión</h1>
-        <input type="text" placeholder="Usuario" autofocus>
-        <input type="password" placeholder="Contraseña">
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
+        <input type="password" id="password" name="password" placeholder="Contraseña">
         <button type="submit">
             Iniciar
         </button>
+
+        <input type="hidden" value="login" name="accion">
     </form>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script src="../../js/funcionesUsuario.js"></script>
+
+  <script>
+      $(document).ready(fusuario);
+  </script>
+
+
 </body>
 
 </html>

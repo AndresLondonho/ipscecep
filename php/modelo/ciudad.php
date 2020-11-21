@@ -58,12 +58,11 @@
         }
 
         public function nuevo($datos=array()){
-            if(array_key_exists('cc_med', $datos)):
+            if(array_key_exists('id_ciu', $datos)):
                 foreach ($datos as $campo => $valor):
                     $$campo = $valor;
                 endforeach;
-                $nom_med = utf8_decode($nom_med);
-                $ape_med = utf8_decode($ape_med);
+
                 $this->query = "
                     insert into ciudad
                     (id_ciu, nom_ciu, id_pais)

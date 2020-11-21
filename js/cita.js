@@ -14,8 +14,6 @@ function cita(){
             })
         })
     })
-
-
 }
 
 $(document).ready(() => {

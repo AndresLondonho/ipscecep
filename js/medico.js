@@ -3,8 +3,7 @@ function medicos(){
 
     $("#tabla").on("click","a#editarM", function(){
         var codigo = $(this).data("codigo");
-        var especialidad;
-        var sede;
+        var especialidad,sede;
         console.log(codigo);
         $("#modal_editar").load("medico/editarMedico.php"); 
         
@@ -85,12 +84,16 @@ function medicos(){
                     'Se actualizaron los datos correctamente',
                     'success'
                 )
+                $('#modal_editar').modal('toggle');
+                dt.ajax.reload();
             } else {
                 swal({
                     type: 'error',
                     title: 'Error',
                     text: 'Algo ha salido mal'
                 })
+                $('#modal_editar').modal('toggle');
+                dt.ajax.reload();
             }
         })
     })
@@ -104,7 +107,7 @@ function medicos(){
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#espec option").remove();
+            //$("#espec option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
             $("#espec").append("<option value='"+value.Codigo+"'>"+value.Especialidad+"</option>");
@@ -117,10 +120,10 @@ function medicos(){
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#sede option").remove();
+            //$("#sede option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-            $("#sede").append("<option selected value='" + value.Codigo + "'>" + value.Sede + "</option>");
+            $("#sede").append("<option value='" + value.Codigo + "'>" + value.Sede + "</option>");
             })
         })
     })
@@ -149,6 +152,7 @@ function medicos(){
                     showConfirmButton: false,
                     timer: 1200
                 })
+                $('#modal_editar').modal('toggle');
                 dt.ajax.reload();
             } else {
                 swal({

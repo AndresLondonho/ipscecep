@@ -57,13 +57,12 @@
                                         <div class="form-group">
                                                 <label for="ciudad">Ciudad:</label>
                                                 <select class="form-control" id="id_ciu" name="id_ciu" value="">
-                                                <option>1001</option>
                                                 </select>
                                                 <small>Ciudad de residencia</small>
                                         </div>
                                     </div>
                                 </div>         
-                                <button type="submit" id="registrar" class="btn btn-primary">Registrar</button>
+                                <button type="button" id="registrar" class="btn btn-primary">Registrar</button>
                                 <input type="hidden" id="editar" value="nuevo" name="accion"/>
                             </form>    
                         </div>
