@@ -14,6 +14,7 @@
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="servicio/servicio.php"><i class="fa fa-circle-o"></i> Servicios</a></li>
+            <li class="active"><a href="funcionario/funcionario.php"><i class="fa fa-circle-o"></i> Funcionarios</a></li>
             <li class="active"><a href="paciente/paciente.php"><i class="fa fa-circle-o"></i> Pacientes</a></li>
             <li class="active"><a href="medico/medico.php"><i class="fa fa-circle-o"></i> Medicos</a></li>
             <li class="treeview">
