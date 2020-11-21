@@ -10,7 +10,7 @@ function fusuario(){
             dataType:"json"
           }).done(function( resultado ) {
             if(resultado.respuesta == "existe"){
-                location.href ="./php/vista/dashboard.php"; 
+                location.href ="../vista/dashboard.php"; 
             }
             else{
                 swal({
