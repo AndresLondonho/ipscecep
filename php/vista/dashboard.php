@@ -167,7 +167,7 @@
             <span>Inventario</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Medicamentos</a></li>
+            <li><a href="medicamento/medicamento.php"><i class="fa fa-circle-o"></i> Medicamentos</a></li>
           </ul>
         </li>
       </ul>
