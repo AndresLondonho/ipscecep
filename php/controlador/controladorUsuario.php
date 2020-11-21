@@ -22,9 +22,11 @@ switch ($_POST['accion']){
                 $_SESSION['codigo'] = $usuario->getID_FUNC();
                 $_SESSION['usuario'] = $usuario->getUSERNAME();
                 $_SESSION['nombre'] = $usuario->getNOM_USER();
+                $_SESSION['apellido'] = $usuario->getAPE_USER();
                 $_SESSION['tipo'] = $usuario->getID_PRIV();
                 $_SESSION['cedula'] = $usuario->getCC_USER();
                 $_SESSION['correo'] = $usuario->getEMAIL_USER();
+                $_SESSION['foto'] = $usuario->getIMG_USER();
                 $respuesta = array(
                     'respuesta' =>'existe'
                 );

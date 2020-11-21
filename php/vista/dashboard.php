@@ -61,16 +61,16 @@
           <!-- Cuenta de usuario: el estilo se puede encontrar en el menú desplegable. -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../../recursos/dashboard/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">CARLOS ALBERTO</span>
+              <img src="../../recursos/imgs/<?php echo $_SESSION['foto'] ?>" class="user-image" alt="User Image">
+              <span class="hidden-xs"><?php echo $_SESSION["nombre"]; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!--  imagen de usuario-->
               <li class="user-header">
-                <img src="../../recursos/dashboard/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../../recursos/imgs/<?php echo $_SESSION['foto'] ?>" class="img-circle" alt="User Image">
 
                 <p>
-                  CARLOS ALBERTO - Web Developer
+                  <?php echo $_SESSION["nombre"]; ?>
                   <small>20 DE ABRIL 2020</small>
                 </p>
               </li>
@@ -81,7 +81,7 @@
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Cerrar sesion</a>
+                  <a href="login.php?cerrar_session=true" class="btn btn-default btn-flat">Cerrar sesion</a>
                 </div>
               </li>
             </ul>
@@ -97,10 +97,10 @@
       <!-- Panel de usuario de la barra lateral -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../../recursos/dashboard/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../../recursos/imgs/<?php echo $_SESSION['foto'] ?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Carlos Alberto</p>
+          <p><?php echo $_SESSION["nombre"]; ?> <?php echo $_SESSION["apellido"]; ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

@@ -9,6 +9,8 @@
 		private $id_priv;
 		private $cc_user;
 		private $email_user;
+		private $img_user;
+		private $ape_user;
 		
 		function __construct() {
 			//$this->db_name = '';
@@ -44,13 +46,23 @@
 			return $this->email_user;
 		}
 
+		public function getIMG_USER(){
+			return $this->img_user;
+		}
+
+		public function getAPE_USER(){
+			return $this->ape_user;
+		}
+
+
 		
 		public function consultar($datos = array()) {
 			
 			$usuario = $datos['usuario'];
 			$password = $datos['password'];
             $this->query = "
-            SELECT func.id_func, func.nom_user, func.username, func.password, func.id_priv, func.cc_user, func.email_user
+			SELECT func.id_func, func.nom_user, func.ape_user, func.username, func.password, func.id_priv, func.cc_user, 
+			func.email_user, func.img_user
 			FROM funcionarios as func
 			WHERE func.username = '$usuario'
 			";
