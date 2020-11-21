@@ -20,9 +20,9 @@ function ciudades(){
                     text: 'La ciudad con numero de ciudad '+codigo+' no existe en la base de datos'
                 })
             } else {
-                document.getElementById("num").innerHTML = ciudad.Codigo;
+                document.getElementById("id").innerHTML = ciudad.Codigo;
                 $("#id_ciu").val(ciudad.Codigo);
-                $("#nom_ciu").val(ciudad.nom_ciu);
+                $("#nom_ciu").val(ciudad.Ciudad);
                 Pais = ciudad.Pais;
                 console.log(Pais);
 
@@ -37,10 +37,10 @@ function ciudades(){
             $("#id_pais option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-                if(Pais === value.Codigo){
-                    $("#id_pais").append("<option selected value='" + value.Codigo + "'>" + value.Pais + "</option>")
+                if(Pais === value.id_pais){
+                    $("#id_pais").append("<option selected value='" + value.id_pais + "'>" + value.nom_pais + "</option>")
                 } else {
-                    $("#id_pais").append("<option value='"+value.Codigo+"'>"+value.Pais+"</option>");
+                    $("#id_pais").append("<option value='"+value.id_pais+"'>"+value.nom_pais+"</option>");
                 }
             })
         })
@@ -60,6 +60,8 @@ function ciudades(){
                    'Se actualizaron los datos correctamente',
                    'success'
                )
+               $("#modal_editar").modal("toggle");
+               dt.ajax.reload();
            } else {
                swal({
                    type: 'error',
@@ -75,14 +77,14 @@ function ciudades(){
         
         $.ajax({
             type:"get",
-            url:"../controlador/ciudad.php",
+            url:"../controlador/pais.php",
             data: {accion:'listar'},
             dataType: "json"
         }).done(function(resultado){
-            $("#id_pais option").remove();
+            //$("#id_pais option").remove();
             $.each(resultado.data, function(index, value){
             console.log(value.Codigo);
-            $("#id_pais").append("<option value='"+value.Codigo+"'>"+value.Pais+"</option>");
+            $("#id_pais").append("<option value='"+value.id_pais+"'>"+value.nom_pais+"</option>");
             })
         })
     })
@@ -103,6 +105,7 @@ function ciudades(){
                     showConfirmButton: false,
                     timer: 1200
                 })
+                $("#modal_editar").modal("toggle");
                 dt.ajax.reload();
             } else {
                 swal({
@@ -176,11 +179,12 @@ $(document).ready(() => {
     dt = $("#tabla").DataTable({
         "ajax": "../controlador/ciudad.php?accion=listar",
         "columns": [
-            { "data": "Ciudad"} ,
+            { "data": "Codigo"},
+            { "data": "Ciudad"},
             { "data": "Pais" },
-            { "data": "Ciudad",
+            { "data": "Codigo",
               render: function (data) {
-                        return '<div class="btn-group pull-right ">'+
+                        return '<div class="btn-group">'+
                         '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Acciones <span class="fa fa-caret-down"></span></button>'+
                         '<ul class="dropdown-menu">'+
                             '<li><a href="#" data-codigo="'+data+'" id="editarC" data-toggle="modal" data-target="#modal_editar"><i class="fa fa-edit"></i> Editar</a></li>'+

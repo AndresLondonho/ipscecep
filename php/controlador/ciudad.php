@@ -2,10 +2,10 @@
     require_once("../modelo/ciudad.php");
 
     $datos = $_GET;
+    $ciudad = new Ciudad();
     switch($_GET['accion']){
 
         case 'editar':
-            $ciudad = new Ciudad();
             $resultado = $ciudad->editar($datos);
             $respuesta = array(
                 'respuesta' => $resultado
@@ -14,7 +14,6 @@
         break;
 
         case 'consultar':
-            $ciudad = new Ciudad();
             $ciudad->consultar($datos['codigo']);
 
             if($ciudad->getID_CIU() == null){
@@ -23,16 +22,30 @@
                 );
             } else {
                 $respuesta = array (
-                    'Ciudad' => $ciudad->getID_CIU(),
-                    'Pais' => $ciudad->getNOM_CIU(),
+                    'Codigo' => $ciudad->getID_CIU(),
+                    'Ciudad' => $ciudad->getNOM_CIU(),
+                    'Pais' => $ciudad->getID_PAIS(),
                     'respuesta' => 'existe'
+                );
+            }
+            echo json_encode($respuesta);
+        break;
+
+        case 'nuevo':
+            $resultado = $ciudad->nuevo($datos);
+            if($resultado > 0){
+                $respuesta = array(
+                    'respuesta' => 'correcto'
+                );
+            } else {
+                $respuesta = array(
+                    'respuesta' => 'error'
                 );
             }
             echo json_encode($respuesta);
         break;
 		
 		case 'borrar':
-			$ciudad = new Ciudad();
 			$resultado = $ciudad->borrar($datos['codigo']);
 			if($resultado > 0){
                 $respuesta = array(
@@ -47,7 +60,6 @@
 		break;
 
         case 'listar':
-            $ciudad = new Ciudad();
             $listado = $ciudad->listar();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;

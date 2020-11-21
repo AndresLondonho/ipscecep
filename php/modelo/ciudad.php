@@ -20,21 +20,12 @@
             return $this->id_pais;
         }
 
-        public function getCIUDAD(){
-            return $this->Ciudad;
-        }
-        public function getPAIS(){
-            return $this->Pais;
-        }
-        
         public function consultar($id_ciu=''){
             if ($id_ciu != ''):
                 $this->query = "
-                SELECT ciu.nom_ciu as Ciudad, pai.nom_pais as Pais
-                FROM ciudad as ciu
-                INNER JOIN pais as pai ON (ciu.id_pais=pai.id_pais)
-                WHERE ciu.id_ciu = '$id_ciu'
-                ORDER BY Ciudad
+                SELECT id_ciu, nom_ciu, id_pais 
+                FROM ciudad 
+                WHERE id_ciu = '$id_ciu'
                 ";
             $this->obtener_resultados_query();
             endif;
@@ -67,7 +58,7 @@
                     insert into ciudad
                     (id_ciu, nom_ciu, id_pais)
                     values
-                    ('$id_ciu', '$nom_ciu', '$id_pais')
+                    ('', '$nom_ciu', '$id_pais')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;
