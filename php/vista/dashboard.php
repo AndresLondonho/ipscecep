@@ -78,7 +78,7 @@
               <!-- opciones de cuenta-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                  <a href="#" class="btn btn-default btn-flat">Actualización de datos</a>
                 </div>
                 <div class="pull-right">
                   <a href="login.php?cerrar_session=true" class="btn btn-default btn-flat">Cerrar sesion</a>
