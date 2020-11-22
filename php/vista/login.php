@@ -3,6 +3,8 @@
 
   if(isset($_GET["cerrar_session"]) and $_GET["cerrar_session"]==true){
     session_destroy();
+    header("location:../../index.php");
+            exit();
   }
 ?>
 <div class="container" style="margin-top: 20%">
