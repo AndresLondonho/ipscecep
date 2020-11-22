@@ -5,49 +5,32 @@
     session_destroy();
   }
 ?>
+<div class="container" style="margin-top: 20%">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="panel-group">
+      <div class="panel panel-success">
+        <div class="panel-heading">Inicia Sesión</div>
+        <div class="panel-body">
+          <form action="" id="login-form" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <button type="submit" class="form-control btn-success">Iniciar</button>
+              </div>
+            </div>
+            <input type="hidden" value="login" name="accion">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <title> Inicia sesion IPS CECEP </title>
-    <link rel="shortcut icon" href="../../imgs/icono.ico">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-    <link rel="stylesheet" href="../../recursos/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.2/sweetalert2.all.js"></script>
-
-
-</head>
-
-<body>
-    <form action="" id="login-form" method="post" class="form-box animated fadeInUp">
-        <h1 class="form-title">Inicia Sesión</h1>
-        <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
-        <input type="password" id="password" name="password" placeholder="Contraseña">
-        <button type="submit">
-            Iniciar
-        </button>
-
-        <input type="hidden" value="login" name="accion">
-    </form>
-
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-
-    <script src="../../js/funcionesUsuario.js"></script>
-
-  <script>
-      $(document).ready(fusuario);
-  </script>
-
-
-</body>
-
-</html>
+<script src="js/funcionesUsuario.js"></script>

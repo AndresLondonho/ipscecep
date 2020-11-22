@@ -1,18 +1,8 @@
 var dt, id_espec, id_func;
 function cita(){
-    $("#id_espec").change(function(){
-        id_espec = $("#id_espec").val();
-        $.ajax({
-            type: "get",
-            url: "../controlador/medico.php",
-            data: {codigo: id_espec, accion: 'consultarE'},
-            dataType: "json"
-        }).done(function(resultado){
-            $("#id_func option").remove();
-            console.log(resultado.data);
-            $.each(resultado.data, function(){
-            })
-        })
+    $(".box").on("keypress","input#id_sede",function(){
+        var cedula = document.getElementById("id_pac").value;
+        $("#nom_pac").val(cedula);
     })
 }
 

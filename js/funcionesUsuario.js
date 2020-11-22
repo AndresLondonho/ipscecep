@@ -5,12 +5,12 @@ function fusuario(){
         console.log(datos)
         $.ajax({
             type:"post",
-            url:"../controlador/controladorUsuario.php",
+            url:"php/controlador/controladorUsuario.php",
             data: datos,
             dataType:"json"
           }).done(function( resultado ) {
             if(resultado.respuesta == "existe"){
-                location.href ="../vista/dashboard.php"; 
+                location.href ="php/vista/dashboard.php"; 
             }
             else{
                 swal({
@@ -26,5 +26,7 @@ function fusuario(){
             }
         });
     })
-
 }
+$(document).ready(() => {
+    fusuario();
+})

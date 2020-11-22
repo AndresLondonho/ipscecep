@@ -32,7 +32,7 @@
       $('.navbar-default a, #home a, footer a').on('click', function(event) {
         var $anchor = $(this);
           $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 49
+            scrollTop: $($anchor.attr('href')).offset()
           }, 1000);
             event.preventDefault();
       });

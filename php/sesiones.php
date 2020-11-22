@@ -1,7 +1,7 @@
 <?php
     function usuarioAutenticado(){
         if(!verificarUsuario()){
-            header("location:./login.php");
+            header("location:../../index.php");
             exit();
         }
     }
@@ -10,5 +10,4 @@
     }
     session_start();
     usuarioAutenticado();
-
 ?>

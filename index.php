@@ -15,7 +15,8 @@
 
      <link rel="stylesheet" href="recursos/css/bootstrap.min.css">
      <link rel="stylesheet" href="recursos/css/font-awesome.min.css">
-     <link rel="stylesheet" href="recursos/css/animate.css">
+     <link rel="stylesheet" href="recursos/css/animate.css">   
+     <link rel="stylesheet" href="recursos/css/styles.css">
      <link rel="stylesheet" href="recursos/css/owl.carousel.css">
      <link rel="stylesheet" href="recursos/css/owl.theme.default.min.css">
      <!-- link rel="stylesheet" href="css/styles.css"> -->
@@ -79,15 +80,14 @@
                          <li><a href="#team" class="smoothScroll">Doctores</a></li>
                          <li><a href="#news" class="smoothScroll">Noticias</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contactenos</a></li>
-                         <li class="appointment-btn"><a href="php/vista/login.php" id="btnlogin">Iniciar sesion</a></li>
+                         <li class="appointment-btn"><a href="#" data-toggle="modal" data-target="#modal_login"  id="btnlogin">Iniciar sesion</a></li>
                     </ul>
                </div>
           </div>
-          <div class="login" id="login">
-               
-          </div>
      </section>
 
+     <div class="modal fade" id="modal_login" tabidex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     </div>
 
      <!-- HOME -->
      <section id="home" class="slider" data-stellar-background-ratio="0.5">
