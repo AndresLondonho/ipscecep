@@ -14,6 +14,7 @@
                                                     <div class="form-group">
                                                         <label>Especialidad:</label>
                                                         <select class="form-control" name="id_espec" id="id_espec">
+                                                            <option>Seleccione tipo de cita</option>
                                                         </select>
                                                         <small>Tipo de cita</small>
                                                     </div>
@@ -21,9 +22,9 @@
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <label>Medicos:</label>
-                                                        <select class="form-control" name="id_func" id="id_func">
+                                                        <select class="form-control" name="id_func" id="id_func" disabled>
                                                             <option>
-                                                                123456
+                                                                ------
                                                             </option>
                                                         </select>
                                                         <small>Nombre Medico</small>

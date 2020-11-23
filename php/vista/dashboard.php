@@ -56,7 +56,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
 
-      <div class="navbar-custom-menu">
+      <div class="navbar-custom-menu" id="menunav">
         <ul class="nav navbar-nav">
           <!-- Cuenta de usuario: el estilo se puede encontrar en el menú desplegable. -->
           <li class="dropdown user user-menu">
@@ -78,7 +78,8 @@
               <!-- opciones de cuenta-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Actualización de datos</a>
+                  <a href="#" class="btn btn-default btn-flat" data-toggle="modal" data-target="#modal_actualizardatos"  id="actualizarDatos">Actualización de datos</a>
+                  <input type="hidden" id="id_func" value="<?php echo $_SESSION['codigo'] ?>">
                 </div>
                 <div class="pull-right">
                   <a href="login.php?cerrar_session=true" class="btn btn-default btn-flat">Cerrar sesion</a>
@@ -90,6 +91,10 @@
       </div>
     </nav>
   </header>
+
+  <div class="modal faded" id="modal_actualizardatos" tabidex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      
+  </div>
 
   <!-- Columna del lado izquierdo. contiene el logo y la barra lateral -->
   <aside class="main-sidebar">

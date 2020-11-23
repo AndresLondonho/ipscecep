@@ -3,9 +3,6 @@
       <div class="row">
         <div class="col-xs-12">
          <div class="box">
-            <div class="box-header with-border">
-              <button type="button" data-toggle="modal" data-target="#modal_editar" class="btn btn-success" id="nuevoM" title="Nuevo Medico" >Nuevo</button>
-            </div>
             <!-- /.box-header -->
             <div class="box-body">
             <div id="listado">

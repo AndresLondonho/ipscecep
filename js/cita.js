@@ -1,9 +1,29 @@
 var dt, id_espec, id_func;
 function cita(){
-    $(".box").on("keypress","input#id_sede",function(){
-        var cedula = document.getElementById("id_pac").value;
-        $("#nom_pac").val(cedula);
-    })
+    document.getElementById("id_espec").onchange = function(){
+        var espec = $("#id_espec").val();
+        console.log(espec);
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/medico.php",
+            data: {espec:espec, accion:'medicoEsp'},
+            dataType:"json"
+        }).done(function(resultado){
+            console.log(resultado.id_func);
+            $("#id_func option").remove();
+            $.each(resultado.data, function(index, value){
+                console.log(value.id_espec);
+                if(espec === resultado.id_espec){
+                    $("#id_func").append("<option selected value='" + value.id_func + "'>" + value.medico + "</option>")
+                } else {
+                    $("#id_func").append("<option value='"+value.id_func+"'>"+value.medico+"</option>");
+                }
+                //$("#id_func").append("<option value='"+value.id_func+"'>"+value.medico+"</option>")
+            })
+        })
+        $("#id_func").prop('disabled', false);
+    }
 }
 
 $(document).ready(() => {
@@ -26,13 +46,11 @@ $(document).ready(() => {
         data: {accion:'listar'},
         dataType: "json"
     }).done(function(resultado){
-        $("#id_espec option").remove();
+        //$("#id_espec option").remove();
         console.log(resultado.data);
         $.each(resultado.data, function (index, value){
-            $("#id_espec").append("<option selected value='"+value.Codigo+"'>"+value.Especialidad+"</option>");
-            id_espec = value.Codigo;
+            $("#id_espec").append("<option value='"+value.Codigo+"'>"+value.Especialidad+"</option>");
         })
-        console.log(id_espec);
     })
     cita();
 })

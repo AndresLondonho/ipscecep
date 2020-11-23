@@ -12,6 +12,7 @@ function funcionarios(){
             data: {codigo:codigo, accion:"consultar"},
             dataType:"json"
         }).done(function(funcionario){
+            console.log(funcionario.id_func);
             if(funcionario.respuesta === "no existe"){
                 swal({
                     type: 'error',

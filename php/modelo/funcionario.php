@@ -170,6 +170,5 @@
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
-        }
-        
+        }        
     }

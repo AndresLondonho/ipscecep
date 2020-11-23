@@ -515,6 +515,6 @@
      <script src="js/custom.js"></script>
      <script src="js/funcion.js"></script>
      
-
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.2/sweetalert2.all.js"></script>
 </body>
 </html>

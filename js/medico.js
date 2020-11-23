@@ -132,11 +132,12 @@ function medicos(){
         var nombre = $("#nom_user").val();
         var apellido = $("#ape_user").val();
         var user = nombre.substr(0, 1)+apellido;
-        var cedula = $("#cc_user").val();
-        console.log(cedula);
-        $("#id_func").val(cedula);
+        var pass = $("#cc_user").val();
+
+        console.log(pass);
+        $("#id_func").val(pass);
         $("#username").val(user.toLowerCase());
-        $("#password").val(cedula);
+        $("#password").val(pass);
         var datos = $("#frmmedico").serialize();
         $.ajax({
             type:"get",
@@ -148,7 +149,7 @@ function medicos(){
                 swal({
                     position: 'center',
                     type: 'success',
-                    title: 'El medico con cedula '+cedula+' fue grabado con éxito',
+                    title: 'El medico con cedula '+pass+' fue grabado con éxito',
                     showConfirmButton: false,
                     timer: 1200
                 })

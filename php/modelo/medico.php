@@ -199,5 +199,22 @@
             $this->obtener_resultados_query();
             return $this->rows;
         }
+
+        public function medicoEsp($id_espec=''){
+            if($id_espec!=''):
+                $this->query = "
+                    select id_func, concat(nom_user,' ',ape_user)as Medico, id_espec
+                    from funcionarios
+                    where id_espec = '$id_espec'
+                ";
+                $this->obtener_resultados_query();
+            endif;
+            if(count($this->rows) == 1):
+                foreach($this->rows[0] as $propiedad => $valor):
+                    $this-> $propiedad = $valor;
+                endforeach;
+            endif;
+        }
+
     }
 ?>
