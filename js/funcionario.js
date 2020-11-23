@@ -17,7 +17,7 @@ function funcionarios(){
                 swal({
                     type: 'error',
                     title: 'Error',
-                    text: 'El duncionario con codigo '+codigo+' no existe en la base de datos'
+                    text: 'El funcionario con codigo '+codigo+' no existe en la base de datos'
                 })
             } else {
                 document.getElementById("id").innerHTML = funcionario.id_func;
@@ -109,7 +109,6 @@ function funcionarios(){
                     text: 'Algo ha salido mal'
                 })
                 $('#modal_editar').modal('toggle');
-                dt.ajax.reload();
             }
         })
     });

@@ -163,6 +163,26 @@
             return $resultado;
         }
         
+        
+        public function editarD($datos = array()){
+            foreach ($datos as $campo => $valor):
+                $$campo = $valor;
+            endforeach;
+            $this->query = "
+                update funcionarios 
+                set
+                nom_user = '$nom_user',
+                nom2_user = '$nom2_user',
+                ape_user = '$ape_user',
+                ape2_user = '$ape2_user',
+                tel_user = '$tel_user',
+                email_user = '$email_user'
+                where id_func = '$id_func'
+            ";
+            $resultado = $this->ejecutar_query_simple();
+            return $resultado;
+        }
+        
         public function borrar($id_func=''){
             $this->query = "
                 delete from funcionarios

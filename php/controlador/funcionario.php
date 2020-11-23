@@ -56,6 +56,14 @@
             );
             echo json_encode($respuesta);
         break;
+
+        case 'editarD':
+            $resultado = $funcionario->editarD($datos);
+            $respuesta = array(
+                'respuesta' => $resultado
+            );
+            echo json_encode($respuesta);
+        break;
         
         case 'borrar':
             $resultado = $funcionario->borrar($datos['codigo']);
