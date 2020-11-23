@@ -78,7 +78,7 @@
               <!-- opciones de cuenta-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat" data-toggle="modal" data-target="#modal_actualizardatos"  id="actualizarDatos">Actualización de datos</a>
+                  <a href="#" class="btn btn-default btn-flat" data-toggle="modal" data-target="#modal_actualizardatos"  id="actualizarDatos">Actualizar datos</a>
                   <input type="hidden" id="id_func" value="<?php echo $_SESSION['codigo'] ?>">
                 </div>
                 <div class="pull-right">
