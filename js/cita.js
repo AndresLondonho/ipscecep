@@ -129,7 +129,60 @@ function cita(){
             }
         })
     })
-    
+
+    $(".box").on("click","a#editarCita",function(){
+        $("#contenido").load("citas/editarCita.php");
+        var codigo = $(this).data("codigo");
+        console.log(codigo);
+        $.ajax({
+            type:"get",
+            url:"../controlador/cita.php",
+            data: {codigo:codigo, accion:'consultar'},
+            dataType:"json"
+        }).done(function(resultado){
+            if (resultado.respuesta === "no existe"){
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: 'Algo salio muy mal'
+                })
+            } else {
+                document.getElementById("nom_pac").innerHTML = resultado.paciente;
+                document.getElementById("id_pac").innerHTML = resultado.cedulaP;
+                document.getElementById("tel_pac").innerHTML = resultado.tel_espec;
+                document.getElementById("nom_med").innerHTML = resultado.medico
+                document.getElementById("espec").innerHTML = resultado.nom_espec;
+                $("#nro_cita").val(resultado.nro_cita)
+            }
+        })
+    })
+
+    $("#contenido").on("click","button#actualizar",function(){
+        var datos = $("#frmcita").serialize();
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/cita.php",
+            data:datos,
+            dataType:"json"
+        }).done(function(resultado){
+            if(resultado.respuesta){
+                swal(
+                    'Actualizado',
+                    'Diagnostico finalizado y listo para reporte.',
+                    'success'
+                )
+                $("#contenido").load("citas/cita.php");
+                dt.ajax.reload();
+            } else {
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: 'Algo ha salido mal'
+                })
+            }
+        })
+    })
 }
 
 $(document).ready(() => {
@@ -149,7 +202,7 @@ $(document).ready(() => {
             {"data": "Sede"},
             {"data": "nro_cita",
                 render: function(data){
-                    return '<a href="#" data-codigo="'+data+'" id="editarCita" data-toggle="modal" data-target="#modal_editar" title="Editar"><i class="fa fa-edit"></i></a>'
+                    return '<a href="#" data-codigo="'+data+'" id="editarCita" title="Editar"><i class="fa fa-edit"></i></a>'
                 }   
             },
             {"data": "nro_cita",

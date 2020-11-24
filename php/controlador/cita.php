@@ -35,5 +35,34 @@ switch($_GET['accion']){
         }
         echo json_encode($respuesta);
     break;
+    
+    case 'consultar':
+        $cita->consultar($datos['codigo']);
+
+        if($cita->getNro_cita() == null){
+            $respuesta = array(
+                'respuesta' => 'no existe'
+            );
+        } else {
+            $respuesta = array (
+                'nro_cita' => $cita->getNro_cita(),
+                'paciente' => $cita->getPaciente(),
+                'cedulaP' => $cita->getID_pac(),
+                'tel_espec' => $cita->getTel_pac(),
+                'medico' => $cita->getMedico(),
+                'nom_espec' => $cita->getNom_espec(),
+                'respuesta' => 'existe'
+            );
+        }
+        echo json_encode($respuesta);
+    break;
+
+    case 'editar':
+        $resultado = $cita->editar($datos);
+        $respuesta = array(
+            'respuesta' => $resultado
+        );
+        echo json_encode($respuesta);
+    break;
 }
 ?>

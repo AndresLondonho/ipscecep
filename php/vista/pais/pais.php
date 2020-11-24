@@ -1,4 +1,4 @@
-<input type="hidden" id="modulo" value="Pais">
+<input type="hidden" id="modulo" value="Paises">
     <!-- Main content -->
     <div class="container">s
         <section class="content">

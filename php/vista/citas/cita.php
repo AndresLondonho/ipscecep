@@ -44,8 +44,5 @@
   <!-- /.content-wrapper --><!--Div para editar los medicos-->
   <div class="modal fade" id="modal_editar" tabidex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       
-      </div>
-
-
-
+  </div>
 <script src="../../js/cita.js"></script>

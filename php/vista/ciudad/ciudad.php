@@ -1,4 +1,4 @@
-<input type="hidden" id="modulo" value="ciudad">
+<input type="hidden" id="modulo" value="Ciudades">
     <!-- Main content -->
     <section class="content">
       <div class="row">

@@ -25,7 +25,6 @@ function ciudades(){
                 $("#nom_ciu").val(ciudad.Ciudad);
                 Pais = ciudad.Pais;
                 console.log(Pais);
-
             }
         });
         $.ajax({

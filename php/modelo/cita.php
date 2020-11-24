@@ -40,6 +40,22 @@
             return $this->detalle;
         }
 
+        public function getPaciente(){
+            return $this->Paciente;
+        }
+
+        public function getMedico(){
+            return $this->Medico;
+        }
+
+        public function getTel_pac(){
+            return $this->tel_pac;
+        }
+
+        public function getNom_espec(){
+            return $this->nom_espec;
+        }
+
         public function listar(){
             $this->query = "
             SELECT cita.nro_cita, concat(pac.nom_pac,' ',pac.ape_pac)as Paciente, 
@@ -57,7 +73,23 @@
         }
 
         public function consultar($nro_cita=''){
-
+            if($nro_cita!=''):
+                $this->query = "
+                select c.nro_cita, c.id_pac, concat(pac.nom_pac,' ',pac.ape_pac)as Paciente, 
+                concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user) as Medico, pac.tel_pac, espec.nom_espec 
+                from cita as c 
+                inner join funcionarios as func on (c.id_func = func.id_func) 
+                inner join pacientes as pac on (c.id_pac = pac.id_pac) 
+                inner join especialidad as espec on (c.id_espec = espec.id_espec) 
+                where c.nro_cita = '$nro_cita'
+                ";
+                $this->obtener_resultados_query();
+            endif;
+            if(count($this->rows) == 1):
+                foreach ($this->rows[0] as $propiedad => $valor):
+                    $this-> $propiedad = $valor;
+                endforeach;
+            endif;
         }
 
         public function editar($datos=array()){
