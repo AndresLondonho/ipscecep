@@ -68,7 +68,7 @@
         public function consultar($cc_pac=''){
             if ($cc_pac != ''):
                 $this->query = "
-                    SELECT pac.cc_pac as Cedula, pac.nom_pac, pac.ape_pac, concat(pac.nom_pac,' ',pac.ape_pac) as Paciente,
+                    SELECT pac.id_pac, pac.cc_pac as Cedula, pac.nom_pac, pac.ape_pac, concat(pac.nom_pac,' ',pac.ape_pac) as Paciente,
                     pac.email_pac as Email, pac.tel_pac as Telefono, pac.dir_pac as Direccion, ciu.nom_ciu as Ciudad
                     FROM pacientes as pac
                     INNER JOIN ciudad as ciu ON (pac.id_ciu = ciu.id_ciu)

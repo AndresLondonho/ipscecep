@@ -200,6 +200,16 @@
             return $this->rows;
         }
 
+        public function medicos($id_espec=''){
+            $this->query = "
+                SELECT id_func as Funcionario, concat(nom_user,' ',' ',ape_user)as Medico , id_sede as Sede
+                FROM funcionarios 
+                where id_espec = '$id_espec'
+            ";
+            $this->obtener_resultados_query();
+            return $this->rows;
+        }
+
         public function medicoEsp($id_espec=''){
             if($id_espec!=''):
                 $this->query = "
@@ -211,6 +221,23 @@
             endif;
             if(count($this->rows) == 1):
                 foreach($this->rows[0] as $propiedad => $valor):
+                    $this-> $propiedad = $valor;
+                endforeach;
+            endif;
+        }
+
+        public function consultarS($id_func=''){
+            if ($id_func!=''):
+                $this->query ="
+                select f.id_func, f.id_sede, s.nom_sede as Sede
+                from funcionarios as f
+                inner join sede as s on (f.id_sede = s.id_sede)
+                where id_func = '$id_func'
+                ";
+                $this->obtener_resultados_query();
+            endif;
+            if(count($this->rows) == 1):
+                foreach ($this->rows[0] as $propiedad => $valor):
                     $this-> $propiedad = $valor;
                 endforeach;
             endif;

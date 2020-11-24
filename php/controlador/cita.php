@@ -21,5 +21,19 @@ switch($_GET['accion']){
         }
         echo json_encode($respuesta);
     break;
+
+    case 'borrar':
+        $resultado = $cita->borrar($datos['codigo']);
+        if($resultado > 0){
+            $respuesta = array(
+                'respuesta' => 'correcto'
+            );
+        } else {
+            $respuesta = array(
+                'respuesta' => 'error'
+            );
+        }
+        echo json_encode($respuesta);
+    break;
 }
 ?>

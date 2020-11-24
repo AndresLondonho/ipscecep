@@ -76,7 +76,7 @@
         break;
 
         case 'listarM':
-            $listado = $medico->directores();
+            $listado = $medico->medicos($datos['codigo']);
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
 
@@ -94,17 +94,17 @@
             echo json_encode($respuesta);
         break;
 
-        case 'medicoEsp':
-            $medico->medicoEsp($datos['espec']);
-            if($medico->getID_func() == null){
+        case 'consultarS':
+            $medico->consultarS($datos['codigo']);
+
+            if($medico->getID_sede() == null){
                 $respuesta = array(
                     'respuesta' => 'no existe'
                 );
             } else {
                 $respuesta = array (
-                    'id_func' => $medico->getID_func(),
-                    'medico' => $medico->getMedico(),
-                    'id_espec' => $medico->getID_espec(),
+                    'id_sede' => $medico->getID_sede(),
+                    'sede' => $medico->getSede(),
                     'respuesta' => 'existe'
                 );
             }

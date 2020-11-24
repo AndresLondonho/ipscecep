@@ -1,41 +1,162 @@
-var dt, id_espec, id_func;
+var dt, id_espec,medico;
 function cita(){
-    document.getElementById("id_espec").onchange = function(){
+    $("#id_espec").change(function(){
         var espec = $("#id_espec").val();
-        console.log(espec);
 
         $.ajax({
             type:"get",
             url:"../controlador/medico.php",
-            data: {espec:espec, accion:'medicoEsp'},
+            data: {codigo: espec, accion:'listarM'},
             dataType:"json"
         }).done(function(resultado){
-            console.log(resultado.id_func);
-            $("#id_func option").remove();
+            $("#nom_med").prop('disabled', false);
+            $("#nom_med option").remove();
+            $("#nom_med").append("<option>Seleccione el medico</option>");
             $.each(resultado.data, function(index, value){
-                console.log(value.id_espec);
-                if(espec === resultado.id_espec){
-                    $("#id_func").append("<option selected value='" + value.id_func + "'>" + value.medico + "</option>")
-                } else {
-                    $("#id_func").append("<option value='"+value.id_func+"'>"+value.medico+"</option>");
-                }
-                //$("#id_func").append("<option value='"+value.id_func+"'>"+value.medico+"</option>")
+                $("#nom_med").append("<option value='"+value.Funcionario+"'>"+value.Medico+"</option>");
             })
         })
-        $("#id_func").prop('disabled', false);
-    }
+    })
+
+    $("#nom_med").change(function(){
+        medico = $("#nom_med").val();
+        $.ajax({
+            type:"get",
+            url:"../controlador/medico.php",
+            data: {codigo:medico, accion:'consultarS'},
+            dataType:"json"
+        }).done(function(resultado){
+            $("#nom_sede").val(resultado.sede);
+            $("#sede").val(resultado.id_sede);
+        })
+        
+    })
+
+    $("#id_pac").keyup(function(){
+        var ced = $(this).val();
+        $.ajax({
+            type:"get",
+            url:"../controlador/paciente.php",
+            data: {codigo:ced, accion:'consultar'},
+            dataType:"json"
+        }).done(function(resultado){
+            if (resultado.respuesta === "no existe"){
+                
+            } else {
+                $("#nom_pac").val(resultado.Paciente);
+            }
+        })
+
+    })
+
+    $("#nuevaCita").click(function(){
+        var datos = $("#frmCita").serialize();
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/cita.php",
+            data: datos,
+            dataType:"json"
+        }).done(function(resultado){
+            if(resultado.respuesta){
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'La cita se ha registrado exitosamente',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
+                $("#contenido").load("citas/nuevaCita.php");
+            }else {
+                swal({
+                    position: 'center',
+                    type: 'error',
+                    title: 'Ocurrió un erro al grabar',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        })
+    })
+
+    $(".box").on("click","a#borrarCita",function(){
+        var codigo = $(this).data("codigo");
+        console.log(codigo);
+        swal({
+            title: '¿Está seguro?',
+            text: "¿Borrar la cita?",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Borrar!'
+      }).then((decision) => {
+              if (decision.value) {
+                  var request = $.ajax({
+                      method: "get",                  
+                      url: "../controlador/cita.php",
+                      data: {codigo: codigo, accion:'borrar'},
+                      dataType: "json"
+                  })
+                  request.done(function( resultado ) {
+                      if(resultado.respuesta == 'correcto'){
+                          swal({
+                            position: 'center',
+                            type: 'success',
+                            title: 'La cita numero ' + codigo + ' se ha borrado',
+                            showConfirmButton: false,
+                            timer: 1500
+                          })       
+                          var info = dt.page.info();   
+                          if((info.end-1) == info.length)
+                              dt.page( info.page-1 ).draw( 'page' );
+                          dt.ajax.reload(null, false);
+                      } else {
+                          swal({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!'                         
+                          })
+                      }
+                  });
+                  request.fail(function( jqXHR, textStatus ) {
+                    swal({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!' + textStatus                          
+                    })
+                });
+            }
+        })
+    })
+    
 }
 
 $(document).ready(() => {
     dt = $("#tabla").dataTable({
         "ajax": "../controlador/cita.php?accion=listar",
         "columns": [
+            {"data": "nro_cita",
+                render: function(data){
+                    return '<a href="#" data-codigo="'+data+'" id="reporte" data-toggle="modal" data-target="#modal_editar" title="Informe"><i class="fa fa-print"></i></a>'
+                }   
+            },
             {"data": "Paciente"},
             {"data": "Medico"},
             {"data": "Tipo_cita"},
             {"data": "Fecha"},
             {"data": "Hora"},
-            {"data": "Sede"}            
+            {"data": "Sede"},
+            {"data": "nro_cita",
+                render: function(data){
+                    return '<a href="#" data-codigo="'+data+'" id="editarCita" data-toggle="modal" data-target="#modal_editar" title="Editar"><i class="fa fa-edit"></i></a>'
+                }   
+            },
+            {"data": "nro_cita",
+                render: function(data){
+                    return '<a href="#" data-codigo="'+data+'" id="borrarCita" title="Borrar"><i class="fa fa-trash"></i></a>'
+                }   
+            }
         ]
     });
 

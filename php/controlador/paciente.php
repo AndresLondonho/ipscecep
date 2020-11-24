@@ -17,7 +17,7 @@
         case 'consultar':
             $paciente->consultar($datos['codigo']);
 
-            if($paciente->getCEDULA() == null){
+            if($paciente->getID_PAC() == null){
                 $respuesta = array(
                     'respuesta' => 'no existe'
                 );

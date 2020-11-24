@@ -6,7 +6,7 @@
                 <div class="panel panel-success">
                     <div class="panel-heading">Nuevo</div>
                         <div class="panel-body">
-                            <form action="../controlador/cita.php" method="GET">
+                            <form id="frmCita">
                                 <div class="row">
                                         <div class="col-md-6">
                                             <div class="col-md-5">
@@ -22,7 +22,7 @@
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <label>Medicos:</label>
-                                                        <select class="form-control" name="id_func" id="id_func" disabled>
+                                                        <select class="form-control" name="id_func" id="nom_med" disabled>
                                                             <option>
                                                                 ------
                                                             </option>
@@ -33,7 +33,8 @@
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <label>Sede:</label>
-                                                        <input type="text" name="id_sede" readonly id="id_sede" class="form-control" placeholder="Sede traida desde el funcionario" value="1012">
+                                                        <input type="text" name="nom_sede" readonly id="nom_sede" class="form-control" placeholder="------" value="">
+                                                        <input type="hidden" name="id_sede" id="sede">
                                                         <small>Sede</small>
                                                     </div>
                                                 </div>
@@ -79,7 +80,7 @@
                                     <input type="hidden" name="detalle" value="" id="detalle">
                                     <input type="hidden" name="accion" value="nuevo">
                                     <div class="form-group">
-                                        <input type="submit" class="btn btn-success" value="Enviar">
+                                        <input type="button" class="btn btn-success" id="nuevaCita" value="Enviar">
                                     </div>
                                 </div>
                             </form>

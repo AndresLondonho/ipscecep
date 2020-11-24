@@ -9,12 +9,15 @@
               <table id="tabla" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                  <th>&nbsp;</th>
                   <th>Paciente</th>
                   <th>Medico</th>
                   <th>Tipo de Cita</th>
                   <th>Fecha</th>
                   <th>Hora</th>
                   <th>Sede</th>
+                  <th>&nbsp;</th>
+                  <th>&nbsp;</th>
                   <!-- <th>Acciones</th> -->
                 </tr>
                 </thead>

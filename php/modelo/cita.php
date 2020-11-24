@@ -91,7 +91,12 @@
         }
 
         public function borrar($nro_cita=''){
-
+            $this->query = "
+                delete from cita
+                where nro_cita = '$nro_cita'
+            ";
+            $resultado = $this->ejecutar_query_simple();
+            return $resultado;
         }
     }
 ?>
