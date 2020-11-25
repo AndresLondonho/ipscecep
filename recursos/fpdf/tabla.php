@@ -6,14 +6,16 @@ class PDF extends FPDF
 function Header()
 {
     // Logo
-    $this->Image('../../imgs/logocecep.png',10,8,33);
+    $this->Image('../../imgs/logocecep.png',10,8,15);
     // Arial bold 15
     $this->SetFont('Arial','B',15);
-	$this->SetTextColor(255,0,0);
+    $this->SetTextColor(34,45,50);
+    $this->SetMargins(40, 0, 35);
+    
     // Movernos a la derecha
     $this->Cell(40);
     // T�tulo
-    $this->Cell(100,5,'IPS CECEP',0,0,'L');
+    $this->Cell(100,5,'INVENTARIO MEDICAMENTOS',0,0,'C');
     // Salto de l�nea
     $this->Ln(20);
 	$this->SetFont('Arial','',14);
@@ -34,9 +36,9 @@ function cargarDatos($file)
 function TablaElegante($titulos, $datos, $cant)
 {
     // Colores, ancho de l�nea y fuente en negrita
-    $this->SetFillColor(255,0,0);
+    $this->SetFillColor(34,45,50);
     $this->SetTextColor(255);
-    $this->SetDrawColor(128,0,0);
+    $this->SetDrawColor(34,45,50);
     $this->SetLineWidth(.2);
     $this->SetFont('','B',14);
     // Cabecera de titulos
