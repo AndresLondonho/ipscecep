@@ -57,6 +57,11 @@ switch($_GET['accion']){
         echo json_encode($respuesta);
     break;
 
+    case 'medicamento':
+        $listado = $cita->medicamento();
+        echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
+    break;
+
     case 'editar':
         $resultado = $cita->editar($datos);
         $respuesta = array(

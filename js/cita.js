@@ -155,6 +155,28 @@ function cita(){
                 $("#nro_cita").val(resultado.nro_cita)
             }
         })
+
+        $.ajax({
+            type:"get",
+            url:"../controlador/cita.php",
+            data: {accion:'medicamento'},
+            dataType:"json"
+        }).done(function(resultado){
+            $("#id_medcto").append("<option>Seleccione el medico</option>");
+            $.each(resultado.data, function(index, value){
+                $("#id_medcto").append("<option value='"+value.id_medcto+"'>"+value.nom_medcto+"</option>");
+            })
+        })
+    })
+
+    $("#contenido").on("change","#med",function(){
+        if(document.getElementById("med").checked){
+            $("#droga").removeClass("hide");
+            $("#droga").addClass("show");
+        } else{
+            $("#droga").removeClass("show");
+            $("#droga").addClass("hide");
+        }
     })
 
     $("#contenido").on("click","button#actualizar",function(){
@@ -186,6 +208,7 @@ function cita(){
 }
 
 $(document).ready(() => {
+
     dt = $("#tabla").dataTable({
         "ajax": "../controlador/cita.php?accion=listar",
         "columns": [

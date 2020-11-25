@@ -78,6 +78,7 @@
                                     </div>
                                     <input type="hidden" name="nro_cita" value="" id="nro_cita">
                                     <input type="hidden" name="detalle" value="" id="detalle">
+                                    <input type="hidden" name="id_est" id="id_est" value="1">
                                     <input type="hidden" name="accion" value="nuevo">
                                     <div class="form-group">
                                         <input type="button" class="btn btn-success" id="nuevaCita" value="Enviar">

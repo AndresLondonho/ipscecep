@@ -34,7 +34,6 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../recursos/dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -208,6 +207,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.2/sweetalert2.all.js"></script>
+
 
 <script src="../../js/dashboard.js"></script>
 </body>

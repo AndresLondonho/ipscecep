@@ -10,9 +10,24 @@
         private $fecha;
         private $hora;
         private $detalle;
+        private $id_est;
+        private $id_medcto;
+        private $stock;
 
         function __construct(){
 
+        }
+  
+        public function getID_est(){
+            return $this->id_est;
+        }
+
+        public function getID_medcto(){
+            return $this->id_medcto;
+        }
+
+        public function getStock(){
+            return $this->stock;
         }
 
         public function getNro_cita(){
@@ -99,11 +114,23 @@
             $this->query = "
                 update cita 
                 set
-                detalle = '$detalle'
+                detalle = '$detalle',
+                id_est = '$id_est',
+                id_medcto = '$id_medcto',
+                stock = '$stock'
                 where nro_cita = '$nro_cita'
             ";
             $resultado = $this->ejecutar_query_simple();
             return $resultado;
+        }
+
+        public function medicamento($nom_medcto=''){
+            $this->query = "
+                SELECT id_medcto, nom_medcto, stock
+                FROM medicamentos
+            ";
+            $this->obtener_resultados_query();
+            return $this->rows;
         }
 
         public function nuevo($datos=array()){
@@ -113,9 +140,9 @@
                 endforeach;
                 $this-> query="
                     insert into cita
-                    (nro_cita, id_func, id_pac, id_sede, id_espec, fecha, hora, detalle)
+                    (nro_cita, id_func, id_pac, id_sede, id_espec, fecha, hora, detalle, id_est)
                     values
-                    ('$nro_cita','$id_func','$id_pac','$id_sede','$id_espec','$fecha','$hora','$detalle')
+                    ('$nro_cita','$id_func','$id_pac','$id_sede','$id_espec','$fecha','$hora','$detalle', '$id_est')
                 ";
                 $resultado = $this->ejecutar_query_simple();
                 return $resultado;

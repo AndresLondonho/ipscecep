@@ -7,7 +7,7 @@
             <div class="box">
             <div class="box-header with-border">
                 <button type="button" data-toggle="modal" data-target="#modal_editar" class="btn btn-success" id="nuevoMedcto" title="Nuevo Medicamento" >Nuevo</button>
-                <a class="btn btn-success" href="../../recursos/fpdf/pdfs/medicamentos.php" target="_blank" role="button">Reporte</a>
+                <a class="btn btn-success pull-right" href="../../recursos/fpdf/pdfs/medicamentos.php" target="_blank" role="button"><i class="fa fa-print"></i></a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
