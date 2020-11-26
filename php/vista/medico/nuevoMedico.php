@@ -12,7 +12,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h5>Información personal</h5>
-                                        <input type="hidden" id="id_func" name="id_func" value="">                                                        
+                                        <input type="hidden" id="func" name="id_func" value="">                                                        
                                         <div class="form-group">
                                             <label for="nombre">Cedula:</label>
                                             <input type="text" class="form-control" id="cc_user" name="cc_user" value="" placeholder="1005124561" required>

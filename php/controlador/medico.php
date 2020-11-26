@@ -75,8 +75,13 @@
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
 
+        case 'directores':
+            $listado = $medico->directores();
+            echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
+        break;
+
         case 'listarM':
-            $listado = $medico->medicos($datos['codigo']);
+            $listado = $medico->medicos();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
 

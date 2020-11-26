@@ -224,13 +224,16 @@ function funcionarios(){
     })
 
     $("#modal_editar").on("click","button#registrar",function(){
-        var nombre = $("#nom_user").val();
-        var apellido = $("#ape_user").val();
+        var nombre = $("#nom_usuario").val();
+        var apellido = $("#ape_usuario").val();
         var user = nombre.substr(0, 1)+apellido;
-        var cedula = $("#cc_user").val();
-        $("#id_func").val(cedula);
+        var cedula = $("#cc_usuario").val();
+        $("#funcionario").val(cedula);
         $("#username").val(user.toLowerCase());
         $("#password").val(cedula);
+        console.log(user);
+        
+        console.log($("#funcionario").val());
 
         var datos = $("#frmfunc").serialize();
 

@@ -134,10 +134,11 @@ function medicos(){
         var user = nombre.substr(0, 1)+apellido;
         var pass = $("#cc_user").val();
 
-        console.log(pass);
-        $("#id_func").val(pass);
+        $("#func").val(pass);
         $("#username").val(user.toLowerCase());
         $("#password").val(pass);
+        console.log("Que si hpta, el codigo es "+$("#func").val());
+        console.log("Que si hpta, la sapa contraseña es "+$("#password").val()+" que deberia ser la misma fucking contraseña de mierdaaaaaaaaaa");
         var datos = $("#frmmedico").serialize();
         $.ajax({
             type:"get",

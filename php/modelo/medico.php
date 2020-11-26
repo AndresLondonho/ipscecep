@@ -200,11 +200,11 @@
             return $this->rows;
         }
 
-        public function medicos($id_espec=''){
+        public function medicos(){
             $this->query = "
-                SELECT id_func as Funcionario, concat(nom_user,' ',' ',ape_user)as Medico , id_sede as Sede
+                SELECT id_func as Funcionario, concat(nom_user,' ',' ',ape_user)as Medico
                 FROM funcionarios 
-                where id_espec = '$id_espec'
+                where id_cargo = 1 
             ";
             $this->obtener_resultados_query();
             return $this->rows;

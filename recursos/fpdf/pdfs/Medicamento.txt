@@ -1,2 +1,2 @@
-2,Acetaminofen,90
+2,Acetaminofen,100
 3,Ibuprofeno,100

@@ -11,17 +11,17 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h5>Información personal</h5>
-                                        <input type="hidden" id="id_func" name="id_func" value="">                                                        
+                                        <input type="hidden" id="funcionario" name="id_func" value="">                                                        
                                         <div class="form-group">
                                             <label for="nombre">Cedula:</label>
-                                            <input type="text" class="form-control" id="cc_user" name="cc_user" value="" placeholder="1005124561" required>
+                                            <input type="text" class="form-control" id="cc_usuario" name="cc_user" value="" placeholder="1005124561" required>
                                             <small class="form-text text-muted">Ingrese numero de cedula.</small>
                                         </div>                                                        
                                         <div class="form-group">
                                             <label for="nombre">Nombres:</label>
                                             <div class="row">
                                                 <div class="col-sm-6">
-                                                    <input type="text" class="form-control" id="nom_user" name="nom_user" value="" placeholder="Rafael" required>
+                                                    <input type="text" class="form-control" id="nom_usuario" name="nom_user" value="" placeholder="Rafael" required>
                                                     <small class="form-text text-muted">Ingrese primer nombre.</small>
                                                 </div>
                                                 <div class="col-sm-6">
@@ -34,7 +34,7 @@
                                             <label for="apellido">Apellidos:</label>
                                             <div class="row">
                                                 <div class="col-sm-6">
-                                                    <input type="text" class="form-control" id="ape_user" name="ape_user" value="" placeholder="Londoño" required>
+                                                    <input type="text" class="form-control" id="ape_usuario" name="ape_user" value="" placeholder="Londoño" required>
                                                     <small class="form-text text-muted">Ingrese primer apellido.</small>
                                                 </div>
                                                 <div class="col-sm-6">

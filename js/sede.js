@@ -24,7 +24,7 @@ function sede(){
         }).done(function(resultado){
             $("#id_rol option").remove();
             $.each(resultado.data, function(index, value){
-                $("#id_rol").append("<option value='"+value.Funcionario+"'>"+value.Director+"</option>")
+                $("#id_rol").append("<option value='"+value.Funcionario+"'>"+value.Medico+"</option>")
             })
         })
     })
@@ -168,9 +168,9 @@ function sede(){
             $("#id_rol option").remove();
             $.each(resultado.data, function(index, value){
                 if(director === value.Funcionario){
-                    $("#id_rol").append("<option selected value='" + value.Funcionario + "'>" + value.Director + "</option>")
+                    $("#id_rol").append("<option selected value='" + value.Funcionario + "'>" + value.Medico + "</option>")
                 } else {
-                    $("#id_rol").append("<option value='"+value.Funcionario+"'>"+value.Director+"</option>");
+                    $("#id_rol").append("<option value='"+value.Funcionario+"'>"+value.Medico+"</option>");
                 }
             })
         })

@@ -3,5 +3,4 @@ rafael loaiza,Jhin Cuarto Tiro Sublime,Medicina General,25/Nov/2020
 rafael loaiza,Mariana  Rogada ,Medicina General,27/Nov/2020
 rafael loaiza,Diego  David ,Odontologia,26/Nov/2020
 rafael loaiza,Marily Paola Gonzalez Herrera,Odontologia,27/Nov/2020
-rafael loaiza,Diego  David ,Odontologia,27/Nov/2020
-rafael loaiza,Carlos  Vinasco ,Odontologia,26/Nov/2020
+Valeria Rivera,Andres  Loaiza ,Traumatologia,27/Nov/2020
