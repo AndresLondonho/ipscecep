@@ -96,7 +96,7 @@
 
                     <li class="active"><a href="servicio/servicio.php"><i class="fa fa-circle-o"></i>Servicios</a></li>
                     <li class="active"><a href="citas/nuevacita.php"><i class="fa fa-circle-o"></i>Asignar Cita</a></li>
-                    <li><a href="medicamento/entregamedicamento.php"><i class="fa fa-circle-o"></i> Entrega de medicamentos</a></li>
+                    <li class="active"><a href="medicamento/entregamedicamento.php"><i class="fa fa-circle-o"></i> Entrega de medicamentos</a></li>
                   </ul>
                 <?php
               break;

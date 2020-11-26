@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2020 a las 05:50:29
+-- Tiempo de generación: 26-11-2020 a las 18:15:32
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -68,7 +68,12 @@ CREATE TABLE `cita` (
 
 INSERT INTO `cita` (`nro_cita`, `id_func`, `id_pac`, `id_sede`, `id_espec`, `fecha`, `hora`, `Detalle`, `id_est`, `id_medcto`, `stock`) VALUES
 (24, 102, 225563622, 1015, 1, '2020-11-13', '15:53:27', 'No me acuerdo lo de Ipia :c', 1, 3, 20),
-(33, 104, 1112486444, 1015, 1, '2020-11-25', '08:00:00', 'El paciente se encuentra con diarrea y vomito constante, se le recomienda guardar reposo y tomar el medicamento 1 vez cada 8 horas', 2, 2, 30);
+(33, 104, 1112486444, 1015, 1, '2020-11-25', '08:00:00', 'El paciente se encuentra con diarrea y vomito constante, se le recomienda guardar reposo y tomar el medicamento 1 vez cada 8 horas', 2, 3, 60),
+(37, 107, 1112486444, 1012, 1, '2020-11-27', '08:00:00', 'El paciente se encuentra nasjndkasjnfiasbv on bEl paciente se encuentra nasjndkasjnfiasbv on bEl paciente se encuentra nasjndkasjnfiasbv on bEl paciente se encuentra nasjndkasjnfiasbv on bEl paciente se encuentra nasjndkasjnfiasbv on bEl paciente se encuentra nasjndkasjnfiasbv on b', 2, NULL, NULL),
+(38, 22222222, 1112486444, 1012, 2, '2020-11-26', '10:00:00', '', 1, NULL, NULL),
+(39, 110, 1112486444, 1015, 2, '2020-11-27', '08:00:00', '', 1, NULL, NULL),
+(40, 22222222, 1112486444, 1012, 2, '2020-11-27', '08:20:00', '', 1, NULL, NULL),
+(41, 44444444, 1112486444, 1014, 2, '2020-11-26', '10:00:00', 'Aquí pues lo normal, se ingresa el diagnostico que halla dado el doctor y si receta pues abajo y bla bla bla', 2, 2, 50);
 
 -- --------------------------------------------------------
 
@@ -180,11 +185,11 @@ INSERT INTO `funcionarios` (`id_func`, `id_priv`, `username`, `password`, `nom_u
 (109, 2, 'jramirez', '89526600', 'Juan', 'Andres', 'Ramirez', 'Ramirez', 32002020, 89526600, 'juanramirez@gmail.com', 2, 1, 1015, NULL),
 (110, 4, 'mgonzalez', '67520520', 'Marily', 'Paola', 'Gonzalez', 'Herrera', 316205055, 67520520, 'marilygonzalez@gmail.com', 2, 2, 1015, NULL),
 (123, 2, 'aloaiza', '', 'Andres', '', 'Loaiza', '', 3182665156, 123, 'cuatro@sublimidad.com', 2, 5, 1012, NULL),
-(11111111, 2, 'epenaranda', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Esteban', NULL, 'Penaranda', NULL, 1526451245, 11111111, 'epenaranda@ipscecep.com', 2, 2, 1011, 'esteban.jpg'),
+(11111111, 2, 'epenaranda', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Esteban', '', 'Penaranda', '', 1526451245, 11111111, 'epenaranda@ipscecep.com', 2, 2, 1011, 'esteban.jpg'),
 (15245167, 4, 'jipia', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Julian', '', 'Ipia', 'Capote', 31520351452, 15245167, 'jipia@ipscecep.com', 2, 1, 1014, 'julian.jpg'),
-(22222222, 2, 'ddavid', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Diego', NULL, 'David', NULL, 3152451245, 22222222, 'ddavid@ipscecep.com', 2, 2, 1012, 'diego.jpg'),
-(33333333, 2, 'sidrobo', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Sebastian', NULL, 'Idrobo', NULL, 3152654874, 33333333, 'sidrobo@ipscecep.com', 2, 2, 1013, 'sebastian.jpg'),
-(44444444, 2, 'cvinasco', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Carlos', NULL, 'Vinasco', NULL, 3152655774, 44444444, 'cvinasco@ipscecep.com', 2, 2, 1014, 'beto.jpg'),
+(22222222, 2, 'ddavid', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Diego', '', 'David', '', 3152451245, 22222222, 'ddavid@ipscecep.com', 2, 2, 1012, 'diego.jpg'),
+(33333333, 2, 'sidrobo', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Sebastian', '', 'Idrobo', '', 3152654874, 33333333, 'sidrobo@ipscecep.com', 2, 2, 1013, 'sebastian.jpg'),
+(44444444, 2, 'cvinasco', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Carlos', '', 'Vinasco', '', 3152655774, 44444444, 'cvinasco@ipscecep.com', 2, 2, 1014, 'beto.jpg'),
 (1112486446, 1, 'rlondono', '$2y$12$PlPOvjmZ9EUcuvmhCjkkC.NQAfwP/HGz6PZpYE7ec9LXiekDKO12G', 'Rafael', 'Andres', 'Londono', 'Loaiza', 3182665156, 1112486446, 'andreslondonho@gmail.com', 4, 10, 1021, 'andres.jpg');
 
 -- --------------------------------------------------------
@@ -204,7 +209,7 @@ CREATE TABLE `medicamentos` (
 --
 
 INSERT INTO `medicamentos` (`id_medcto`, `nom_medcto`, `stock`) VALUES
-(2, 'Acetaminofen', 0),
+(2, 'Acetaminofen', 100),
 (3, 'Ibuprofeno', 100);
 
 -- --------------------------------------------------------
@@ -431,7 +436,7 @@ ALTER TABLE `servicios`
 -- AUTO_INCREMENT de la tabla `cita`
 --
 ALTER TABLE `cita`
-  MODIFY `nro_cita` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `nro_cita` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
