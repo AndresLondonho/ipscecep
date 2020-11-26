@@ -6,6 +6,7 @@
         private $id_medcto;
         private $nom_medcto;
         private $stock;
+        private $id_pac;
         
         function __construct(){
 
@@ -19,6 +20,9 @@
         }
         public function getStock(){
             return $this->stock;
+        }
+        public function getID_pac(){
+            return $this->id_pac;
         }
 
         public function consultar($id_medcto=''){
@@ -85,5 +89,15 @@
             return $resultado;
         }
         
+        public function buscarmedcto($id_pac=''){
+                $this->query = "
+                    select c.nro_cita, m.id_medcto, m.nom_medcto, c.stock 
+                    from medicamentos as m 
+                    inner join cita as c on (m.id_medcto = c.id_medcto) 
+                    where c.id_pac = '$id_pac' and c.stock > 0
+                ";
+                $this->obtener_resultados_query();
+                return $this->rows;
+        }
     }
 ?>

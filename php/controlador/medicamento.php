@@ -64,4 +64,9 @@
             echo json_encode($respuesta);
         break;
 
+        case 'buscarmedcto':
+            $listado = $medicamento->buscarmedcto($datos['id_pac']);
+            echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
+        break;
+
     }
