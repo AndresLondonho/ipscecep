@@ -9,7 +9,7 @@
                         <div class="panel-body">
                             <form id="frmfunc">
                                 <h3>ID: <label id="id"></label></h3>
-                                <input type="hidden" id="id_func" name="id_func" value="">
+                                <input type="hidden" id="func" name="id_func" value="">
 
                                 <div class="row">
                                     <div class="col-md-6">

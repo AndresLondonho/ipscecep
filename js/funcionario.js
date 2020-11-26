@@ -21,7 +21,7 @@ function funcionarios(){
                 })
             } else {
                 document.getElementById("id").innerHTML = funcionario.id_func;
-                $("#id_func").val(funcionario.id_func);
+                $("#func").val(funcionario.id_func);
                 $("#nom_user").val(funcionario.nom_user);
                 $("#ape_user").val(funcionario.ape_user);
                 $("#nom2_user").val(funcionario.nom2_user);

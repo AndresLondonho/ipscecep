@@ -19,7 +19,7 @@ function sede(){
         $.ajax({
             type: "get",
             url: "../controlador/medico.php",
-            data: {accion:'listarM'},
+            data: {accion:'listarD'},
             dataType: "json"
         }).done(function(resultado){
             $("#id_rol option").remove();
@@ -162,7 +162,7 @@ function sede(){
         $.ajax({
             type: "get",
             url: "../controlador/medico.php",
-            data: {accion:'listarM'},
+            data: {accion:'listarD'},
             dataType: "json"
         }).done(function(resultado){
             $("#id_rol option").remove();

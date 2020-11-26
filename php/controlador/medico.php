@@ -81,7 +81,12 @@
         break;
 
         case 'listarM':
-            $listado = $medico->medicos();
+            $listado = $medico->medicos($datos['codigo']);
+            echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
+        break;
+
+        case 'listarD':
+            $listado = $medico->dir();
             echo json_encode(array('data'=>$listado), JSON_UNESCAPED_UNICODE);
         break;
 
