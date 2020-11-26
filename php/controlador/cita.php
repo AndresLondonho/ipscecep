@@ -52,6 +52,28 @@ switch($_GET['accion']){
                 'medico' => $cita->getMedico(),
                 'nom_espec' => $cita->getNom_espec(),
                 'stock' => $cita->getStock(),
+                'detalle' => $cita->getDetalle(),
+                'respuesta' => 'existe'
+            );
+        }
+        echo json_encode($respuesta);
+    break;
+   
+    case 'detalle':
+        $cita->detalle($datos['codigo']);
+
+        if($cita->getNro_cita() == null){
+            $respuesta = array(
+                'respuesta' => 'no existe'
+            );
+        } else {
+            $respuesta = array (
+                'nro_cita' => $cita->getNro_cita(),
+                'paciente' => $cita->getPaciente(),
+                'cedulaP' => $cita->getID_pac(),
+                'stock' => $cita->getStock(),
+                'detalle' => $cita->getDetalle(),
+                'nom_medcto' => $cita->getNom_medcto(),
                 'respuesta' => 'existe'
             );
         }

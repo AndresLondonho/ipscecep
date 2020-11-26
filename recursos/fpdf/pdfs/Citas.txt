@@ -1,2 +1,7 @@
-valeria andrea capote sandoval,rafael  Londono ,Medicina General,13/Nov/2020
-rafael loaiza,Cristian David Loaiza Estrada,Medicina General,09/Nov/2020
+valeria andrea capote sandoval,Mateo  Erazo ,Medicina General,13/Nov/2020
+rafael loaiza,Jhin Cuarto Tiro Sublime,Medicina General,25/Nov/2020
+rafael loaiza,Mariana  Rogada ,Medicina General,27/Nov/2020
+rafael loaiza,Diego  David ,Odontologia,26/Nov/2020
+rafael loaiza,Marily Paola Gonzalez Herrera,Odontologia,27/Nov/2020
+rafael loaiza,Diego  David ,Odontologia,27/Nov/2020
+rafael loaiza,Carlos  Vinasco ,Odontologia,26/Nov/2020

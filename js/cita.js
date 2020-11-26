@@ -206,8 +206,41 @@ function cita(){
         })
     })
 
+    $("#tabla").on("click","a#detalleCita",function(){
+        var codigo = $(this).data("codigo");
+        console.log(codigo);
+        $("#modal_detalle").load("citas/detallecita.php");
+        $.ajax({
+            type:"get",
+            url:"../controlador/cita.php",
+            data: {codigo:codigo, accion:'detalle'},
+            dataType:"json"
+        }).done(function(resultado){
+            if (resultado.respuesta === "no existe"){
+                $("#modal_detalle").modal("toggle");
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: 'El paciente aun no ha sido atendido'
+                })                
+            } else {
+                document.getElementById("nom_pac").innerHTML = resultado.paciente;
+                document.getElementById("id_pac").innerHTML = resultado.cedulaP;
+                document.getElementById("detalle").innerHTML = resultado.detalle;
+                document.getElementById("medicamento").innerHTML = resultado.nom_medcto;
+                document.getElementById("cantidad").innerHTML = resultado.stock;
 
-    $("#tabla").on("click","a#reporte",function(){
+                $("#nro_cita").val(resultado.nro_cita)
+            }
+        })
+    })
+
+    $("#contenido").on("click","button#aceptar",function(){
+        $("#modal_detalle").modal("toggle");
+    })
+
+
+    $(".box").on("click","a#reporte",function(){
         $("a#reporte").attr("href","../../recursos/fpdf/pdfs/citas.php");
     })
 }
@@ -219,7 +252,7 @@ $(document).ready(() => {
         "columns": [
             {"data": "nro_cita",
                 render: function(data){
-                    return '<a href="#" data-codigo="'+data+'" id="reporte" title="Informe"><i class="fa fa-print"></i></a>'
+                    return '<a href="#" data-codigo="'+data+'" data-toggle="modal" data-target="#modal_detalle" id="detalleCita" title="Detalle"><i class="fa fa-info"></i></a>'
                 }   
             },
             {"data": "Paciente"},

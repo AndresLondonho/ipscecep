@@ -13,6 +13,7 @@
         private $id_est;
         private $id_medcto;
         private $stock;
+        private $nom_medcto;
 
         function __construct(){
 
@@ -20,6 +21,10 @@
   
         public function getID_est(){
             return $this->id_est;
+        }
+
+        public function getNom_medcto(){
+            return $this->nom_medcto;
         }
 
         public function getID_medcto(){
@@ -92,12 +97,29 @@
             if($nro_cita!=''):
                 $this->query = "
                 select c.nro_cita, c.id_pac, concat(pac.nom_pac,' ',pac.ape_pac)as Paciente, 
-                concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user) as Medico, pac.tel_pac, espec.nom_espec, m.stock
+                concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user) as Medico, pac.tel_pac, espec.nom_espec, c.detalle
                 from cita as c 
                 inner join funcionarios as func on (c.id_func = func.id_func) 
                 inner join pacientes as pac on (c.id_pac = pac.id_pac) 
                 inner join especialidad as espec on (c.id_espec = espec.id_espec) 
-                inner join medicamentos as m on (c.id_medcto = m.id_medcto) 
+                where c.nro_cita = '$nro_cita'
+                ";
+                $this->obtener_resultados_query();
+            endif;
+            if(count($this->rows) == 1):
+                foreach ($this->rows[0] as $propiedad => $valor):
+                    $this-> $propiedad = $valor;
+                endforeach;
+            endif;
+        }
+        public function detalle($nro_cita=''){
+            if($nro_cita!=''):
+                $this->query = "
+                select c.nro_cita, c.id_pac, concat(pac.nom_pac,' ',pac.ape_pac)as Paciente, c.detalle,
+                c.stock, m.nom_medcto
+                from cita as c 
+                inner join pacientes as pac on (c.id_pac = pac.id_pac) 
+                inner join medicamentos as m on (c.id_medcto = m.id_medcto)
                 where c.nro_cita = '$nro_cita'
                 ";
                 $this->obtener_resultados_query();
