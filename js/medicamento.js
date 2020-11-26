@@ -1,4 +1,4 @@
-var dt,stock;
+var dt,stock,codigo;
 function medicamento(){
    $(".box").on("click","button#nuevoMedcto", function(){
        $("#modal_editar").load("medicamento/nuevomedicamento.php");
@@ -35,7 +35,7 @@ function medicamento(){
    })
 
    $("#tabla").on("click","a#editarMedcto", function(){
-        var codigo = $(this).data("codigo");
+        codigo = $(this).data("codigo");
         $("#modal_editar").load("medicamento/editarmedicamento.php");
 
         $.ajax({
@@ -45,11 +45,7 @@ function medicamento(){
             dataType:"json"
         }).done(function(medicamento){
             if(medicamento.respuesta === "no existe"){
-                swal({
-                    type: 'error',
-                    title: 'Error',
-                    text: 'El pais con codigo '+codigo+' no existe en la base de datos'
-                })
+                
             } else {
                 document.getElementById("id").innerHTML = medicamento.ID_medcto;
                 $("#id_medcto").val(medicamento.ID_medcto);
@@ -89,7 +85,7 @@ function medicamento(){
    })
 
    $("#tabla").on("click","a#borrarMedcto",function(){
-    var codigo = $(this).data("codigo");
+    codigo = $(this).data("codigo");
 
     swal({
         title: '¿Está seguro?',
@@ -141,6 +137,58 @@ function medicamento(){
   })
    })
 
+   $("#entrega").click(function(){
+       var datos = $("#medcto").serialize();
+       $.ajax({
+            type:"get",
+            url:"../controlador/medicamento.php",
+            data: datos,
+            dataType:"json"
+       }).done(function(resultado){
+            $.each(resultado.data, function(index, value){
+                $("#medicamentos").removeClass("hide");
+                $("#medicamentos").addClass("show");
+                document.getElementById("nombre").innerHTML = value.nom_medcto;
+                $("#id_medcto").val(value.id_medcto);
+                codigo = value.nro_cita;
+                $("#nro_cita").val(value.nro_cita);
+                $("#stock").val(value.stock);
+                document.getElementById("cantidad").innerHTML = value.stock;
+            })
+       }).fail(function(){
+            swal({
+                type: 'error',
+                title: 'Error',
+                text: 'Algo ha salido mal'
+            })
+       })
+   })
+
+   $("#reporte").click(function(){
+       $("#stock").val("0")
+       var datos = $("#entregarM").serialize();
+        $.ajax({
+            type:"get",
+            url:"../controlador/cita.php",
+            data:datos,
+            dataType:"json"
+        }).done(function(resultado){
+            if(resultado.respuesta){
+                swal(
+                    'Actualizado',
+                    'Debe abrir rl reporte',
+                    'success'
+                )
+                $("#contenido").load("medicamento/entregamedicamento.php");
+            } else {
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: 'Algo ha salido mal'
+                })
+            }
+        })
+    })
 
 }
 

@@ -51,6 +51,7 @@ switch($_GET['accion']){
                 'tel_espec' => $cita->getTel_pac(),
                 'medico' => $cita->getMedico(),
                 'nom_espec' => $cita->getNom_espec(),
+                'stock' => $cita->getStock(),
                 'respuesta' => 'existe'
             );
         }
@@ -64,6 +65,13 @@ switch($_GET['accion']){
 
     case 'editar':
         $resultado = $cita->editar($datos);
+        $respuesta = array(
+            'respuesta' => $resultado
+        );
+        echo json_encode($respuesta);
+    break;
+    case 'editarMedcto':
+        $resultado = $cita->editarMedcto($datos);
         $respuesta = array(
             'respuesta' => $resultado
         );

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2020 a las 23:28:26
+-- Tiempo de generación: 26-11-2020 a las 05:50:29
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -56,16 +56,19 @@ CREATE TABLE `cita` (
   `id_espec` int(4) NOT NULL,
   `fecha` date NOT NULL,
   `hora` time NOT NULL,
-  `Detalle` text COLLATE utf8_spanish_ci DEFAULT NULL
+  `Detalle` text COLLATE utf8_spanish_ci DEFAULT NULL,
+  `id_est` int(1) NOT NULL,
+  `id_medcto` int(4) DEFAULT NULL,
+  `stock` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `cita`
 --
 
-INSERT INTO `cita` (`nro_cita`, `id_func`, `id_pac`, `id_sede`, `id_espec`, `fecha`, `hora`, `Detalle`) VALUES
-(1, 102, 225563622, 1015, 1, '2020-11-13', '15:53:27', 'Me duele el estomago y tengo nauseas creo que Ipia me embarazó'),
-(6, 101, 1112486444, 1011, 1, '2020-11-09', '16:40:00', NULL);
+INSERT INTO `cita` (`nro_cita`, `id_func`, `id_pac`, `id_sede`, `id_espec`, `fecha`, `hora`, `Detalle`, `id_est`, `id_medcto`, `stock`) VALUES
+(24, 102, 225563622, 1015, 1, '2020-11-13', '15:53:27', 'No me acuerdo lo de Ipia :c', 1, 3, 20),
+(33, 104, 1112486444, 1015, 1, '2020-11-25', '08:00:00', 'El paciente se encuentra con diarrea y vomito constante, se le recomienda guardar reposo y tomar el medicamento 1 vez cada 8 horas', 2, 2, 30);
 
 -- --------------------------------------------------------
 
@@ -122,6 +125,26 @@ INSERT INTO `especialidad` (`id_espec`, `nom_espec`, `derivacion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `estado`
+--
+
+CREATE TABLE `estado` (
+  `id_est` int(1) NOT NULL,
+  `nom_est` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `estado`
+--
+
+INSERT INTO `estado` (`id_est`, `nom_est`) VALUES
+(1, 'Pendiente'),
+(2, 'Finalizado'),
+(3, 'Cancelado');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `funcionarios`
 --
 
@@ -148,15 +171,21 @@ CREATE TABLE `funcionarios` (
 --
 
 INSERT INTO `funcionarios` (`id_func`, `id_priv`, `username`, `password`, `nom_user`, `nom2_user`, `ape_user`, `ape2_user`, `tel_user`, `cc_user`, `email_user`, `id_cargo`, `id_espec`, `id_sede`, `img_user`) VALUES
-(101, 2, 'medico1', 'ytfrcyjvguyr', 'Cristian', 'David', 'Loaiza', 'Estrada', 3017505543, 1234894, 'yoquese@menos.com', 2, 3, 1021, 'cristian.jpg'),
-(102, 2, 'medico2', '8548413165651', 'rafael', '', 'Londono', '', 5154861, 33265154, 'asdsda@gmail.com', 2, 1, 1011, NULL),
-(103, 2, 'iwachu', '$2y$12$TlUviODMVkF9AfIhKXVgiu8KB0eN7ZXbBY7Moe6SbxYarehNnz2hu', 'rafael', 'David', 'Londono', 'Estrada', 1234567, 12348945, 'asdvausb@dufhs.com', 1, 9, 1021, NULL),
-(104, 2, 'jtiro', '4444', 'Jhin', 'Cuarto', 'Tiro', 'Sublime', 4444444, 4444, 'elvirtuoso@cuatro.com', 2, 1, 1015, ''),
-(107, 2, 'mrogada', '100505040', 'Mariana', 'Rogada', 'Rogada', 'Mariana', 301205020, 100505040, 'marianarogada@gmail.com', 1, 9, 1012, NULL),
-(108, 2, 'lperez', '98205050', 'luisa', 'andrea', 'perez', 'palacio', 301252020, 98205050, 'luisaperezpalacio@gmail.com', 1, 9, 1013, NULL),
-(109, 2, 'jramirez', '89526600', 'juan', 'andres', 'ramirez', 'ramirez', 32002020, 89526600, 'juanramirez@gmail.com', 3, 11, 1014, NULL),
-(110, 2, 'mgonzalez', '67520520', 'marily', 'paola', 'gonzalez', 'herrera', 316205055, 67520520, 'marilygonzalez@gmail.com', 1, 9, 1015, NULL),
-(1112486446, 1, 'rlondono', '1112486446', 'Rafael', 'Andres', 'Londono', 'Loaiza', 3182665156, 1112486446, 'andreslondonho@gmail.com', 4, 10, 1021, NULL);
+(101, 2, 'cloaiza', '$2y$12$ckq.stvYChCxFIBOzFkrdO95aB9QaaK4W5fqEwCaxlmjte2hDoVBm', 'Cristian', 'David', 'Loaiza', 'Estrada', 3017505543, 1234894, 'yoquese@menos.com', 2, 3, 1011, 'cristian.jpg'),
+(102, 2, 'merazo', '8548413165651', 'Mateo', '', 'Erazo', '', 5154861, 33265154, 'asdsda@gmail.com', 2, 1, 1011, NULL),
+(103, 4, 'iwachu', '$2y$12$TlUviODMVkF9AfIhKXVgiu8KB0eN7ZXbBY7Moe6SbxYarehNnz2hu', 'Iwachu', '', 'Ramirez', '', 1234567, 12348945, 'asdvausb@dufhs.com', 1, 9, 1011, 'unknown.jpg'),
+(104, 3, 'jtiro', '$2y$12$J5uAI0/kqd8.MRG6YbBn3.mRFMZ2B..UmMmLz6wDFmcqYJFDkNKeK', 'Jhin', 'Cuarto', 'Tiro', 'Sublime', 4444444, 4444, 'elvirtuoso@cuatro.com', 3, 11, 1015, 'jhin.jpg'),
+(107, 4, 'mrogada', '100505040', 'Mariana', '', 'Rogada', '', 301205020, 100505040, 'marianarogada@gmail.com', 2, 1, 1012, NULL),
+(108, 4, 'lperez', '98205050', 'Luisa', 'Andrea', 'Perez', 'Palacio', 301252020, 98205050, 'luisaperezpalacio@gmail.com', 2, 1, 1013, NULL),
+(109, 2, 'jramirez', '89526600', 'Juan', 'Andres', 'Ramirez', 'Ramirez', 32002020, 89526600, 'juanramirez@gmail.com', 2, 1, 1015, NULL),
+(110, 4, 'mgonzalez', '67520520', 'Marily', 'Paola', 'Gonzalez', 'Herrera', 316205055, 67520520, 'marilygonzalez@gmail.com', 2, 2, 1015, NULL),
+(123, 2, 'aloaiza', '', 'Andres', '', 'Loaiza', '', 3182665156, 123, 'cuatro@sublimidad.com', 2, 5, 1012, NULL),
+(11111111, 2, 'epenaranda', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Esteban', NULL, 'Penaranda', NULL, 1526451245, 11111111, 'epenaranda@ipscecep.com', 2, 2, 1011, 'esteban.jpg'),
+(15245167, 4, 'jipia', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Julian', '', 'Ipia', 'Capote', 31520351452, 15245167, 'jipia@ipscecep.com', 2, 1, 1014, 'julian.jpg'),
+(22222222, 2, 'ddavid', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Diego', NULL, 'David', NULL, 3152451245, 22222222, 'ddavid@ipscecep.com', 2, 2, 1012, 'diego.jpg'),
+(33333333, 2, 'sidrobo', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Sebastian', NULL, 'Idrobo', NULL, 3152654874, 33333333, 'sidrobo@ipscecep.com', 2, 2, 1013, 'sebastian.jpg'),
+(44444444, 2, 'cvinasco', '$2y$12$G8Us8ufaZ8VtRV5bT75nKOlDRJpSthwpxL33MJzFf7L3yp23/8mYy', 'Carlos', NULL, 'Vinasco', NULL, 3152655774, 44444444, 'cvinasco@ipscecep.com', 2, 2, 1014, 'beto.jpg'),
+(1112486446, 1, 'rlondono', '$2y$12$PlPOvjmZ9EUcuvmhCjkkC.NQAfwP/HGz6PZpYE7ec9LXiekDKO12G', 'Rafael', 'Andres', 'Londono', 'Loaiza', 3182665156, 1112486446, 'andreslondonho@gmail.com', 4, 10, 1021, 'andres.jpg');
 
 -- --------------------------------------------------------
 
@@ -175,7 +204,7 @@ CREATE TABLE `medicamentos` (
 --
 
 INSERT INTO `medicamentos` (`id_medcto`, `nom_medcto`, `stock`) VALUES
-(2, 'Acetaminofen', 90),
+(2, 'Acetaminofen', 0),
 (3, 'Ibuprofeno', 100);
 
 -- --------------------------------------------------------
@@ -320,7 +349,9 @@ ALTER TABLE `cita`
   ADD KEY `id_rol` (`id_func`),
   ADD KEY `id_pac` (`id_pac`),
   ADD KEY `id_sede` (`id_sede`),
-  ADD KEY `id_serv` (`id_espec`);
+  ADD KEY `id_serv` (`id_espec`),
+  ADD KEY `id_est` (`id_est`),
+  ADD KEY `id_medcto` (`id_medcto`);
 
 --
 -- Indices de la tabla `ciudad`
@@ -334,6 +365,12 @@ ALTER TABLE `ciudad`
 --
 ALTER TABLE `especialidad`
   ADD PRIMARY KEY (`id_espec`);
+
+--
+-- Indices de la tabla `estado`
+--
+ALTER TABLE `estado`
+  ADD PRIMARY KEY (`id_est`);
 
 --
 -- Indices de la tabla `funcionarios`
@@ -394,7 +431,7 @@ ALTER TABLE `servicios`
 -- AUTO_INCREMENT de la tabla `cita`
 --
 ALTER TABLE `cita`
-  MODIFY `nro_cita` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `nro_cita` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
@@ -437,7 +474,9 @@ ALTER TABLE `cita`
   ADD CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id_func`) REFERENCES `funcionarios` (`id_func`),
   ADD CONSTRAINT `cita_ibfk_3` FOREIGN KEY (`id_espec`) REFERENCES `especialidad` (`id_espec`),
   ADD CONSTRAINT `cita_ibfk_4` FOREIGN KEY (`id_pac`) REFERENCES `pacientes` (`id_pac`),
-  ADD CONSTRAINT `cita_ibfk_5` FOREIGN KEY (`id_sede`) REFERENCES `sede` (`id_sede`);
+  ADD CONSTRAINT `cita_ibfk_5` FOREIGN KEY (`id_sede`) REFERENCES `sede` (`id_sede`),
+  ADD CONSTRAINT `cita_ibfk_6` FOREIGN KEY (`id_est`) REFERENCES `estado` (`id_est`),
+  ADD CONSTRAINT `cita_ibfk_7` FOREIGN KEY (`id_medcto`) REFERENCES `medicamentos` (`id_medcto`);
 
 --
 -- Filtros para la tabla `ciudad`
