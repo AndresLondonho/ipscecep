@@ -205,6 +205,11 @@ function cita(){
             }
         })
     })
+
+
+    $("#tabla").on("click","a#reporte",function(){
+        $("a#reporte").attr("href","../../recursos/fpdf/pdfs/citas.php");
+    })
 }
 
 $(document).ready(() => {
@@ -214,7 +219,7 @@ $(document).ready(() => {
         "columns": [
             {"data": "nro_cita",
                 render: function(data){
-                    return '<a href="#" data-codigo="'+data+'" id="reporte" data-toggle="modal" data-target="#modal_editar" title="Informe"><i class="fa fa-print"></i></a>'
+                    return '<a href="#" data-codigo="'+data+'" id="reporte" title="Informe"><i class="fa fa-print"></i></a>'
                 }   
             },
             {"data": "Paciente"},

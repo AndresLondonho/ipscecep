@@ -73,9 +73,10 @@
 
         public function listar(){
             $this->query = "
-            SELECT cita.nro_cita, concat(pac.nom_pac,' ',pac.ape_pac)as Paciente, 
+            SELECT cita.nro_cita, concat(pac.nom_pac,' ',pac.ape_pac)as Paciente,
             concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user) as Medico, 
-            espec.nom_espec as Tipo_cita, date_format(cita.fecha, '%d/%b/%Y') Fecha, date_format(cita.hora, '%h:%m %p') Hora, sede.nom_sede as Sede 
+            espec.nom_espec as Tipo_cita, date_format(cita.fecha, '%d/%b/%Y') Fecha, date_format(cita.hora, '%h:%m %p') Hora,
+            sede.nom_sede as Sede, cita.Detalle as Detalle
             from cita as cita 
             inner join funcionarios as func on (cita.id_func = func.id_func) 
             inner join pacientes as pac on (cita.id_pac = pac.id_pac) 
@@ -91,7 +92,7 @@
             if($nro_cita!=''):
                 $this->query = "
                 select c.nro_cita, c.id_pac, concat(pac.nom_pac,' ',pac.ape_pac)as Paciente, 
-                concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user) as Medico, pac.tel_pac, espec.nom_espec 
+                concat(func.nom_user,' ',func.nom2_user,' ',func.ape_user,' ',func.ape2_user) as Medico, pac.tel_pac, espec.nom_espec, c.Detalle
                 from cita as c 
                 inner join funcionarios as func on (c.id_func = func.id_func) 
                 inner join pacientes as pac on (c.id_pac = pac.id_pac) 

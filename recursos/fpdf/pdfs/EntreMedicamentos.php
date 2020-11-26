@@ -18,7 +18,8 @@
 	$titulos = array('Codigo','Nombre','Stock');
 	$cant = 3;
 	$datos = $pdf->cargarDatos($plano);
-    $pdf->TablaElegante($titulos,$datos,$cant);
+	$pdf->TablaElegante($titulos,$datos,$cant);
+	
 	
 
 	$pdf->Output();
